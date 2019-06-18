@@ -1,0 +1,4396 @@
+$Allerdale
+$Allerdale$control
+[1] "NOC NO CHANGE"
+
+$Allerdale$elected
+          Independent          Conservative                Labour UK Independence Party 
+                   20                    15                    14                     0 
+
+$Allerdale$total
+          Independent          Conservative                Labour UK Independence Party 
+                   20                    15                    14                     0 
+
+$Allerdale$change
+          Independent          Conservative                Labour UK Independence Party 
+                   14                    -1                   -11                    -2 
+
+
+$`Amber Valley`
+$`Amber Valley`$control
+[1] "LAB GAIN FROM CON"
+
+$`Amber Valley`$elected
+      Labour Conservative        Green 
+           7            7            1 
+
+$`Amber Valley`$total
+      Labour Conservative        Green 
+          26           18            1 
+
+$`Amber Valley`$change
+      Labour Conservative        Green 
+           6           -7            1 
+
+
+$Arun
+$Arun$control
+[1] "CON LOSE TO NOC"
+
+$Arun$elected
+     Liberal Democrat          Conservative           Independent                 Green                Labour 
+                   22                    21                     8                     2                     1 
+UK Independence Party 
+                    0 
+
+$Arun$total
+     Liberal Democrat          Conservative           Independent                 Green                Labour 
+                   22                    21                     8                     2                     1 
+UK Independence Party 
+                    0 
+
+$Arun$change
+     Liberal Democrat          Conservative           Independent                 Green                Labour 
+                   17                   -21                     6                     2                     0 
+UK Independence Party 
+                   -4 
+
+
+$Ashfield
+$Ashfield$control
+[1] "IND GAIN FROM NOC"
+
+$Ashfield$elected
+     Independent     Conservative           Labour Liberal Democrat 
+              30                3                2                0 
+
+$Ashfield$total
+     Independent     Conservative           Labour Liberal Democrat 
+              30                3                2                0 
+
+$Ashfield$change
+     Independent     Conservative           Labour Liberal Democrat 
+              26               -1              -20               -5 
+
+
+$Ashford
+$Ashford$control
+[1] "CON HOLD"
+
+$Ashford$elected
+         Conservative           Independent                Labour                 Green      Liberal Democrat 
+                   26                    12                     7                     2                     0 
+UK Independence Party 
+                    0 
+
+$Ashford$total
+         Conservative           Independent                Labour                 Green      Liberal Democrat 
+                   26                    12                     7                     2                     0 
+UK Independence Party 
+                    0 
+
+$Ashford$change
+         Conservative           Independent                Labour                 Green      Liberal Democrat 
+                  -13                    10                     3                     2                    -1 
+UK Independence Party 
+                   -1 
+
+
+$Babergh
+$Babergh$control
+[1] "CON LOSE TO NOC"
+
+$Babergh$elected
+    Conservative      Independent            Green Liberal Democrat           Labour 
+              15                8                4                3                2 
+
+$Babergh$total
+    Conservative      Independent            Green Liberal Democrat           Labour 
+              15                8                4                3                2 
+
+$Babergh$change
+    Conservative      Independent            Green Liberal Democrat           Labour 
+              -7                1                4                1                1 
+
+
+$Barnsley
+$Barnsley$control
+[1] "LAB HOLD"
+
+$Barnsley$elected
+          Labour      Independent Liberal Democrat     Conservative 
+              12                5                3                1 
+
+$Barnsley$total
+          Labour      Independent Liberal Democrat     Conservative 
+              49                7                4                3 
+
+$Barnsley$change
+          Labour      Independent Liberal Democrat     Conservative 
+              -7                5                3               -1 
+
+
+$`Barrow-in-Furness`
+$`Barrow-in-Furness`$control
+[1] "LAB HOLD"
+
+$`Barrow-in-Furness`$elected
+      Labour Conservative 
+          24           12 
+
+$`Barrow-in-Furness`$total
+      Labour Conservative 
+          24           12 
+
+$`Barrow-in-Furness`$change
+      Labour Conservative 
+          -3            3 
+
+
+$Basildon
+$Basildon$control
+[1] "CON LOSE TO NOC"
+
+$Basildon$elected
+         Conservative                Labour           Independent UK Independence Party 
+                    5                     6                     3                     0 
+
+$Basildon$total
+         Conservative                Labour           Independent UK Independence Party 
+                   20                    15                     6                     1 
+
+$Basildon$change
+         Conservative                Labour           Independent UK Independence Party 
+                   -3                     2                     3                    -2 
+
+
+$`Basingstoke & Deane`
+$`Basingstoke & Deane`$control
+[1] "CON HOLD"
+
+$`Basingstoke & Deane`$elected
+    Conservative           Labour Liberal Democrat      Independent 
+              12                4                4                0 
+
+$`Basingstoke & Deane`$total
+    Conservative           Labour Liberal Democrat      Independent 
+              31               21                7                1 
+
+$`Basingstoke & Deane`$change
+    Conservative           Labour Liberal Democrat      Independent 
+              -3                1                2                0 
+
+
+$Bassetlaw
+$Bassetlaw$control
+[1] "LAB HOLD"
+
+$Bassetlaw$elected
+          Labour     Conservative      Independent Liberal Democrat 
+              37                5                5                1 
+
+$Bassetlaw$total
+          Labour     Conservative      Independent Liberal Democrat 
+              37                5                5                1 
+
+$Bassetlaw$change
+          Labour     Conservative      Independent Liberal Democrat 
+               4               -7                2                1 
+
+
+$`Bath & North East Somerset`
+$`Bath & North East Somerset`$control
+[1] "LD GAIN FROM CON"
+
+$`Bath & North East Somerset`$elected
+Liberal Democrat     Conservative      Independent           Labour            Green 
+              37                9                6                7                0 
+
+$`Bath & North East Somerset`$total
+Liberal Democrat     Conservative      Independent           Labour            Green 
+              37               11                6                5                0 
+
+$`Bath & North East Somerset`$change
+Liberal Democrat     Conservative      Independent           Labour            Green 
+              23              -22                1               -1               -1 
+
+
+$Bedford
+$Bedford$control
+[1] "NOC NO CHANGE"
+
+$Bedford$elected
+Liberal Democrat     Conservative           Labour            Green      Independent 
+              15               11               11                2                1 
+
+$Bedford$total
+Liberal Democrat     Conservative           Labour            Green      Independent 
+              15               11               11                2                1 
+
+$Bedford$change
+Liberal Democrat     Conservative           Labour            Green      Independent 
+               6               -4               -3                2               -1 
+
+
+$Blaby
+$Blaby$control
+[1] "CON HOLD"
+
+$Blaby$elected
+    Conservative           Labour Liberal Democrat            Green      Independent 
+              25                6                6                1                1 
+
+$Blaby$total
+    Conservative           Labour Liberal Democrat            Green      Independent 
+              25                6                6                1                1 
+
+$Blaby$change
+    Conservative           Labour Liberal Democrat            Green      Independent 
+              -4                0                2                1                1 
+
+
+$`Blackburn with Darwen`
+$`Blackburn with Darwen`$control
+[1] "LAB HOLD"
+
+$`Blackburn with Darwen`$elected
+          Labour     Conservative Liberal Democrat 
+              12                4                1 
+
+$`Blackburn with Darwen`$total
+          Labour     Conservative Liberal Democrat 
+              36               13                2 
+
+$`Blackburn with Darwen`$change
+          Labour     Conservative Liberal Democrat 
+              -1                0                1 
+
+
+$Blackpool
+$Blackpool$control
+[1] "LAB HOLD"
+
+$Blackpool$elected
+      Labour Conservative  Independent 
+          23           15            4 
+
+$Blackpool$total
+      Labour Conservative  Independent 
+          23           15            4 
+
+$Blackpool$change
+      Labour Conservative  Independent 
+          -6            2            4 
+
+
+$Bolsover
+$Bolsover$control
+[1] "LAB LOSE TO NOC"
+
+$Bolsover$elected
+          Labour      Independent     Conservative Liberal Democrat 
+              18               16                2                1 
+
+$Bolsover$total
+          Labour      Independent     Conservative Liberal Democrat 
+              18               16                2                1 
+
+$Bolsover$change
+          Labour      Independent     Conservative Liberal Democrat 
+             -14               11                2                1 
+
+
+$Bolton
+$Bolton$control
+[1] "NOC NO CHANGE"
+
+$Bolton$elected
+               Labour          Conservative           Independent      Liberal Democrat UK Independence Party 
+                    6                     6                     4                     3                     1 
+
+$Bolton$total
+               Labour          Conservative           Independent      Liberal Democrat UK Independence Party 
+                   23                    20                     8                     6                     3 
+
+$Bolton$change
+               Labour          Conservative           Independent      Liberal Democrat UK Independence Party 
+                   -7                     1                     4                     2                     0 
+
+
+$Boston
+$Boston$control
+[1] "CON HOLD"
+
+$Boston$elected
+         Conservative           Independent                Labour UK Independence Party 
+                   16                    11                     2                     1 
+
+$Boston$total
+         Conservative           Independent                Labour UK Independence Party 
+                   16                    11                     2                     1 
+
+$Boston$change
+         Conservative           Independent                Labour UK Independence Party 
+                    3                     9                     0                   -12 
+
+
+$`Bournemouth, Christchurch & Poole`
+$`Bournemouth, Christchurch & Poole`$control
+[1] "NOC"
+
+$`Bournemouth, Christchurch & Poole`$elected
+         Conservative           Independent      Liberal Democrat                Labour                 Green 
+                   36                    19                    15                     3                     2 
+UK Independence Party 
+                    1 
+
+$`Bournemouth, Christchurch & Poole`$total
+         Conservative           Independent      Liberal Democrat                Labour                 Green 
+                   36                    19                    15                     3                     2 
+UK Independence Party 
+                    1 
+
+$`Bournemouth, Christchurch & Poole`$change
+         Conservative           Independent      Liberal Democrat                Labour                 Green 
+                  -33                    16                    11                     3                     2 
+UK Independence Party 
+                    1 
+
+
+$`Bracknell Forest`
+$`Bracknell Forest`$control
+[1] "CON HOLD"
+
+$`Bracknell Forest`$elected
+    Conservative           Labour Liberal Democrat 
+              38                3                1 
+
+$`Bracknell Forest`$total
+    Conservative           Labour Liberal Democrat 
+              38                3                1 
+
+$`Bracknell Forest`$change
+    Conservative           Labour Liberal Democrat 
+              -3                2                1 
+
+
+$Bradford
+$Bradford$control
+[1] "LAB HOLD"
+
+$Bradford$elected
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              18                9                2                0                1 
+
+$Bradford$total
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              52               22                9                5                2 
+
+$Bradford$change
+          Labour     Conservative Liberal Democrat      Independent            Green 
+               1                0               -1                0                0 
+
+
+$Braintree
+$Braintree$control
+[1] "CON HOLD"
+
+$Braintree$elected
+          Conservative                  Green Residents' Association            Independent 
+                    34                      6                      4                      3 
+                Labour 
+                     2 
+
+$Braintree$total
+          Conservative                  Green Residents' Association            Independent 
+                    34                      6                      4                      3 
+                Labour 
+                     2 
+
+$Braintree$change
+          Conservative                  Green Residents' Association            Independent 
+                   -10                      5                      2                      3 
+                Labour 
+                     0 
+
+
+$Breckland
+$Breckland$control
+[1] "CON HOLD"
+
+$Breckland$elected
+         Conservative                Labour           Independent                 Green UK Independence Party 
+                   37                     6                     4                     2                     0 
+
+$Breckland$total
+         Conservative                Labour           Independent                 Green UK Independence Party 
+                   37                     6                     4                     2                     0 
+
+$Breckland$change
+         Conservative                Labour           Independent                 Green UK Independence Party 
+                   -5                     4                     3                     2                    -4 
+
+
+$Brentwood
+$Brentwood$control
+[1] "CON HOLD"
+
+$Brentwood$elected
+    Conservative Liberal Democrat           Labour      Independent 
+               6                5                1                0 
+
+$Brentwood$total
+    Conservative Liberal Democrat           Labour      Independent 
+              20               13                3                1 
+
+$Brentwood$change
+    Conservative Liberal Democrat           Labour      Independent 
+              -5                4                1                0 
+
+
+$`Brighton & Hove`
+$`Brighton & Hove`$control
+[1] "NOC NO CHANGE"
+
+$`Brighton & Hove`$elected
+      Labour        Green Conservative  Independent 
+          20           19           14            1 
+
+$`Brighton & Hove`$total
+      Labour        Green Conservative  Independent 
+          20           19           14            1 
+
+$`Brighton & Hove`$change
+      Labour        Green Conservative  Independent 
+          -3            8           -6            1 
+
+
+$Broadland
+$Broadland$control
+[1] "CON HOLD"
+
+$Broadland$elected
+    Conservative Liberal Democrat           Labour      Independent 
+              32               12                2                1 
+
+$Broadland$total
+    Conservative Liberal Democrat           Labour      Independent 
+              32               12                2                1 
+
+$Broadland$change
+    Conservative Liberal Democrat           Labour      Independent 
+             -11                8                2                1 
+
+
+$Bromsgrove
+$Bromsgrove$control
+[1] "CON HOLD"
+
+$Bromsgrove$elected
+          Conservative            Independent                 Labour       Liberal Democrat 
+                    17                      5                      5                      3 
+Residents' Association 
+                     1 
+
+$Bromsgrove$total
+          Conservative            Independent                 Labour       Liberal Democrat 
+                    17                      5                      5                      3 
+Residents' Association 
+                     1 
+
+$Bromsgrove$change
+          Conservative            Independent                 Labour       Liberal Democrat 
+                    -1                      2                     -2                      3 
+Residents' Association 
+                    -2 
+
+
+$Broxbourne
+$Broxbourne$control
+[1] "CON HOLD"
+
+$Broxbourne$elected
+Conservative       Labour  Independent 
+          10            1            0 
+
+$Broxbourne$total
+Conservative       Labour  Independent 
+          27            2            1 
+
+$Broxbourne$change
+Conservative       Labour  Independent 
+           0            0            0 
+
+
+$Broxtowe
+$Broxtowe$control
+[1] "CON LOSE TO NOC"
+
+$Broxtowe$elected
+    Conservative           Labour Liberal Democrat      Independent 
+              20               14                5                3 
+
+$Broxtowe$total
+    Conservative           Labour Liberal Democrat      Independent 
+              20               14                5                3 
+
+$Broxtowe$change
+    Conservative           Labour Liberal Democrat      Independent 
+              -5                2                1                2 
+
+
+$Burnley
+$Burnley$control
+[1] "LAB LOSE TO NOC"
+
+$Burnley$elected
+               Labour      Liberal Democrat           Independent          Conservative UK Independence Party 
+                    6                     3                     3                     1                     1 
+                Green 
+                    1 
+
+$Burnley$total
+               Labour      Liberal Democrat           Independent          Conservative UK Independence Party 
+                   22                     8                     6                     4                     3 
+                Green 
+                    2 
+
+$Burnley$change
+               Labour      Liberal Democrat           Independent          Conservative UK Independence Party 
+                   -4                     0                     3                    -1                     1 
+                Green 
+                    1 
+
+
+$Bury
+$Bury$control
+[1] "LAB HOLD"
+
+$Bury$elected
+          Labour     Conservative Liberal Democrat      Independent 
+               9                5                2                1 
+
+$Bury$total
+          Labour     Conservative Liberal Democrat      Independent 
+              29               16                4                2 
+
+$Bury$change
+          Labour     Conservative Liberal Democrat      Independent 
+              -1               -1                1                1 
+
+
+$Calderdale
+$Calderdale$control
+[1] "LAB GAIN FROM NOC"
+
+$Calderdale$elected
+          Labour     Conservative Liberal Democrat      Independent 
+              10                4                2                1 
+
+$Calderdale$total
+          Labour     Conservative Liberal Democrat      Independent 
+              28               14                7                2 
+
+$Calderdale$change
+          Labour     Conservative Liberal Democrat      Independent 
+               4               -6                1                1 
+
+
+$Cambridge
+$Cambridge$control
+[1] "LAB HOLD"
+
+$Cambridge$elected
+          Labour Liberal Democrat      Independent            Green 
+               9                7                0                0 
+
+$Cambridge$total
+          Labour Liberal Democrat      Independent            Green 
+              26               15                1                0 
+
+$Cambridge$change
+          Labour Liberal Democrat      Independent            Green 
+               0                1                0               -1 
+
+
+$`Cannock Chase`
+$`Cannock Chase`$control
+[1] "LAB LOSE TO NOC"
+
+$`Cannock Chase`$elected
+          Labour     Conservative            Green Liberal Democrat      Independent 
+               4                7                3                1                0 
+
+$`Cannock Chase`$total
+          Labour     Conservative            Green Liberal Democrat      Independent 
+              18               15                5                2                1 
+
+$`Cannock Chase`$change
+          Labour     Conservative            Green Liberal Democrat      Independent 
+              -2               -2                3                1                0 
+
+
+$Canterbury
+$Canterbury$control
+[1] "CON HOLD"
+
+$Canterbury$elected
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                   23                    10                     6                     0 
+
+$Canterbury$total
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                   23                    10                     6                     0 
+
+$Canterbury$change
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                   -8                     7                     3                    -2 
+
+
+$Carlisle
+$Carlisle$control
+[1] "NOC NO CHANGE"
+
+$Carlisle$elected
+         Conservative                Labour           Independent                 Green      Liberal Democrat 
+                   17                    15                     4                     1                     1 
+UK Independence Party 
+                    1 
+
+$Carlisle$total
+         Conservative                Labour           Independent                 Green      Liberal Democrat 
+                   17                    15                     4                     1                     1 
+UK Independence Party 
+                    1 
+
+$Carlisle$change
+         Conservative                Labour           Independent                 Green      Liberal Democrat 
+                   -1                    -6                     4                     1                     1 
+UK Independence Party 
+                    1 
+
+
+$`Castle Point`
+$`Castle Point`$control
+[1] "CON HOLD"
+
+$`Castle Point`$elected
+Conservative  Independent 
+           8            6 
+
+$`Castle Point`$total
+Conservative  Independent 
+          25           16 
+
+$`Castle Point`$change
+Conservative  Independent 
+          -2            2 
+
+
+$`Central Bedfordshire`
+$`Central Bedfordshire`$control
+[1] "CON HOLD"
+
+$`Central Bedfordshire`$elected
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   41                    13                     3                     1                     1 
+
+$`Central Bedfordshire`$total
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   41                    13                     3                     1                     1 
+
+$`Central Bedfordshire`$change
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                  -12                    10                     2                    -1                     1 
+
+
+$Charnwood
+$Charnwood$control
+[1] "CON HOLD"
+
+$Charnwood$elected
+    Conservative           Labour            Green      Independent Liberal Democrat 
+              37               13                1                1                0 
+
+$Charnwood$total
+    Conservative           Labour            Green      Independent Liberal Democrat 
+              37               13                1                1                0 
+
+$Charnwood$change
+    Conservative           Labour            Green      Independent Liberal Democrat 
+              -4                4                1                0               -1 
+
+
+$Chelmsford
+$Chelmsford$control
+[1] "LD GAIN FROM CON"
+
+$Chelmsford$elected
+Liberal Democrat     Conservative      Independent 
+              31               21                5 
+
+$Chelmsford$total
+Liberal Democrat     Conservative      Independent 
+              31               21                5 
+
+$Chelmsford$change
+Liberal Democrat     Conservative      Independent 
+              26              -31                5 
+
+
+$Cherwell
+$Cherwell$control
+[1] "CON HOLD"
+
+$Cherwell$elected
+    Conservative           Labour      Independent Liberal Democrat            Green 
+               9                3                2                2                1 
+
+$Cherwell$total
+    Conservative           Labour      Independent Liberal Democrat            Green 
+              32                9                4                2                1 
+
+$Cherwell$change
+    Conservative           Labour      Independent Liberal Democrat            Green 
+              -4                0                2                1                1 
+
+
+$`Cheshire East`
+$`Cheshire East`$control
+[1] "CON LOSE TO NOC"
+
+$`Cheshire East`$elected
+          Conservative                 Labour            Independent Residents' Association 
+                    34                     25                     14                      5 
+      Liberal Democrat 
+                     4 
+
+$`Cheshire East`$total
+          Conservative                 Labour            Independent Residents' Association 
+                    34                     25                     14                      5 
+      Liberal Democrat 
+                     4 
+
+$`Cheshire East`$change
+          Conservative                 Labour            Independent Residents' Association 
+                   -19                      9                      5                      3 
+      Liberal Democrat 
+                     2 
+
+
+$`Cheshire West & Chester`
+$`Cheshire West & Chester`$control
+[1] "LAB LOSE TO NOC"
+
+$`Cheshire West & Chester`$elected
+          Labour     Conservative      Independent Liberal Democrat            Green 
+              35               27                5                2                1 
+
+$`Cheshire West & Chester`$total
+          Labour     Conservative      Independent Liberal Democrat            Green 
+              35               28                4                2                1 
+
+$`Cheshire West & Chester`$change
+          Labour     Conservative      Independent Liberal Democrat            Green 
+               1               -7                3                2                1 
+
+
+$Chesterfield
+$Chesterfield$control
+[1] "LAB HOLD"
+
+$Chesterfield$elected
+               Labour      Liberal Democrat           Independent UK Independence Party 
+                   28                    17                     3                     0 
+
+$Chesterfield$total
+               Labour      Liberal Democrat           Independent UK Independence Party 
+                   28                    17                     3                     0 
+
+$Chesterfield$change
+               Labour      Liberal Democrat           Independent UK Independence Party 
+                  -10                     8                     3                    -1 
+
+
+$Chichester
+$Chichester$control
+[1] "CON LOSE TO NOC"
+
+$Chichester$elected
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              18               11                3                2                2 
+
+$Chichester$total
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              18               11                3                2                2 
+
+$Chichester$change
+    Conservative Liberal Democrat      Independent            Green           Labour 
+             -13                9                0                2                2 
+
+
+$Chorley
+$Chorley$control
+[1] "LAB HOLD"
+
+$Chorley$elected
+      Labour Conservative  Independent 
+          13            2            0 
+
+$Chorley$total
+      Labour Conservative  Independent 
+          37            8            2 
+
+$Chorley$change
+      Labour Conservative  Independent 
+           5           -5            0 
+
+
+$Colchester
+$Colchester$control
+[1] "NOC NO CHANGE"
+
+$Colchester$elected
+    Conservative Liberal Democrat           Labour      Independent            Green 
+               6                6                3                1                1 
+
+$Colchester$total
+    Conservative Liberal Democrat           Labour      Independent            Green 
+              23               13               11                3                1 
+
+$Colchester$change
+    Conservative Liberal Democrat           Labour      Independent            Green 
+              -1                0                0                0                1 
+
+
+$Copeland
+$Copeland$control
+[1] "LAB HOLD"
+
+$Copeland$elected
+      Labour Conservative  Independent 
+          19           10            4 
+
+$Copeland$total
+      Labour Conservative  Independent 
+          19           10            4 
+
+$Copeland$change
+      Labour Conservative  Independent 
+           1           -1            0 
+
+
+$Cotswold
+$Cotswold$control
+[1] "LD GAIN FROM CON"
+
+$Cotswold$elected
+Liberal Democrat     Conservative            Green      Independent 
+              18               14                1                1 
+
+$Cotswold$total
+Liberal Democrat     Conservative            Green      Independent 
+              18               14                1                1 
+
+$Cotswold$change
+Liberal Democrat     Conservative            Green      Independent 
+               8              -10                1                1 
+
+
+$Coventry
+$Coventry$control
+[1] "LAB HOLD"
+
+$Coventry$elected
+      Labour Conservative  Independent 
+          14            4            0 
+
+$Coventry$total
+      Labour Conservative  Independent 
+          40           13            1 
+
+$Coventry$change
+      Labour Conservative  Independent 
+           0            0            0 
+
+
+$Craven
+$Craven$control
+[1] "CON LOSE TO NOC"
+
+$Craven$elected
+         Conservative           Independent                Labour                 Green      Liberal Democrat 
+                    4                     5                     1                     1                     0 
+UK Independence Party 
+                    0 
+
+$Craven$total
+         Conservative           Independent                Labour                 Green      Liberal Democrat 
+                   15                     9                     3                     2                     1 
+UK Independence Party 
+                    0 
+
+$Craven$change
+         Conservative           Independent                Labour                 Green      Liberal Democrat 
+                   -3                     3                     0                     1                     0 
+UK Independence Party 
+                   -1 
+
+
+$Crawley
+$Crawley$control
+[1] "LAB HOLD"
+
+$Crawley$elected
+      Labour Conservative 
+          19           17 
+
+$Crawley$total
+      Labour Conservative 
+          19           17 
+
+$Crawley$change
+      Labour Conservative 
+           1           -1 
+
+
+$Dacorum
+$Dacorum$control
+[1] "CON HOLD"
+
+$Dacorum$elected
+    Conservative Liberal Democrat      Independent           Labour 
+              31               19                1                0 
+
+$Dacorum$total
+    Conservative Liberal Democrat      Independent           Labour 
+              31               19                1                0 
+
+$Dacorum$change
+    Conservative Liberal Democrat      Independent           Labour 
+             -15               16                1               -2 
+
+
+$Darlington
+$Darlington$control
+[1] "LAB LOSE TO NOC"
+
+$Darlington$elected
+    Conservative           Labour      Independent Liberal Democrat            Green 
+              22               20                3                3                2 
+
+$Darlington$total
+    Conservative           Labour      Independent Liberal Democrat            Green 
+              22               20                3                3                2 
+
+$Darlington$change
+    Conservative           Labour      Independent Liberal Democrat            Green 
+               5               -9                2                0                2 
+
+
+$Dartford
+$Dartford$control
+[1] "CON HOLD"
+
+$Dartford$elected
+          Conservative                 Labour Residents' Association            Independent 
+                    29                     10                      3                      0 
+
+$Dartford$total
+          Conservative                 Labour Residents' Association            Independent 
+                    29                     10                      3                      0 
+
+$Dartford$change
+          Conservative                 Labour Residents' Association            Independent 
+                    -4                      3                      3                     -2 
+
+
+$Derby
+$Derby$control
+[1] "NOC NO CHANGE"
+
+$Derby$elected
+         Conservative                Labour      Liberal Democrat UK Independence Party           Independent 
+                    6                     5                     3                     2                     1 
+
+$Derby$total
+         Conservative                Labour      Liberal Democrat UK Independence Party           Independent 
+                   20                    16                     7                     5                     3 
+
+$Derby$change
+         Conservative                Labour      Liberal Democrat UK Independence Party           Independent 
+                    1                    -6                     2                     2                     1 
+
+
+$`Derbyshire Dales`
+$`Derbyshire Dales`$control
+[1] "CON HOLD"
+
+$`Derbyshire Dales`$elected
+    Conservative Liberal Democrat           Labour      Independent            Green 
+              20                8                6                3                2 
+
+$`Derbyshire Dales`$total
+    Conservative Liberal Democrat           Labour      Independent            Green 
+              20                8                6                3                2 
+
+$`Derbyshire Dales`$change
+    Conservative Liberal Democrat           Labour      Independent            Green 
+              -9                5                1                1                2 
+
+
+$Dorset
+$Dorset$control
+[1] "CON WIN"
+
+$Dorset$elected
+    Conservative Liberal Democrat            Green      Independent           Labour 
+              43               29                4                4                2 
+
+$Dorset$total
+    Conservative Liberal Democrat            Green      Independent           Labour 
+              43               29                4                4                2 
+
+$Dorset$change
+    Conservative Liberal Democrat            Green      Independent           Labour 
+             -15               14                4               -2               -1 
+
+
+$Dover
+$Dover$control
+[1] "CON HOLD"
+
+$Dover$elected
+         Conservative                Labour           Independent UK Independence Party 
+                   19                    12                     1                     0 
+
+$Dover$total
+         Conservative                Labour           Independent UK Independence Party 
+                   19                    12                     1                     0 
+
+$Dover$change
+         Conservative                Labour           Independent UK Independence Party 
+                    1                    -1                     1                    -1 
+
+
+$Dudley
+$Dudley$control
+[1] "NOC NO CHANGE"
+
+$Dudley$elected
+Conservative       Labour 
+          13           11 
+
+$Dudley$total
+Conservative       Labour 
+          36           36 
+
+$Dudley$change
+Conservative       Labour 
+           0            0 
+
+
+$`East Cambridgeshire`
+$`East Cambridgeshire`$control
+[1] "CON HOLD"
+
+$`East Cambridgeshire`$elected
+    Conservative Liberal Democrat      Independent 
+              15               13                0 
+
+$`East Cambridgeshire`$total
+    Conservative Liberal Democrat      Independent 
+              15               13                0 
+
+$`East Cambridgeshire`$change
+    Conservative Liberal Democrat      Independent 
+             -11               12               -1 
+
+
+$`East Devon`
+$`East Devon`$control
+[1] "IND GAIN FROM CON"
+
+$`East Devon`$elected
+     Independent     Conservative Liberal Democrat            Green 
+              31               19                8                2 
+
+$`East Devon`$total
+     Independent     Conservative Liberal Democrat            Green 
+              31               19                8                2 
+
+$`East Devon`$change
+     Independent     Conservative Liberal Democrat            Green 
+              18              -22                2                2 
+
+
+$`East Hampshire`
+$`East Hampshire`$control
+[1] "CON HOLD"
+
+$`East Hampshire`$elected
+    Conservative Liberal Democrat      Independent           Labour 
+              32                7                2                2 
+
+$`East Hampshire`$total
+    Conservative Liberal Democrat      Independent           Labour 
+              32                7                2                2 
+
+$`East Hampshire`$change
+    Conservative Liberal Democrat      Independent           Labour 
+              -8                4                2                2 
+
+
+$`East Hertfordshire`
+$`East Hertfordshire`$control
+[1] "CON HOLD"
+
+$`East Hertfordshire`$elected
+    Conservative Liberal Democrat            Green           Labour 
+              40                6                2                2 
+
+$`East Hertfordshire`$total
+    Conservative Liberal Democrat            Green           Labour 
+              40                6                2                2 
+
+$`East Hertfordshire`$change
+    Conservative Liberal Democrat            Green           Labour 
+             -10                6                2                2 
+
+
+$`East Lindsey`
+$`East Lindsey`$control
+[1] "CON HOLD"
+
+$`East Lindsey`$elected
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   29                    18                     7                     1                     0 
+
+$`East Lindsey`$total
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   29                    18                     7                     1                     0 
+
+$`East Lindsey`$change
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   -4                     9                     3                     0                    -8 
+
+
+$`East Riding of Yorkshire`
+$`East Riding of Yorkshire`$control
+[1] "CON HOLD"
+
+$`East Riding of Yorkshire`$elected
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   49                    10                     8                     0                     0 
+
+$`East Riding of Yorkshire`$total
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   49                    10                     8                     0                     0 
+
+$`East Riding of Yorkshire`$change
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   -2                     5                     6                    -6                    -3 
+
+
+$`East Staffordshire`
+$`East Staffordshire`$control
+[1] "CON HOLD"
+
+$`East Staffordshire`$elected
+         Conservative                Labour           Independent      Liberal Democrat UK Independence Party 
+                   25                    10                     3                     1                     0 
+
+$`East Staffordshire`$total
+         Conservative                Labour           Independent      Liberal Democrat UK Independence Party 
+                   25                    10                     3                     1                     0 
+
+$`East Staffordshire`$change
+         Conservative                Labour           Independent      Liberal Democrat UK Independence Party 
+                    0                    -2                     3                     0                    -1 
+
+
+$`East Suffolk`
+$`East Suffolk`$control
+[1] "CON WIN"
+
+$`East Suffolk`$elected
+    Conservative           Labour            Green Liberal Democrat      Independent 
+              39                7                4                3                2 
+
+$`East Suffolk`$total
+    Conservative           Labour            Green Liberal Democrat      Independent 
+              39                7                4                3                2 
+
+$`East Suffolk`$change
+    Conservative           Labour            Green Liberal Democrat      Independent 
+              -1               -4                4                1                0 
+
+
+$Eastbourne
+$Eastbourne$control
+[1] "LD HOLD"
+
+$Eastbourne$elected
+Liberal Democrat     Conservative 
+              18                9 
+
+$Eastbourne$total
+Liberal Democrat     Conservative 
+              18                9 
+
+$Eastbourne$change
+Liberal Democrat     Conservative 
+               0                0 
+
+
+$Eastleigh
+$Eastleigh$control
+[1] "LD HOLD"
+
+$Eastleigh$elected
+Liberal Democrat      Independent     Conservative 
+              12                1                0 
+
+$Eastleigh$total
+Liberal Democrat      Independent     Conservative 
+              34                3                2 
+
+$Eastleigh$change
+Liberal Democrat      Independent     Conservative 
+               2                0               -2 
+
+
+$Eden
+$Eden$control
+[1] "CON LOSE TO NOC"
+
+$Eden$elected
+    Conservative      Independent Liberal Democrat            Green           Labour 
+              14               10               10                2                2 
+
+$Eden$total
+    Conservative      Independent Liberal Democrat            Green           Labour 
+              14               10               10                2                2 
+
+$Eden$change
+    Conservative      Independent Liberal Democrat            Green           Labour 
+              -7                0                3                2                2 
+
+
+$Elmbridge
+$Elmbridge$control
+[1] "NOC NO CHANGE"
+
+$Elmbridge$elected
+          Conservative Residents' Association       Liberal Democrat 
+                     6                      7                      3 
+
+$Elmbridge$total
+          Conservative Residents' Association       Liberal Democrat 
+                    21                     17                     10 
+
+$Elmbridge$change
+          Conservative Residents' Association       Liberal Democrat 
+                    -3                      2                      1 
+
+
+$`Epping Forest`
+$`Epping Forest`$control
+[1] "CON HOLD"
+
+$`Epping Forest`$elected
+          Conservative Residents' Association                  Green       Liberal Democrat 
+                    15                      0                      1                      1 
+           Independent 
+                     1 
+
+$`Epping Forest`$total
+          Conservative Residents' Association                  Green       Liberal Democrat 
+                    37                     13                      3                      3 
+           Independent 
+                     2 
+
+$`Epping Forest`$change
+          Conservative Residents' Association                  Green       Liberal Democrat 
+                    -2                      0                      1                      1 
+           Independent 
+                     0 
+
+
+$`Epsom & Ewell`
+$`Epsom & Ewell`$control
+[1] "RA HOLD"
+
+$`Epsom & Ewell`$elected
+Residents' Association                 Labour       Liberal Democrat           Conservative 
+                    32                      3                      2                      1 
+           Independent 
+                     0 
+
+$`Epsom & Ewell`$total
+Residents' Association                 Labour       Liberal Democrat           Conservative 
+                    32                      3                      2                      1 
+           Independent 
+                     0 
+
+$`Epsom & Ewell`$change
+Residents' Association                 Labour       Liberal Democrat           Conservative 
+                     6                      0                      2                     -3 
+           Independent 
+                    -5 
+
+
+$Erewash
+$Erewash$control
+[1] "CON HOLD"
+
+$Erewash$elected
+    Conservative           Labour Liberal Democrat 
+              27               19                1 
+
+$Erewash$total
+    Conservative           Labour Liberal Democrat 
+              27               19                1 
+
+$Erewash$change
+    Conservative           Labour Liberal Democrat 
+              -3                2                1 
+
+
+$Exeter
+$Exeter$control
+[1] "LAB HOLD"
+
+$Exeter$elected
+          Labour     Conservative Liberal Democrat            Green      Independent 
+               9                2                1                1                1 
+
+$Exeter$total
+          Labour     Conservative Liberal Democrat            Green      Independent 
+              29                6                2                1                1 
+
+$Exeter$change
+          Labour     Conservative Liberal Democrat            Green      Independent 
+              -1               -2                1                1                1 
+
+
+$Fenland
+$Fenland$control
+[1] "CON HOLD"
+
+$Fenland$elected
+    Conservative      Independent Liberal Democrat            Green 
+              26               10                2                1 
+
+$Fenland$total
+    Conservative      Independent Liberal Democrat            Green 
+              26               10                2                1 
+
+$Fenland$change
+    Conservative      Independent Liberal Democrat            Green 
+              -8                7                0                1 
+
+
+$`Folkestone & Hythe`
+$`Folkestone & Hythe`$control
+[1] "CON LOSE TO NOC"
+
+$`Folkestone & Hythe`$elected
+         Conservative                 Green                Labour      Liberal Democrat UK Independence Party 
+                   13                     6                     6                     2                     2 
+          Independent 
+                    1 
+
+$`Folkestone & Hythe`$total
+         Conservative                 Green                Labour      Liberal Democrat UK Independence Party 
+                   13                     6                     6                     2                     2 
+          Independent 
+                    1 
+
+$`Folkestone & Hythe`$change
+         Conservative                 Green                Labour      Liberal Democrat UK Independence Party 
+                   -9                     6                     5                     2                    -5 
+          Independent 
+                    1 
+
+
+$`Forest of Dean`
+$`Forest of Dean`$control
+[1] "NOC NO CHANGE"
+
+$`Forest of Dean`$elected
+          Independent          Conservative                 Green                Labour UK Independence Party 
+                   14                    10                     6                     5                     0 
+
+$`Forest of Dean`$total
+          Independent          Conservative                 Green                Labour UK Independence Party 
+                   14                    10                     6                     5                     0 
+
+$`Forest of Dean`$change
+          Independent          Conservative                 Green                Labour UK Independence Party 
+                   10                    -6                     6                    -6                    -4 
+
+
+$Fylde
+$Fylde$control
+[1] "CON HOLD"
+
+$Fylde$elected
+          Conservative            Independent       Liberal Democrat                 Labour 
+                    31                     19                      1                      0 
+Residents' Association 
+                     0 
+
+$Fylde$total
+          Conservative            Independent       Liberal Democrat                 Labour 
+                    31                     19                      1                      0 
+Residents' Association 
+                     0 
+
+$Fylde$change
+          Conservative            Independent       Liberal Democrat                 Labour 
+                    -1                      5                     -1                     -1 
+Residents' Association 
+                    -2 
+
+
+$Gateshead
+$Gateshead$control
+[1] "LAB HOLD"
+
+$Gateshead$elected
+          Labour Liberal Democrat 
+              17                5 
+
+$Gateshead$total
+          Labour Liberal Democrat 
+              52               14 
+
+$Gateshead$change
+          Labour Liberal Democrat 
+              -2                2 
+
+
+$Gedling
+$Gedling$control
+[1] "LAB HOLD"
+
+$Gedling$elected
+          Labour     Conservative      Independent Liberal Democrat 
+              29                8                2                2 
+
+$Gedling$total
+          Labour     Conservative      Independent Liberal Democrat 
+              29                8                2                2 
+
+$Gedling$change
+          Labour     Conservative      Independent Liberal Democrat 
+               4               -7                2                1 
+
+
+$Gravesham
+$Gravesham$control
+[1] "LAB GAIN FROM NOC"
+
+$Gravesham$elected
+      Labour Conservative  Independent 
+          24           18            2 
+
+$Gravesham$total
+      Labour Conservative  Independent 
+          24           18            2 
+
+$Gravesham$change
+      Labour Conservative  Independent 
+           3           -5            2 
+
+
+$`Great Yarmouth`
+$`Great Yarmouth`$control
+[1] "CON HOLD"
+
+$`Great Yarmouth`$elected
+         Conservative                Labour           Independent UK Independence Party 
+                   20                    15                     3                     1 
+
+$`Great Yarmouth`$total
+         Conservative                Labour           Independent UK Independence Party 
+                   20                    15                     3                     1 
+
+$`Great Yarmouth`$change
+         Conservative                Labour           Independent UK Independence Party 
+                    0                     0                     3                    -3 
+
+
+$Guildford
+$Guildford$control
+[1] "CON LOSE TO NOC"
+
+$Guildford$elected
+     Independent Liberal Democrat     Conservative           Labour            Green 
+              19               17                9                2                1 
+
+$Guildford$total
+     Independent Liberal Democrat     Conservative           Labour            Green 
+              19               17                9                2                1 
+
+$Guildford$change
+     Independent Liberal Democrat     Conservative           Labour            Green 
+              16                7              -25                1                1 
+
+
+$Halton
+$Halton$control
+[1] "LAB HOLD"
+
+$Halton$elected
+          Labour Liberal Democrat     Conservative 
+              17                1                1 
+
+$Halton$total
+          Labour Liberal Democrat     Conservative 
+              51                3                2 
+
+$Halton$change
+          Labour Liberal Democrat     Conservative 
+              -1                1                0 
+
+
+$Hambleton
+$Hambleton$control
+[1] "CON HOLD"
+
+$Hambleton$elected
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   24                     2                     1                     1                     0 
+
+$Hambleton$total
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   24                     2                     1                     1                     0 
+
+$Hambleton$change
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   -3                     2                     1                     1                    -1 
+
+
+$Harborough
+$Harborough$control
+[1] "CON HOLD"
+
+$Harborough$elected
+    Conservative Liberal Democrat           Labour 
+              22               11                1 
+
+$Harborough$total
+    Conservative Liberal Democrat           Labour 
+              22               11                1 
+
+$Harborough$change
+    Conservative Liberal Democrat           Labour 
+              -5                4                1 
+
+
+$Harlow
+$Harlow$control
+[1] "LAB HOLD"
+
+$Harlow$elected
+      Labour Conservative 
+           7            4 
+
+$Harlow$total
+      Labour Conservative 
+          20           13 
+
+$Harlow$change
+      Labour Conservative 
+           0            0 
+
+
+$Hart
+$Hart$control
+[1] "NOC NO CHANGE"
+
+$Hart$elected
+Residents' Association           Conservative       Liberal Democrat            Independent 
+                     4                      3                      4                      1 
+
+$Hart$total
+Residents' Association           Conservative       Liberal Democrat            Independent 
+                    11                     11                     10                      1 
+
+$Hart$change
+Residents' Association           Conservative       Liberal Democrat            Independent 
+                     2                     -5                      2                      1 
+
+
+$Hartlepool
+$Hartlepool$control
+[1] "LAB LOSE TO NOC"
+
+$Hartlepool$elected
+          Independent                Labour          Conservative UK Independence Party 
+                    6                     3                     1                     1 
+
+$Hartlepool$total
+          Independent                Labour          Conservative UK Independence Party 
+                   16                    13                     3                     1 
+
+$Hartlepool$change
+          Independent                Labour          Conservative UK Independence Party 
+                    4                    -5                     0                     1 
+
+
+$Havant
+$Havant$control
+[1] "CON HOLD"
+
+$Havant$elected
+         Conservative                Labour UK Independence Party      Liberal Democrat 
+                   11                     0                     0                     0 
+
+$Havant$total
+         Conservative                Labour UK Independence Party      Liberal Democrat 
+                   33                     2                     2                     1 
+
+$Havant$change
+         Conservative                Labour UK Independence Party      Liberal Democrat 
+                    0                     0                     0                     0 
+
+
+$Herefordshire
+$Herefordshire$control
+[1] "CON LOSE TO NOC"
+
+$Herefordshire$elected
+     Independent     Conservative            Green Liberal Democrat 
+              26               13                7                6 
+
+$Herefordshire$total
+     Independent     Conservative            Green Liberal Democrat 
+              26               13                7                6 
+
+$Herefordshire$change
+     Independent     Conservative            Green Liberal Democrat 
+               6              -15                5                4 
+
+
+$Hertsmere
+$Hertsmere$control
+[1] "CON HOLD"
+
+$Hertsmere$elected
+    Conservative           Labour Liberal Democrat 
+              29                7                3 
+
+$Hertsmere$total
+    Conservative           Labour Liberal Democrat 
+              29                7                3 
+
+$Hertsmere$change
+    Conservative           Labour Liberal Democrat 
+              -8                5                3 
+
+
+$`High Peak`
+$`High Peak`$control
+[1] "LAB GAIN FROM CON"
+
+$`High Peak`$elected
+          Labour     Conservative Liberal Democrat            Green      Independent 
+              22               16                3                2                0 
+
+$`High Peak`$total
+          Labour     Conservative Liberal Democrat            Green      Independent 
+              22               16                3                2                0 
+
+$`High Peak`$change
+          Labour     Conservative Liberal Democrat            Green      Independent 
+               5               -7                1                2               -1 
+
+
+$`Hinckley & Bosworth`
+$`Hinckley & Bosworth`$control
+[1] "LD GAIN FROM CON"
+
+$`Hinckley & Bosworth`$elected
+Liberal Democrat     Conservative           Labour 
+              21               11                2 
+
+$`Hinckley & Bosworth`$total
+Liberal Democrat     Conservative           Labour 
+              21               11                2 
+
+$`Hinckley & Bosworth`$change
+Liberal Democrat     Conservative           Labour 
+               9              -10                1 
+
+
+$Horsham
+$Horsham$control
+[1] "CON HOLD"
+
+$Horsham$elected
+    Conservative Liberal Democrat            Green      Independent 
+              32               13                2                1 
+
+$Horsham$total
+    Conservative Liberal Democrat            Green      Independent 
+              32               13                2                1 
+
+$Horsham$change
+    Conservative Liberal Democrat            Green      Independent 
+             -13               10                2                1 
+
+
+$Hyndburn
+$Hyndburn$control
+[1] "LAB HOLD"
+
+$Hyndburn$elected
+      Labour Conservative 
+           9            3 
+
+$Hyndburn$total
+      Labour Conservative 
+          26            9 
+
+$Hyndburn$change
+      Labour Conservative 
+           0            0 
+
+
+$Ipswich
+$Ipswich$control
+[1] "LAB HOLD"
+
+$Ipswich$elected
+          Labour     Conservative Liberal Democrat 
+              11                4                1 
+
+$Ipswich$total
+          Labour     Conservative Liberal Democrat 
+              36                9                3 
+
+$Ipswich$change
+          Labour     Conservative Liberal Democrat 
+               2               -3                1 
+
+
+$`King's Lynn & West Norfolk`
+$`King's Lynn & West Norfolk`$control
+[1] "CON HOLD"
+
+$`King's Lynn & West Norfolk`$elected
+    Conservative      Independent           Labour            Green Liberal Democrat 
+              28               15               10                1                1 
+
+$`King's Lynn & West Norfolk`$total
+    Conservative      Independent           Labour            Green Liberal Democrat 
+              28               15               10                1                1 
+
+$`King's Lynn & West Norfolk`$change
+    Conservative      Independent           Labour            Green Liberal Democrat 
+             -16               14                0                1                1 
+
+
+$`Kingston-upon-Hull`
+$`Kingston-upon-Hull`$control
+[1] "LAB HOLD"
+
+$`Kingston-upon-Hull`$elected
+          Labour Liberal Democrat     Conservative 
+              10                9                0 
+
+$`Kingston-upon-Hull`$total
+          Labour Liberal Democrat     Conservative 
+              31               24                2 
+
+$`Kingston-upon-Hull`$change
+          Labour Liberal Democrat     Conservative 
+               0                0                0 
+
+
+$Kirklees
+$Kirklees$control
+[1] "LAB HOLD"
+
+$Kirklees$elected
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              11                5                4                2                1 
+
+$Kirklees$total
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              36               16               10                4                3 
+
+$Kirklees$change
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              -1               -3                3                1                0 
+
+
+$Knowsley
+$Knowsley$control
+[1] "LAB HOLD"
+
+$Knowsley$elected
+          Labour            Green Liberal Democrat      Independent 
+              11                2                1                1 
+
+$Knowsley$total
+          Labour            Green Liberal Democrat      Independent 
+              37                3                3                2 
+
+$Knowsley$change
+          Labour            Green Liberal Democrat      Independent 
+              -3                2                0                1 
+
+
+$Lancaster
+$Lancaster$control
+[1] "LAB LOSE TO NOC"
+
+$Lancaster$elected
+          Labour      Independent     Conservative            Green Liberal Democrat 
+              21               14               12               10                3 
+
+$Lancaster$total
+          Labour      Independent     Conservative            Green Liberal Democrat 
+              21               14               12               10                3 
+
+$Lancaster$change
+          Labour      Independent     Conservative            Green Liberal Democrat 
+              -8               11               -7                1                3 
+
+
+$Leeds
+$Leeds$control
+[1] "LAB HOLD"
+
+$Leeds$elected
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              20                7                3                2                1 
+
+$Leeds$total
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              58               23                8                7                3 
+
+$Leeds$change
+          Labour     Conservative Liberal Democrat      Independent            Green 
+              -3                1                2               -1                1 
+
+
+$Leicester
+$Leicester$control
+[1] "LAB HOLD"
+
+$Leicester$elected
+          Labour Liberal Democrat     Conservative 
+              53                1                0 
+
+$Leicester$total
+          Labour Liberal Democrat     Conservative 
+              53                1                0 
+
+$Leicester$change
+          Labour Liberal Democrat     Conservative 
+               1                0               -1 
+
+
+$Lewes
+$Lewes$control
+[1] "NOC NO CHANGE"
+
+$Lewes$elected
+         Conservative                 Green      Liberal Democrat                Labour           Independent 
+                   19                     9                     8                     3                     2 
+UK Independence Party 
+                    0 
+
+$Lewes$total
+         Conservative                 Green      Liberal Democrat                Labour           Independent 
+                   19                     9                     8                     3                     2 
+UK Independence Party 
+                    0 
+
+$Lewes$change
+         Conservative                 Green      Liberal Democrat                Labour           Independent 
+                   -5                     6                    -4                     3                     2 
+UK Independence Party 
+                   -2 
+
+
+$Lichfield
+$Lichfield$control
+[1] "CON HOLD"
+
+$Lichfield$elected
+         Conservative                Labour           Independent      Liberal Democrat UK Independence Party 
+                   34                    10                     2                     1                     0 
+
+$Lichfield$total
+         Conservative                Labour           Independent      Liberal Democrat UK Independence Party 
+                   34                    10                     2                     1                     0 
+
+$Lichfield$change
+         Conservative                Labour           Independent      Liberal Democrat UK Independence Party 
+                   -7                     6                     2                     0                    -1 
+
+
+$Lincoln
+$Lincoln$control
+[1] "LAB HOLD"
+
+$Lincoln$elected
+      Labour Conservative 
+          10            1 
+
+$Lincoln$total
+      Labour Conservative 
+          24            9 
+
+$Lincoln$change
+      Labour Conservative 
+           0            0 
+
+
+$Liverpool
+$Liverpool$control
+[1] "LAB HOLD"
+
+$Liverpool$elected
+          Labour Liberal Democrat            Green    Liberal Party      Independent 
+              25                3                1                1                0 
+
+$Liverpool$total
+          Labour Liberal Democrat            Green    Liberal Party      Independent 
+              72               10                4                3                1 
+
+$Liverpool$change
+          Labour Liberal Democrat            Green    Liberal Party      Independent 
+              -3                2                0                1                0 
+
+
+$Luton
+$Luton$control
+[1] "LAB HOLD"
+
+$Luton$elected
+          Labour Liberal Democrat     Conservative 
+              32               12                4 
+
+$Luton$total
+          Labour Liberal Democrat     Conservative 
+              32               12                4 
+
+$Luton$change
+          Labour Liberal Democrat     Conservative 
+              -3                4               -1 
+
+
+$Maidstone
+$Maidstone$control
+[1] "NOC NO CHANGE"
+
+$Maidstone$elected
+    Conservative Liberal Democrat      Independent           Labour 
+               9                6                2                1 
+
+$Maidstone$total
+    Conservative Liberal Democrat      Independent           Labour 
+              24               20                7                4 
+
+$Maidstone$change
+    Conservative Liberal Democrat      Independent           Labour 
+              -1                0                0                1 
+
+
+$Maldon
+$Maldon$control
+[1] "CON HOLD"
+
+$Maldon$elected
+         Conservative           Independent UK Independence Party 
+                   17                    14                     0 
+
+$Maldon$total
+         Conservative           Independent UK Independence Party 
+                   17                    14                     0 
+
+$Maldon$change
+         Conservative           Independent UK Independence Party 
+                  -11                    12                    -1 
+
+
+$`Malvern Hills`
+$`Malvern Hills`$control
+[1] "CON LOSE TO NOC"
+
+$`Malvern Hills`$elected
+    Conservative      Independent Liberal Democrat            Green           Labour 
+              13               10                9                5                1 
+
+$`Malvern Hills`$total
+    Conservative      Independent Liberal Democrat            Green           Labour 
+              13               10                9                5                1 
+
+$`Malvern Hills`$change
+    Conservative      Independent Liberal Democrat            Green           Labour 
+             -10                3                4                2                1 
+
+
+$Manchester
+$Manchester$control
+[1] "LAB HOLD"
+
+$Manchester$elected
+          Labour Liberal Democrat 
+              32                1 
+
+$Manchester$total
+          Labour Liberal Democrat 
+              93                3 
+
+$Manchester$change
+          Labour Liberal Democrat 
+              -1                1 
+
+
+$Mansfield
+$Mansfield$control
+[1] "NOC NO CHANGE"
+
+$Mansfield$elected
+          Independent                Labour          Conservative UK Independence Party 
+                   19                    15                     2                     0 
+
+$Mansfield$total
+          Independent                Labour          Conservative UK Independence Party 
+                   19                    15                     2                     0 
+
+$Mansfield$change
+          Independent                Labour          Conservative UK Independence Party 
+                    4                    -4                     2                    -2 
+
+
+$Medway
+$Medway$control
+[1] "CON HOLD"
+
+$Medway$elected
+         Conservative                Labour           Independent UK Independence Party 
+                   33                    20                     2                     0 
+
+$Medway$total
+         Conservative                Labour           Independent UK Independence Party 
+                   33                    20                     2                     0 
+
+$Medway$change
+         Conservative                Labour           Independent UK Independence Party 
+                   -3                     5                     2                    -4 
+
+
+$Melton
+$Melton$control
+[1] "CON HOLD"
+
+$Melton$elected
+Conservative  Independent        Green 
+          22            5            1 
+
+$Melton$total
+Conservative  Independent        Green 
+          22            5            1 
+
+$Melton$change
+Conservative  Independent        Green 
+          -4            3            1 
+
+
+$Mendip
+$Mendip$control
+[1] "CON LOSE TO NOC"
+
+$Mendip$elected
+Liberal Democrat     Conservative            Green      Independent 
+              22               10               10                5 
+
+$Mendip$total
+Liberal Democrat     Conservative            Green      Independent 
+              22               10               10                5 
+
+$Mendip$change
+Liberal Democrat     Conservative            Green      Independent 
+              11              -22                7                4 
+
+
+$`Mid Devon`
+$`Mid Devon`$control
+[1] "CON LOSE TO NOC"
+
+$`Mid Devon`$elected
+         Conservative      Liberal Democrat           Independent                 Green         Liberal Party 
+                   18                    12                    10                     2                     0 
+UK Independence Party 
+                    0 
+
+$`Mid Devon`$total
+         Conservative      Liberal Democrat           Independent                 Green         Liberal Party 
+                   18                    12                    10                     2                     0 
+UK Independence Party 
+                    0 
+
+$`Mid Devon`$change
+         Conservative      Liberal Democrat           Independent                 Green         Liberal Party 
+                  -10                     7                     4                     2                    -1 
+UK Independence Party 
+                   -2 
+
+
+$`Mid Suffolk`
+$`Mid Suffolk`$control
+[1] "CON LOSE TO NOC"
+
+$`Mid Suffolk`$elected
+    Conservative            Green Liberal Democrat      Independent 
+              16               12                5                1 
+
+$`Mid Suffolk`$total
+    Conservative            Green Liberal Democrat      Independent 
+              16               12                5                1 
+
+$`Mid Suffolk`$change
+    Conservative            Green Liberal Democrat      Independent 
+              -7                7                1               -1 
+
+
+$`Mid Sussex`
+$`Mid Sussex`$control
+[1] "CON HOLD"
+
+$`Mid Sussex`$elected
+    Conservative Liberal Democrat      Independent            Green 
+              34               13                4                3 
+
+$`Mid Sussex`$total
+    Conservative Liberal Democrat      Independent            Green 
+              34               13                4                3 
+
+$`Mid Sussex`$change
+    Conservative Liberal Democrat      Independent            Green 
+             -20               13                4                3 
+
+
+$Middlesbrough
+$Middlesbrough$control
+[1] "LAB LOSE TO NOC"
+
+$Middlesbrough$elected
+ Independent       Labour Conservative 
+          23           20            3 
+
+$Middlesbrough$total
+ Independent       Labour Conservative 
+          23           20            3 
+
+$Middlesbrough$change
+ Independent       Labour Conservative 
+          14          -13           -1 
+
+
+$`Milton Keynes`
+$`Milton Keynes`$control
+[1] "NOC NO CHANGE"
+
+$`Milton Keynes`$elected
+          Labour     Conservative Liberal Democrat 
+               6                8                5 
+
+$`Milton Keynes`$total
+          Labour     Conservative Liberal Democrat 
+              23               19               15 
+
+$`Milton Keynes`$change
+          Labour     Conservative Liberal Democrat 
+               2               -5                3 
+
+
+$`Mole Valley`
+$`Mole Valley`$control
+[1] "LD GAIN FROM CON"
+
+$`Mole Valley`$elected
+Liberal Democrat     Conservative      Independent 
+              11                2                1 
+
+$`Mole Valley`$total
+Liberal Democrat     Conservative      Independent 
+              22               12                7 
+
+$`Mole Valley`$change
+Liberal Democrat     Conservative      Independent 
+               9              -10                1 
+
+
+$`New Forest`
+$`New Forest`$control
+[1] "CON HOLD"
+
+$`New Forest`$elected
+    Conservative Liberal Democrat      Independent 
+              46               13                1 
+
+$`New Forest`$total
+    Conservative Liberal Democrat      Independent 
+              46               13                1 
+
+$`New Forest`$change
+    Conservative Liberal Democrat      Independent 
+             -12               11                1 
+
+
+$`Newark & Sherwood`
+$`Newark & Sherwood`$control
+[1] "CON HOLD"
+
+$`Newark & Sherwood`$elected
+    Conservative           Labour      Independent Liberal Democrat 
+              27                7                3                2 
+
+$`Newark & Sherwood`$total
+    Conservative           Labour      Independent Liberal Democrat 
+              27                7                3                2 
+
+$`Newark & Sherwood`$change
+    Conservative           Labour      Independent Liberal Democrat 
+               3               -5                0                2 
+
+
+$`Newcastle-upon-Tyne`
+$`Newcastle-upon-Tyne`$control
+[1] "LAB HOLD"
+
+$`Newcastle-upon-Tyne`$elected
+          Labour Liberal Democrat      Independent 
+              17                8                2 
+
+$`Newcastle-upon-Tyne`$total
+          Labour Liberal Democrat      Independent 
+              54               20                4 
+
+$`Newcastle-upon-Tyne`$change
+          Labour Liberal Democrat      Independent 
+              -2                1                1 
+
+
+$`North Devon`
+$`North Devon`$control
+[1] "LD GAIN FROM NOC"
+
+$`North Devon`$elected
+     Liberal Democrat          Conservative           Independent                 Green UK Independence Party 
+                   21                    11                     7                     2                     0 
+
+$`North Devon`$total
+     Liberal Democrat          Conservative           Independent                 Green UK Independence Party 
+                   21                    11                     7                     2                     0 
+
+$`North Devon`$change
+     Liberal Democrat          Conservative           Independent                 Green UK Independence Party 
+                   10                    -8                    -3                     2                    -1 
+
+
+$`North East Derbyshire`
+$`North East Derbyshire`$control
+[1] "CON GAIN FROM LAB"
+
+$`North East Derbyshire`$elected
+    Conservative           Labour Liberal Democrat      Independent 
+              30               18                3                2 
+
+$`North East Derbyshire`$total
+    Conservative           Labour Liberal Democrat      Independent 
+              30               18                3                2 
+
+$`North East Derbyshire`$change
+    Conservative           Labour Liberal Democrat      Independent 
+              13              -17                3                1 
+
+
+$`North East Lincolnshire`
+$`North East Lincolnshire`$control
+[1] "CON GAIN FROM NOC"
+
+$`North East Lincolnshire`$elected
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                   10                     4                     1                     1 
+
+$`North East Lincolnshire`$total
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                   23                    14                     4                     1 
+
+$`North East Lincolnshire`$change
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                    5                    -6                     0                     1 
+
+
+$`North Hertfordshire`
+$`North Hertfordshire`$control
+[1] "CON LOSE TO NOC"
+
+$`North Hertfordshire`$elected
+    Conservative           Labour Liberal Democrat 
+               7                3                6 
+
+$`North Hertfordshire`$total
+    Conservative           Labour Liberal Democrat 
+              22               16               11 
+
+$`North Hertfordshire`$change
+    Conservative           Labour Liberal Democrat 
+              -7                2                5 
+
+
+$`North Kesteven`
+$`North Kesteven`$control
+[1] "CON LOSE TO NOC"
+
+$`North Kesteven`$elected
+ Independent Conservative 
+          22           20 
+
+$`North Kesteven`$total
+ Independent Conservative 
+          22           20 
+
+$`North Kesteven`$change
+ Independent Conservative 
+           8           -8 
+
+
+$`North Lincolnshire`
+$`North Lincolnshire`$control
+[1] "CON HOLD"
+
+$`North Lincolnshire`$elected
+Conservative       Labour 
+          27           16 
+
+$`North Lincolnshire`$total
+Conservative       Labour 
+          27           16 
+
+$`North Lincolnshire`$change
+Conservative       Labour 
+           1           -1 
+
+
+$`North Norfolk`
+$`North Norfolk`$control
+[1] "LD GAIN FROM NOC"
+
+$`North Norfolk`$elected
+Liberal Democrat     Conservative      Independent 
+              30                6                4 
+
+$`North Norfolk`$total
+Liberal Democrat     Conservative      Independent 
+              30                6                4 
+
+$`North Norfolk`$change
+Liberal Democrat     Conservative      Independent 
+              15              -19                4 
+
+
+$`North Somerset`
+$`North Somerset`$control
+[1] "CON LOSE TO NOC"
+
+$`North Somerset`$elected
+     Independent     Conservative Liberal Democrat           Labour            Green 
+              17               13               11                6                3 
+
+$`North Somerset`$total
+     Independent     Conservative Liberal Democrat           Labour            Green 
+              17               13               11                6                3 
+
+$`North Somerset`$change
+     Independent     Conservative Liberal Democrat           Labour            Green 
+              11              -23                7                3                2 
+
+
+$`North Tyneside`
+$`North Tyneside`$control
+[1] "LAB HOLD"
+
+$`North Tyneside`$elected
+          Labour     Conservative      Independent Liberal Democrat 
+              17                3                0                0 
+
+$`North Tyneside`$total
+          Labour     Conservative      Independent Liberal Democrat 
+              51                7                1                1 
+
+$`North Tyneside`$change
+          Labour     Conservative      Independent Liberal Democrat 
+              -1                1                0                0 
+
+
+$`North Warwickshire`
+$`North Warwickshire`$control
+[1] "CON HOLD"
+
+$`North Warwickshire`$elected
+Conservative       Labour 
+          21           14 
+
+$`North Warwickshire`$total
+Conservative       Labour 
+          21           14 
+
+$`North Warwickshire`$change
+Conservative       Labour 
+          -1            1 
+
+
+$`North West Leicestershire`
+$`North West Leicestershire`$control
+[1] "CON HOLD"
+
+$`North West Leicestershire`$elected
+    Conservative           Labour Liberal Democrat      Independent            Green 
+              20               10                4                3                1 
+
+$`North West Leicestershire`$total
+    Conservative           Labour Liberal Democrat      Independent            Green 
+              20               10                4                3                1 
+
+$`North West Leicestershire`$change
+    Conservative           Labour Liberal Democrat      Independent            Green 
+              -5                0                3                1                1 
+
+
+$Norwich
+$Norwich$control
+[1] "LAB HOLD"
+
+$Norwich$elected
+          Labour            Green Liberal Democrat 
+              27                9                3 
+
+$Norwich$total
+          Labour            Green Liberal Democrat 
+              27                9                3 
+
+$Norwich$change
+          Labour            Green Liberal Democrat 
+              -4                4                0 
+
+
+$Nottingham
+$Nottingham$control
+[1] "LAB HOLD"
+
+$Nottingham$elected
+      Labour  Independent Conservative 
+          50            3            2 
+
+$Nottingham$total
+      Labour  Independent Conservative 
+          50            3            2 
+
+$Nottingham$change
+      Labour  Independent Conservative 
+          -3            3            0 
+
+
+$`Oadby & Wigston`
+$`Oadby & Wigston`$control
+[1] "LD HOLD"
+
+$`Oadby & Wigston`$elected
+Liberal Democrat     Conservative           Labour 
+              24                2                0 
+
+$`Oadby & Wigston`$total
+Liberal Democrat     Conservative           Labour 
+              24                2                0 
+
+$`Oadby & Wigston`$change
+Liberal Democrat     Conservative           Labour 
+               5               -4               -1 
+
+
+$Oldham
+$Oldham$control
+[1] "LAB HOLD"
+
+$Oldham$elected
+          Labour Liberal Democrat     Conservative      Independent 
+              15                3                1                1 
+
+$Oldham$total
+          Labour Liberal Democrat     Conservative      Independent 
+              45                8                4                3 
+
+$Oldham$change
+          Labour Liberal Democrat     Conservative      Independent 
+              -1                0                0                1 
+
+
+$Pendle
+$Pendle$control
+[1] "CON LOSE TO NOC"
+
+$Pendle$elected
+    Conservative           Labour Liberal Democrat 
+               8                4                5 
+
+$Pendle$total
+    Conservative           Labour Liberal Democrat 
+              23               16               10 
+
+$Pendle$change
+    Conservative           Labour Liberal Democrat 
+               0               -1                1 
+
+
+$Peterborough
+$Peterborough$control
+[1] "CON LOSE TO NOC"
+
+$Peterborough$elected
+         Conservative                Labour      Liberal Democrat           Independent                 Green 
+                    7                     7                     4                     1                     1 
+        Liberal Party UK Independence Party 
+                    0                     0 
+
+$Peterborough$total
+         Conservative                Labour      Liberal Democrat           Independent                 Green 
+                   28                    17                     9                     3                     2 
+        Liberal Party UK Independence Party 
+                    1                     0 
+
+$Peterborough$change
+         Conservative                Labour      Liberal Democrat           Independent                 Green 
+                   -4                     3                     2                     0                     1 
+        Liberal Party UK Independence Party 
+                   -1                    -1 
+
+
+$Plymouth
+$Plymouth$control
+[1] "LAB HOLD"
+
+$Plymouth$elected
+      Labour Conservative  Independent 
+          10            9            0 
+
+$Plymouth$total
+      Labour Conservative  Independent 
+          31           25            1 
+
+$Plymouth$change
+      Labour Conservative  Independent 
+           1           -1            0 
+
+
+$Portsmouth
+$Portsmouth$control
+[1] "NOC NO CHANGE"
+
+$Portsmouth$elected
+Liberal Democrat     Conservative           Labour      Independent 
+               6                7                2                0 
+
+$Portsmouth$total
+Liberal Democrat     Conservative           Labour      Independent 
+              18               16                6                2 
+
+$Portsmouth$change
+Liberal Democrat     Conservative           Labour      Independent 
+               2               -3                1                0 
+
+
+$Preston
+$Preston$control
+[1] "LAB HOLD"
+
+$Preston$elected
+          Labour     Conservative Liberal Democrat 
+              30                9                9 
+
+$Preston$total
+          Labour     Conservative Liberal Democrat 
+              30                9                9 
+
+$Preston$change
+          Labour     Conservative Liberal Democrat 
+               4               -7                3 
+
+
+$Reading
+$Reading$control
+[1] "LAB HOLD"
+
+$Reading$elected
+          Labour     Conservative            Green Liberal Democrat 
+               9                4                2                1 
+
+$Reading$total
+          Labour     Conservative            Green Liberal Democrat 
+              30               10                4                2 
+
+$Reading$change
+          Labour     Conservative            Green Liberal Democrat 
+               0               -2                1                1 
+
+
+$`Redcar & Cleveland`
+$`Redcar & Cleveland`$control
+[1] "NOC NO CHANGE"
+
+$`Redcar & Cleveland`$elected
+          Independent                Labour      Liberal Democrat          Conservative UK Independence Party 
+                   18                    15                    13                    11                     2 
+
+$`Redcar & Cleveland`$total
+          Independent                Labour      Liberal Democrat          Conservative UK Independence Party 
+                   18                    15                    13                    11                     2 
+
+$`Redcar & Cleveland`$change
+          Independent                Labour      Liberal Democrat          Conservative UK Independence Party 
+                    9                   -13                     2                     0                     2 
+
+
+$Redditch
+$Redditch$control
+[1] "CON HOLD"
+
+$Redditch$elected
+Conservative       Labour 
+           9            1 
+
+$Redditch$total
+Conservative       Labour 
+          18           11 
+
+$Redditch$change
+Conservative       Labour 
+           1           -1 
+
+
+$`Reigate & Banstead`
+$`Reigate & Banstead`$control
+[1] "CON HOLD"
+
+$`Reigate & Banstead`$elected
+          Conservative                  Green Residents' Association       Liberal Democrat 
+                    29                      6                      6                      3 
+           Independent 
+                     1 
+
+$`Reigate & Banstead`$total
+          Conservative                  Green Residents' Association       Liberal Democrat 
+                    29                      6                      6                      3 
+           Independent 
+                     1 
+
+$`Reigate & Banstead`$change
+          Conservative                  Green Residents' Association       Liberal Democrat 
+                    -6                      3                      0                      2 
+           Independent 
+                     1 
+
+
+$`Ribble Valley`
+$`Ribble Valley`$control
+[1] "CON HOLD"
+
+$`Ribble Valley`$elected
+    Conservative Liberal Democrat      Independent           Labour 
+              28               10                2                0 
+
+$`Ribble Valley`$total
+    Conservative Liberal Democrat      Independent           Labour 
+              28               10                2                0 
+
+$`Ribble Valley`$change
+    Conservative Liberal Democrat      Independent           Labour 
+              -7                6                2               -1 
+
+
+$Richmondshire
+$Richmondshire$control
+[1] "CON LOSE TO NOC"
+
+$Richmondshire$elected
+    Conservative      Independent Liberal Democrat            Green 
+              10               10                3                1 
+
+$Richmondshire$total
+    Conservative      Independent Liberal Democrat            Green 
+              10               10                3                1 
+
+$Richmondshire$change
+    Conservative      Independent Liberal Democrat            Green 
+              -5                2                2                1 
+
+
+$Rochdale
+$Rochdale$control
+[1] "LAB HOLD"
+
+$Rochdale$elected
+          Labour     Conservative Liberal Democrat 
+              16                3                1 
+
+$Rochdale$total
+          Labour     Conservative Liberal Democrat 
+              47                9                4 
+
+$Rochdale$change
+          Labour     Conservative Liberal Democrat 
+               1               -1                0 
+
+
+$Rochford
+$Rochford$control
+[1] "CON HOLD"
+
+$Rochford$elected
+          Conservative Residents' Association                  Green            Independent 
+                     8                      2                      1                      1 
+      Liberal Democrat  UK Independence Party 
+                     1                      0 
+
+$Rochford$total
+          Conservative Residents' Association                  Green            Independent 
+                    26                      4                      3                      3 
+      Liberal Democrat  UK Independence Party 
+                     3                      0 
+
+$Rochford$change
+          Conservative Residents' Association                  Green            Independent 
+                     1                      0                      0                      1 
+      Liberal Democrat  UK Independence Party 
+                     0                     -2 
+
+
+$Rossendale
+$Rossendale$control
+[1] "LAB HOLD"
+
+$Rossendale$elected
+      Labour Conservative  Independent 
+           5            5            2 
+
+$Rossendale$total
+      Labour Conservative  Independent 
+          19           13            4 
+
+$Rossendale$change
+      Labour Conservative  Independent 
+          -1           -1            2 
+
+
+$Rother
+$Rother$control
+[1] "CON LOSE TO NOC"
+
+$Rother$elected
+    Conservative      Independent Liberal Democrat           Labour            Green 
+              14               13                7                3                1 
+
+$Rother$total
+    Conservative      Independent Liberal Democrat           Labour            Green 
+              14               13                7                3                1 
+
+$Rother$change
+    Conservative      Independent Liberal Democrat           Labour            Green 
+             -18                9                6                2                1 
+
+
+$Rugby
+$Rugby$control
+[1] "CON HOLD"
+
+$Rugby$elected
+    Conservative           Labour Liberal Democrat 
+               8                3                3 
+
+$Rugby$total
+    Conservative           Labour Liberal Democrat 
+              24                9                9 
+
+$Rugby$change
+    Conservative           Labour Liberal Democrat 
+               0                0                0 
+
+
+$Runnymede
+$Runnymede$control
+[1] "CON HOLD"
+
+$Runnymede$elected
+    Conservative      Independent Liberal Democrat           Labour            Green 
+              26                9                3                2                1 
+
+$Runnymede$total
+    Conservative      Independent Liberal Democrat           Labour            Green 
+              26                9                3                2                1 
+
+$Runnymede$change
+    Conservative      Independent Liberal Democrat           Labour            Green 
+              -8                3                3                1                1 
+
+
+$Rushcliffe
+$Rushcliffe$control
+[1] "CON HOLD"
+
+$Rushcliffe$elected
+    Conservative           Labour      Independent Liberal Democrat            Green 
+              29                7                3                3                2 
+
+$Rushcliffe$total
+    Conservative           Labour      Independent Liberal Democrat            Green 
+              29                7                3                3                2 
+
+$Rushcliffe$change
+    Conservative           Labour      Independent Liberal Democrat            Green 
+              -5                3                1                1                0 
+
+
+$Rushmoor
+$Rushmoor$control
+[1] "CON HOLD"
+
+$Rushmoor$elected
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                    9                     3                     1                     0 
+
+$Rushmoor$total
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                   26                    11                     2                     0 
+
+$Rushmoor$change
+         Conservative                Labour      Liberal Democrat UK Independence Party 
+                    0                     0                     1                    -1 
+
+
+$Rutland
+$Rutland$control
+[1] "CON HOLD"
+
+$Rutland$elected
+    Conservative      Independent Liberal Democrat            Green 
+              15                8                3                1 
+
+$Rutland$total
+    Conservative      Independent Liberal Democrat            Green 
+              15                8                3                1 
+
+$Rutland$change
+    Conservative      Independent Liberal Democrat            Green 
+              -2                0                1                1 
+
+
+$Ryedale
+$Ryedale$control
+[1] "NOC NO CHANGE"
+
+$Ryedale$elected
+    Conservative      Independent    Liberal Party Liberal Democrat 
+              12               11                5                2 
+
+$Ryedale$total
+    Conservative      Independent    Liberal Party Liberal Democrat 
+              12               11                5                2 
+
+$Ryedale$change
+    Conservative      Independent    Liberal Party Liberal Democrat 
+              -8                6                2                0 
+
+
+$Salford
+$Salford$control
+[1] "LAB HOLD"
+
+$Salford$elected
+      Labour Conservative  Independent 
+          15            3            1 
+
+$Salford$total
+      Labour Conservative  Independent 
+          50            8            1 
+
+$Salford$change
+      Labour Conservative  Independent 
+          -2            1            1 
+
+
+$Sandwell
+$Sandwell$control
+[1] "LAB HOLD"
+
+$Sandwell$elected
+Labour 
+    24 
+
+$Sandwell$total
+Labour 
+    72 
+
+$Sandwell$change
+Labour 
+     0 
+
+
+$Scarborough
+$Scarborough$control
+[1] "NOC NO CHANGE"
+
+$Scarborough$elected
+         Conservative           Independent                Labour                 Green UK Independence Party 
+                   16                    14                    13                     2                     1 
+
+$Scarborough$total
+         Conservative           Independent                Labour                 Green UK Independence Party 
+                   16                    14                    13                     2                     1 
+
+$Scarborough$change
+         Conservative           Independent                Labour                 Green UK Independence Party 
+                   -7                    11                    -1                     1                    -4 
+
+
+$Sedgemoor
+$Sedgemoor$control
+[1] "CON HOLD"
+
+$Sedgemoor$elected
+         Conservative                Labour      Liberal Democrat           Independent UK Independence Party 
+                   28                    12                     7                     1                     0 
+
+$Sedgemoor$total
+         Conservative                Labour      Liberal Democrat           Independent UK Independence Party 
+                   28                    12                     7                     1                     0 
+
+$Sedgemoor$change
+         Conservative                Labour      Liberal Democrat           Independent UK Independence Party 
+                   -7                     2                     6                     1                    -2 
+
+
+$Sefton
+$Sefton$control
+[1] "LAB HOLD"
+
+$Sefton$elected
+          Labour Liberal Democrat     Conservative      Independent 
+              16                4                1                2 
+
+$Sefton$total
+          Labour Liberal Democrat     Conservative      Independent 
+              43               12                6                5 
+
+$Sefton$change
+          Labour Liberal Democrat     Conservative      Independent 
+               2               -1               -3                2 
+
+
+$Selby
+$Selby$control
+[1] "CON HOLD"
+
+$Selby$elected
+Conservative       Labour  Independent 
+          16            8            7 
+
+$Selby$total
+Conservative       Labour  Independent 
+          16            8            7 
+
+$Selby$change
+Conservative       Labour  Independent 
+          -6            0            6 
+
+
+$Sevenoaks
+$Sevenoaks$control
+[1] "CON HOLD"
+
+$Sevenoaks$elected
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   46                     4                     3                     1                     0 
+
+$Sevenoaks$total
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   46                     4                     3                     1                     0 
+
+$Sevenoaks$change
+         Conservative           Independent      Liberal Democrat                Labour UK Independence Party 
+                   -2                     3                     1                    -1                    -1 
+
+
+$Sheffield
+$Sheffield$control
+[1] "LAB HOLD"
+
+$Sheffield$elected
+               Labour      Liberal Democrat                 Green UK Independence Party 
+                   13                    11                     4                     0 
+
+$Sheffield$total
+               Labour      Liberal Democrat                 Green UK Independence Party 
+                   49                    26                     8                     1 
+
+$Sheffield$change
+               Labour      Liberal Democrat                 Green UK Independence Party 
+                   -3                     3                     2                    -2 
+
+
+$Slough
+$Slough$control
+[1] "LAB HOLD"
+
+$Slough$elected
+      Labour Conservative 
+          12            2 
+
+$Slough$total
+      Labour Conservative 
+          37            5 
+
+$Slough$change
+      Labour Conservative 
+           2           -2 
+
+
+$Solihull
+$Solihull$control
+[1] "CON HOLD"
+
+$Solihull$elected
+         Conservative                 Green      Liberal Democrat                Labour           Independent 
+                    8                     5                     2                     1                     1 
+UK Independence Party 
+                    0 
+
+$Solihull$total
+         Conservative                 Green      Liberal Democrat                Labour           Independent 
+                   26                    14                     6                     3                     2 
+UK Independence Party 
+                    0 
+
+$Solihull$change
+         Conservative                 Green      Liberal Democrat                Labour           Independent 
+                   -6                     3                     2                     1                     1 
+UK Independence Party 
+                   -1 
+
+
+$`Somerset West & Taunton`
+$`Somerset West & Taunton`$control
+[1] "LD WIN"
+
+$`Somerset West & Taunton`$elected
+     Liberal Democrat           Independent          Conservative                Labour                 Green 
+                   30                    14                    10                     3                     2 
+UK Independence Party 
+                    0 
+
+$`Somerset West & Taunton`$total
+     Liberal Democrat           Independent          Conservative                Labour                 Green 
+                   30                    14                    10                     3                     2 
+UK Independence Party 
+                    0 
+
+$`Somerset West & Taunton`$change
+     Liberal Democrat           Independent          Conservative                Labour                 Green 
+                   19                    10                   -31                     1                     2 
+UK Independence Party 
+                   -1 
+
+
+$`South Derbyshire`
+$`South Derbyshire`$control
+[1] "CON HOLD"
+
+$`South Derbyshire`$elected
+Conservative       Labour 
+          22           14 
+
+$`South Derbyshire`$total
+Conservative       Labour 
+          22           14 
+
+$`South Derbyshire`$change
+Conservative       Labour 
+          -2            2 
+
+
+$`South Gloucestershire`
+$`South Gloucestershire`$control
+[1] "CON HOLD"
+
+$`South Gloucestershire`$elected
+    Conservative Liberal Democrat           Labour 
+              33               17               11 
+
+$`South Gloucestershire`$total
+    Conservative Liberal Democrat           Labour 
+              33               17               11 
+
+$`South Gloucestershire`$change
+    Conservative Liberal Democrat           Labour 
+               0                2               -2 
+
+
+$`South Hams`
+$`South Hams`$control
+[1] "CON HOLD"
+
+$`South Hams`$elected
+    Conservative Liberal Democrat            Green      Independent           Labour 
+              16               10                3                2                0 
+
+$`South Hams`$total
+    Conservative Liberal Democrat            Green      Independent           Labour 
+              16               10                3                2                0 
+
+$`South Hams`$change
+    Conservative Liberal Democrat            Green      Independent           Labour 
+              -9                8                0                2               -1 
+
+
+$`South Holland`
+$`South Holland`$control
+[1] "CON HOLD"
+
+$`South Holland`$elected
+         Conservative           Independent UK Independence Party 
+                   24                    13                     0 
+
+$`South Holland`$total
+         Conservative           Independent UK Independence Party 
+                   24                    13                     0 
+
+$`South Holland`$change
+         Conservative           Independent UK Independence Party 
+                   -4                     6                    -2 
+
+
+$`South Kesteven`
+$`South Kesteven`$control
+[1] "CON HOLD"
+
+$`South Kesteven`$elected
+         Conservative           Independent                Labour      Liberal Democrat         Liberal Party 
+                   40                    11                     3                     1                     1 
+UK Independence Party 
+                    0 
+
+$`South Kesteven`$total
+         Conservative           Independent                Labour      Liberal Democrat         Liberal Party 
+                   40                    11                     3                     1                     1 
+UK Independence Party 
+                    0 
+
+$`South Kesteven`$change
+         Conservative           Independent                Labour      Liberal Democrat         Liberal Party 
+                   -5                     5                     0                     0                     1 
+UK Independence Party 
+                   -1 
+
+
+$`South Lakeland`
+$`South Lakeland`$control
+[1] "LD HOLD"
+
+$`South Lakeland`$elected
+Liberal Democrat     Conservative           Labour            Green 
+              12                2                1                1 
+
+$`South Lakeland`$total
+Liberal Democrat     Conservative           Labour            Green 
+              32               15                3                1 
+
+$`South Lakeland`$change
+Liberal Democrat     Conservative           Labour            Green 
+               3               -4                0                1 
+
+
+$`South Norfolk`
+$`South Norfolk`$control
+[1] "CON HOLD"
+
+$`South Norfolk`$elected
+    Conservative Liberal Democrat           Labour 
+              35               10                1 
+
+$`South Norfolk`$total
+    Conservative Liberal Democrat           Labour 
+              35               10                1 
+
+$`South Norfolk`$change
+    Conservative Liberal Democrat           Labour 
+              -4                3                1 
+
+
+$`South Oxfordshire`
+$`South Oxfordshire`$control
+[1] "CON LOSE TO NOC"
+
+$`South Oxfordshire`$elected
+      Liberal Democrat           Conservative                  Green            Independent 
+                    12                     10                      5                      3 
+                Labour Residents' Association 
+                     3                      3 
+
+$`South Oxfordshire`$total
+      Liberal Democrat           Conservative                  Green            Independent 
+                    12                     10                      5                      3 
+                Labour Residents' Association 
+                     3                      3 
+
+$`South Oxfordshire`$change
+      Liberal Democrat           Conservative                  Green            Independent 
+                    11                    -23                      5                      3 
+                Labour Residents' Association 
+                     2                      2 
+
+
+$`South Ribble`
+$`South Ribble`$control
+[1] "CON LOSE TO NOC"
+
+$`South Ribble`$elected
+          Labour     Conservative Liberal Democrat 
+              22               21                5 
+
+$`South Ribble`$total
+          Labour     Conservative Liberal Democrat 
+              22               21                5 
+
+$`South Ribble`$change
+          Labour     Conservative Liberal Democrat 
+               3               -6                3 
+
+
+$`South Somerset`
+$`South Somerset`$control
+[1] "LD HOLD"
+
+$`South Somerset`$elected
+Liberal Democrat     Conservative      Independent 
+              41               15                4 
+
+$`South Somerset`$total
+Liberal Democrat     Conservative      Independent 
+              41               15                4 
+
+$`South Somerset`$change
+Liberal Democrat     Conservative      Independent 
+              12              -13                1 
+
+
+$`South Staffordshire`
+$`South Staffordshire`$control
+[1] "CON HOLD"
+
+$`South Staffordshire`$elected
+         Conservative           Independent                 Green                Labour UK Independence Party 
+                   35                     7                     3                     1                     1 
+
+$`South Staffordshire`$total
+         Conservative           Independent                 Green                Labour UK Independence Party 
+                   35                     7                     3                     1                     1 
+
+$`South Staffordshire`$change
+         Conservative           Independent                 Green                Labour UK Independence Party 
+                   -5                     3                     3                    -1                     0 
+
+
+$`South Tyneside`
+$`South Tyneside`$control
+[1] "LAB HOLD"
+
+$`South Tyneside`$elected
+     Labour Independent       Green 
+         14           4           1 
+
+$`South Tyneside`$total
+     Labour Independent       Green 
+         48           5           1 
+
+$`South Tyneside`$change
+     Labour Independent       Green 
+         -5           4           1 
+
+
+$Southampton
+$Southampton$control
+[1] "LAB HOLD"
+
+$Southampton$elected
+      Labour Conservative  Independent 
+           9            7            0 
+
+$Southampton$total
+      Labour Conservative  Independent 
+          29           18            1 
+
+$Southampton$change
+      Labour Conservative  Independent 
+           2           -1           -1 
+
+
+$`Southend-on-Sea`
+$`Southend-on-Sea`$control
+[1] "CON LOSE TO NOC"
+
+$`Southend-on-Sea`$elected
+    Conservative           Labour      Independent Liberal Democrat 
+               4                5                5                3 
+
+$`Southend-on-Sea`$total
+    Conservative           Labour      Independent Liberal Democrat 
+              20               14               12                5 
+
+$`Southend-on-Sea`$change
+    Conservative           Labour      Independent Liberal Democrat 
+              -8                2                3                3 
+
+
+$Spelthorne
+$Spelthorne$control
+[1] "CON HOLD"
+
+$Spelthorne$elected
+    Conservative Liberal Democrat           Labour            Green      Independent 
+              23                8                4                2                2 
+
+$Spelthorne$total
+    Conservative Liberal Democrat           Labour            Green      Independent 
+              23                8                4                2                2 
+
+$Spelthorne$change
+    Conservative Liberal Democrat           Labour            Green      Independent 
+             -12                5                3                2                2 
+
+
+$`St Albans`
+$`St Albans`$control
+[1] "CON LOSE TO NOC"
+
+$`St Albans`$elected
+Liberal Democrat     Conservative           Labour      Independent            Green 
+              12                7                1                1                0 
+
+$`St Albans`$total
+Liberal Democrat     Conservative           Labour      Independent            Green 
+              25               23                6                3                1 
+
+$`St Albans`$change
+Liberal Democrat     Conservative           Labour      Independent            Green 
+               7               -8                0                1                0 
+
+
+$`St Helens`
+$`St Helens`$control
+[1] "LAB HOLD"
+
+$`St Helens`$elected
+          Labour Liberal Democrat     Conservative            Green      Independent 
+              10                2                1                2                1 
+
+$`St Helens`$total
+          Labour Liberal Democrat     Conservative            Green      Independent 
+              37                4                3                2                2 
+
+$`St Helens`$change
+          Labour Liberal Democrat     Conservative            Green      Independent 
+              -4                1                0                2                1 
+
+
+$Stafford
+$Stafford$control
+[1] "CON HOLD"
+
+$Stafford$elected
+Conservative       Labour  Independent        Green 
+          22           10            7            1 
+
+$Stafford$total
+Conservative       Labour  Independent        Green 
+          22           10            7            1 
+
+$Stafford$change
+Conservative       Labour  Independent        Green 
+          -7            1            5            1 
+
+
+$`Staffordshire Moorlands`
+$`Staffordshire Moorlands`$control
+[1] "CON LOSE TO NOC"
+
+$`Staffordshire Moorlands`$elected
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   25                    17                    13                     1                     0 
+
+$`Staffordshire Moorlands`$total
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                   25                    17                    13                     1                     0 
+
+$`Staffordshire Moorlands`$change
+         Conservative           Independent                Labour      Liberal Democrat UK Independence Party 
+                  -10                     7                     6                    -1                    -2 
+
+
+$Stevenage
+$Stevenage$control
+[1] "LAB HOLD"
+
+$Stevenage$elected
+          Labour     Conservative Liberal Democrat 
+               9                2                2 
+
+$Stevenage$total
+          Labour     Conservative Liberal Democrat 
+              27                7                5 
+
+$Stevenage$change
+          Labour     Conservative Liberal Democrat 
+               1               -2                1 
+
+
+$Stockport
+$Stockport$control
+[1] "NOC NO CHANGE"
+
+$Stockport$elected
+Liberal Democrat           Labour     Conservative      Independent 
+              10                8                2                1 
+
+$Stockport$total
+Liberal Democrat           Labour     Conservative      Independent 
+              26               26                8                3 
+
+$Stockport$change
+Liberal Democrat           Labour     Conservative      Independent 
+               4                1               -5                0 
+
+
+$`Stockton-on-Tees`
+$`Stockton-on-Tees`$control
+[1] "LAB LOSE TO NOC"
+
+$`Stockton-on-Tees`$elected
+          Labour      Independent     Conservative Liberal Democrat 
+              24               16               14                2 
+
+$`Stockton-on-Tees`$total
+          Labour      Independent     Conservative Liberal Democrat 
+              24               16               14                2 
+
+$`Stockton-on-Tees`$change
+          Labour      Independent     Conservative Liberal Democrat 
+              -8                6                1                1 
+
+
+$`Stoke-on-Trent`
+$`Stoke-on-Trent`$control
+[1] "NOC NO CHANGE"
+
+$`Stoke-on-Trent`$elected
+               Labour          Conservative           Independent UK Independence Party 
+                   16                    15                    13                     0 
+
+$`Stoke-on-Trent`$total
+               Labour          Conservative           Independent UK Independence Party 
+                   16                    15                    13                     0 
+
+$`Stoke-on-Trent`$change
+               Labour          Conservative           Independent UK Independence Party 
+                   -5                     8                    -1                    -2 
+
+
+$`Stratford-on-Avon`
+$`Stratford-on-Avon`$control
+[1] "CON HOLD"
+
+$`Stratford-on-Avon`$elected
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              20               11                4                1                0 
+
+$`Stratford-on-Avon`$total
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              20               11                4                1                0 
+
+$`Stratford-on-Avon`$change
+    Conservative Liberal Democrat      Independent            Green           Labour 
+             -11                8                3                1               -1 
+
+
+$Sunderland
+$Sunderland$control
+[1] "LAB HOLD"
+
+$Sunderland$elected
+               Labour          Conservative      Liberal Democrat UK Independence Party                 Green 
+                   12                     5                     5                     3                     1 
+
+$Sunderland$total
+               Labour          Conservative      Liberal Democrat UK Independence Party                 Green 
+                   51                    12                     8                     3                     1 
+
+$Sunderland$change
+               Labour          Conservative      Liberal Democrat UK Independence Party                 Green 
+                  -12                     4                     4                     3                     1 
+
+
+$`Surrey Heath`
+$`Surrey Heath`$control
+[1] "CON HOLD"
+
+$`Surrey Heath`$elected
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              18               10                4                2                1 
+
+$`Surrey Heath`$total
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              18               10                4                2                1 
+
+$`Surrey Heath`$change
+    Conservative Liberal Democrat      Independent            Green           Labour 
+             -14                9                3                2                0 
+
+
+$Swale
+$Swale$control
+[1] "CON LOSE TO NOC"
+
+$Swale$elected
+         Conservative           Independent                Labour      Liberal Democrat                 Green 
+                   16                    12                    11                     5                     2 
+UK Independence Party 
+                    1 
+
+$Swale$total
+         Conservative           Independent                Labour      Liberal Democrat                 Green 
+                   16                    12                    11                     5                     2 
+UK Independence Party 
+                    1 
+
+$Swale$change
+         Conservative           Independent                Labour      Liberal Democrat                 Green 
+                  -16                    10                     6                     5                     2 
+UK Independence Party 
+                   -7 
+
+
+$Swindon
+$Swindon$control
+[1] "CON HOLD"
+
+$Swindon$elected
+    Conservative           Labour Liberal Democrat 
+              12                7                0 
+
+$Swindon$total
+    Conservative           Labour Liberal Democrat 
+              31               24                2 
+
+$Swindon$change
+    Conservative           Labour Liberal Democrat 
+               1               -1                0 
+
+
+$Tameside
+$Tameside$control
+[1] "LAB HOLD"
+
+$Tameside$elected
+      Labour Conservative        Green 
+          17            1            1 
+
+$Tameside$total
+      Labour Conservative        Green 
+          51            5            1 
+
+$Tameside$change
+      Labour Conservative        Green 
+           0           -1            1 
+
+
+$Tamworth
+$Tamworth$control
+[1] "CON HOLD"
+
+$Tamworth$elected
+         Conservative                Labour UK Independence Party           Independent 
+                    8                     1                     1                     0 
+
+$Tamworth$total
+         Conservative                Labour UK Independence Party           Independent 
+                   22                     5                     2                     1 
+
+$Tamworth$change
+         Conservative                Labour UK Independence Party           Independent 
+                    0                    -1                     1                     0 
+
+
+$Tandridge
+$Tandridge$control
+[1] "CON LOSE TO NOC"
+
+$Tandridge$elected
+          Conservative       Liberal Democrat            Independent Residents' Association 
+                     4                      3                      4                      3 
+
+$Tandridge$total
+          Conservative       Liberal Democrat            Independent Residents' Association 
+                    16                     11                      8                      7 
+
+$Tandridge$change
+          Conservative       Liberal Democrat            Independent Residents' Association 
+                    -8                      2                      3                      3 
+
+
+$Teignbridge
+$Teignbridge$control
+[1] "LD GAIN FROM NOC"
+
+$Teignbridge$elected
+Liberal Democrat     Conservative      Independent 
+              26               12                9 
+
+$Teignbridge$total
+Liberal Democrat     Conservative      Independent 
+              26               12                9 
+
+$Teignbridge$change
+Liberal Democrat     Conservative      Independent 
+              15              -19                4 
+
+
+$`Telford & Wrekin`
+$`Telford & Wrekin`$control
+[1] "LAB HOLD"
+
+$`Telford & Wrekin`$elected
+          Labour     Conservative Liberal Democrat      Independent 
+              36               13                4                1 
+
+$`Telford & Wrekin`$total
+          Labour     Conservative Liberal Democrat      Independent 
+              36               13                4                1 
+
+$`Telford & Wrekin`$change
+          Labour     Conservative Liberal Democrat      Independent 
+               9              -10                1                0 
+
+
+$Tendring
+$Tendring$control
+[1] "CON LOSE TO NOC"
+
+$Tendring$elected
+           Independent           Conservative                 Labour  UK Independence Party 
+                    17                     16                      6                      5 
+      Liberal Democrat Residents' Association 
+                     2                      0 
+
+$Tendring$total
+           Independent           Conservative                 Labour  UK Independence Party 
+                    17                     16                      6                      5 
+      Liberal Democrat Residents' Association 
+                     2                      0 
+
+$Tendring$change
+           Independent           Conservative                 Labour  UK Independence Party 
+                    13                     -1                      3                    -14 
+      Liberal Democrat Residents' Association 
+                     1                     -2 
+
+
+$`Test Valley`
+$`Test Valley`$control
+[1] "CON HOLD"
+
+$`Test Valley`$elected
+    Conservative Liberal Democrat      Independent 
+              24               12                7 
+
+$`Test Valley`$total
+    Conservative Liberal Democrat      Independent 
+              24               12                7 
+
+$`Test Valley`$change
+    Conservative Liberal Democrat      Independent 
+             -11                4                7 
+
+
+$Tewkesbury
+$Tewkesbury$control
+[1] "CON HOLD"
+
+$Tewkesbury$elected
+    Conservative Liberal Democrat      Independent            Green 
+              23                8                6                1 
+
+$Tewkesbury$total
+    Conservative Liberal Democrat      Independent            Green 
+              23                8                6                1 
+
+$Tewkesbury$change
+    Conservative Liberal Democrat      Independent            Green 
+             -10                5                4                1 
+
+
+$Thanet
+$Thanet$control
+[1] "NOC NO CHANGE"
+
+$Thanet$elected
+         Conservative                Labour           Independent                 Green UK Independence Party 
+                   25                    20                     8                     3                     0 
+
+$Thanet$total
+         Conservative                Labour           Independent                 Green UK Independence Party 
+                   25                    20                     8                     3                     0 
+
+$Thanet$change
+         Conservative                Labour           Independent                 Green UK Independence Party 
+                    7                    16                     7                     3                   -33 
+
+
+$`Three Rivers`
+$`Three Rivers`$control
+[1] "LD HOLD"
+
+$`Three Rivers`$elected
+Liberal Democrat     Conservative           Labour 
+               8                5                1 
+
+$`Three Rivers`$total
+Liberal Democrat     Conservative           Labour 
+              24               12                3 
+
+$`Three Rivers`$change
+Liberal Democrat     Conservative           Labour 
+               5               -5                0 
+
+
+$Thurrock
+$Thurrock$control
+[1] "NOC NO CHANGE"
+
+$Thurrock$elected
+         Conservative                Labour           Independent UK Independence Party 
+                    6                     6                     5                     0 
+
+$Thurrock$total
+         Conservative                Labour           Independent UK Independence Party 
+                   22                    18                     9                     0 
+
+$Thurrock$change
+         Conservative                Labour           Independent UK Independence Party 
+                    1                     1                     5                    -7 
+
+
+$`Tonbridge & Malling`
+$`Tonbridge & Malling`$control
+[1] "CON HOLD"
+
+$`Tonbridge & Malling`$elected
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              39                9                3                2                1 
+
+$`Tonbridge & Malling`$total
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              39                9                3                2                1 
+
+$`Tonbridge & Malling`$change
+    Conservative Liberal Democrat      Independent            Green           Labour 
+              -9                5                1                2                1 
+
+
+$Torbay
+$Torbay$control
+[1] "NOC NO CHANGE"
+
+$Torbay$elected
+         Conservative      Liberal Democrat           Independent UK Independence Party 
+                   15                    13                     8                     0 
+
+$Torbay$total
+         Conservative      Liberal Democrat           Independent UK Independence Party 
+                   15                    13                     8                     0 
+
+$Torbay$change
+         Conservative      Liberal Democrat           Independent UK Independence Party 
+                   -9                     5                     5                    -1 
+
+
+$Torridge
+$Torridge$control
+[1] "CON LOSE TO NOC"
+
+$Torridge$elected
+          Independent          Conservative                Labour                 Green      Liberal Democrat 
+                   18                    11                     3                     2                     2 
+UK Independence Party 
+                    0 
+
+$Torridge$total
+          Independent          Conservative                Labour                 Green      Liberal Democrat 
+                   18                    11                     3                     2                     2 
+UK Independence Party 
+                    0 
+
+$Torridge$change
+          Independent          Conservative                Labour                 Green      Liberal Democrat 
+                   13                    -9                     2                     0                     0 
+UK Independence Party 
+                   -6 
+
+
+$Trafford
+$Trafford$control
+[1] "LAB GAIN FROM NOC"
+
+$Trafford$elected
+          Labour     Conservative Liberal Democrat            Green 
+              14                4                2                1 
+
+$Trafford$total
+          Labour     Conservative Liberal Democrat            Green 
+              36               20                4                3 
+
+$Trafford$change
+          Labour     Conservative Liberal Democrat            Green 
+               6               -9                2                1 
+
+
+$`Tunbridge Wells`
+$`Tunbridge Wells`$control
+[1] "CON HOLD"
+
+$`Tunbridge Wells`$elected
+    Conservative Liberal Democrat      Independent           Labour 
+               5                5                6                2 
+
+$`Tunbridge Wells`$total
+    Conservative Liberal Democrat      Independent           Labour 
+              28                9                7                4 
+
+$`Tunbridge Wells`$change
+    Conservative Liberal Democrat      Independent           Labour 
+             -13                5                6                2 
+
+
+$Uttlesford
+$Uttlesford$control
+[1] "RA GAIN FROM CON"
+
+$Uttlesford$elected
+Residents' Association       Liberal Democrat           Conservative            Independent 
+                    26                      7                      4                      2 
+
+$Uttlesford$total
+Residents' Association       Liberal Democrat           Conservative            Independent 
+                    26                      7                      4                      2 
+
+$Uttlesford$change
+Residents' Association       Liberal Democrat           Conservative            Independent 
+                    17                      1                    -19                      1 
+
+
+$`Vale of White Horse`
+$`Vale of White Horse`$control
+[1] "LD GAIN FROM CON"
+
+$`Vale of White Horse`$elected
+Liberal Democrat     Conservative            Green 
+              31                6                1 
+
+$`Vale of White Horse`$total
+Liberal Democrat     Conservative            Green 
+              31                6                1 
+
+$`Vale of White Horse`$change
+Liberal Democrat     Conservative            Green 
+              22              -23                1 
+
+
+$Wakefield
+$Wakefield$control
+[1] "LAB HOLD"
+
+$Wakefield$elected
+          Labour     Conservative      Independent Liberal Democrat 
+              14                4                2                1 
+
+$Wakefield$total
+          Labour     Conservative      Independent Liberal Democrat 
+              49               11                2                1 
+
+$Wakefield$change
+          Labour     Conservative      Independent Liberal Democrat 
+              -3                0                2                1 
+
+
+$Walsall
+$Walsall$control
+[1] "CON GAIN FROM NOC"
+
+$Walsall$elected
+    Conservative           Labour Liberal Democrat 
+              13                7                0 
+
+$Walsall$total
+    Conservative           Labour Liberal Democrat 
+              32               26                2 
+
+$Walsall$change
+    Conservative           Labour Liberal Democrat 
+               2               -2                0 
+
+
+$Warwick
+$Warwick$control
+[1] "CON LOSE TO NOC"
+
+$Warwick$elected
+          Conservative       Liberal Democrat                  Green                 Labour 
+                    19                      9                      8                      5 
+Residents' Association 
+                     3 
+
+$Warwick$total
+          Conservative       Liberal Democrat                  Green                 Labour 
+                    19                      9                      8                      5 
+Residents' Association 
+                     3 
+
+$Warwick$change
+          Conservative       Liberal Democrat                  Green                 Labour 
+                   -10                      7                      6                     -3 
+Residents' Association 
+                     0 
+
+
+$Watford
+$Watford$control
+[1] "LD HOLD"
+
+$Watford$elected
+Liberal Democrat           Labour 
+              10                3 
+
+$Watford$total
+Liberal Democrat           Labour 
+              26               10 
+
+$Watford$change
+Liberal Democrat           Labour 
+               0                0 
+
+
+$Waverley
+$Waverley$control
+[1] "CON LOSE TO NOC"
+
+$Waverley$elected
+          Conservative Residents' Association       Liberal Democrat                  Green 
+                    23                     15                     14                      2 
+                Labour            Independent 
+                     2                      1 
+
+$Waverley$total
+          Conservative Residents' Association       Liberal Democrat                  Green 
+                    23                     15                     14                      2 
+                Labour            Independent 
+                     2                      1 
+
+$Waverley$change
+          Conservative Residents' Association       Liberal Democrat                  Green 
+                   -30                     12                     14                      2 
+                Labour            Independent 
+                     2                      0 
+
+
+$Wealden
+$Wealden$control
+[1] "CON HOLD"
+
+$Wealden$elected
+    Conservative      Independent Liberal Democrat            Green 
+              34                5                4                2 
+
+$Wealden$total
+    Conservative      Independent Liberal Democrat            Green 
+              34                5                4                2 
+
+$Wealden$change
+    Conservative      Independent Liberal Democrat            Green 
+              -6                0                4                2 
+
+
+$`Welwyn Hatfield`
+$`Welwyn Hatfield`$control
+[1] "CON LOSE TO NOC"
+
+$`Welwyn Hatfield`$elected
+    Conservative           Labour Liberal Democrat 
+               8                5                5 
+
+$`Welwyn Hatfield`$total
+    Conservative           Labour Liberal Democrat 
+              23               13               12 
+
+$`Welwyn Hatfield`$change
+    Conservative           Labour Liberal Democrat 
+              -3               -1                4 
+
+
+$`West Berkshire`
+$`West Berkshire`$control
+[1] "CON HOLD"
+
+$`West Berkshire`$elected
+    Conservative Liberal Democrat            Green 
+              24               16                3 
+
+$`West Berkshire`$total
+    Conservative Liberal Democrat            Green 
+              24               16                3 
+
+$`West Berkshire`$change
+    Conservative Liberal Democrat            Green 
+             -14               11                3 
+
+
+$`West Devon`
+$`West Devon`$control
+[1] "CON HOLD"
+
+$`West Devon`$elected
+    Conservative      Independent            Green Liberal Democrat           Labour 
+              16               11                2                2                0 
+
+$`West Devon`$total
+    Conservative      Independent            Green Liberal Democrat           Labour 
+              16               11                2                2                0 
+
+$`West Devon`$change
+    Conservative      Independent            Green Liberal Democrat           Labour 
+              -3                1                2                2               -2 
+
+
+$`West Lancashire`
+$`West Lancashire`$control
+[1] "LAB HOLD"
+
+$`West Lancashire`$elected
+      Labour Conservative  Independent 
+           7            7            4 
+
+$`West Lancashire`$total
+      Labour Conservative  Independent 
+          29           19            6 
+
+$`West Lancashire`$change
+      Labour Conservative  Independent 
+          -4            0            4 
+
+
+$`West Lindsey`
+$`West Lindsey`$control
+[1] "CON HOLD"
+
+$`West Lindsey`$elected
+    Conservative Liberal Democrat      Independent           Labour 
+              19               12                5                0 
+
+$`West Lindsey`$total
+    Conservative Liberal Democrat      Independent           Labour 
+              19               12                5                0 
+
+$`West Lindsey`$change
+    Conservative Liberal Democrat      Independent           Labour 
+              -4                5                3               -4 
+
+
+$`West Oxfordshire`
+$`West Oxfordshire`$control
+[1] "CON HOLD"
+
+$`West Oxfordshire`$elected
+    Conservative Liberal Democrat           Labour      Independent 
+               8                3                4                1 
+
+$`West Oxfordshire`$total
+    Conservative Liberal Democrat           Labour      Independent 
+              28               10                9                2 
+
+$`West Oxfordshire`$change
+    Conservative Liberal Democrat           Labour      Independent 
+              -7                2                4                1 
+
+
+$`West Suffolk`
+$`West Suffolk`$control
+[1] "CON WIN"
+
+$`West Suffolk`$elected
+         Conservative           Independent                Labour                 Green UK Independence Party 
+                   43                    15                     5                     1                     0 
+
+$`West Suffolk`$total
+         Conservative           Independent                Labour                 Green UK Independence Party 
+                   43                    15                     5                     1                     0 
+
+$`West Suffolk`$change
+         Conservative           Independent                Labour                 Green UK Independence Party 
+                  -12                    12                     3                     1                    -4 
+
+
+$Wigan
+$Wigan$control
+[1] "LAB HOLD"
+
+$Wigan$elected
+      Labour  Independent Conservative 
+          20            3            2 
+
+$Wigan$total
+      Labour  Independent Conservative 
+          57           10            8 
+
+$Wigan$change
+      Labour  Independent Conservative 
+          -3            2            1 
+
+
+$Winchester
+$Winchester$control
+[1] "LD GAIN FROM CON"
+
+$Winchester$elected
+Liberal Democrat     Conservative 
+              11                5 
+
+$Winchester$total
+Liberal Democrat     Conservative 
+              27               18 
+
+$Winchester$change
+Liberal Democrat     Conservative 
+               6               -6 
+
+
+$`Windsor & Maidenhead`
+$`Windsor & Maidenhead`$control
+[1] "CON HOLD"
+
+$`Windsor & Maidenhead`$elected
+          Conservative       Liberal Democrat Residents' Association            Independent 
+                    23                      9                      5                      4 
+
+$`Windsor & Maidenhead`$total
+          Conservative       Liberal Democrat Residents' Association            Independent 
+                    23                      9                      5                      4 
+
+$`Windsor & Maidenhead`$change
+          Conservative       Liberal Democrat Residents' Association            Independent 
+                   -15                      8                      3                      4 
+
+
+$Wirral
+$Wirral$control
+[1] "LAB LOSE TO NOC"
+
+$Wirral$elected
+          Labour     Conservative Liberal Democrat            Green      Independent 
+              10                8                2                2                0 
+
+$Wirral$total
+          Labour     Conservative Liberal Democrat            Green      Independent 
+              32               22                6                3                3 
+
+$Wirral$change
+          Labour     Conservative Liberal Democrat            Green      Independent 
+              -4                1                1                2                0 
+
+
+$Woking
+$Woking$control
+[1] "NOC NO CHANGE"
+
+$Woking$elected
+    Conservative Liberal Democrat      Independent           Labour 
+               4                4                1                1 
+
+$Woking$total
+    Conservative Liberal Democrat      Independent           Labour 
+              14               10                3                3 
+
+$Woking$change
+    Conservative Liberal Democrat      Independent           Labour 
+              -1                1                0                0 
+
+
+$Wokingham
+$Wokingham$control
+[1] "CON HOLD"
+
+$Wokingham$elected
+    Conservative Liberal Democrat           Labour      Independent 
+               8                8                1                1 
+
+$Wokingham$total
+    Conservative Liberal Democrat           Labour      Independent 
+              31               16                4                3 
+
+$Wokingham$change
+    Conservative Liberal Democrat           Labour      Independent 
+             -10                8                1                1 
+
+
+$Wolverhampton
+$Wolverhampton$control
+[1] "LAB HOLD"
+
+$Wolverhampton$elected
+      Labour Conservative 
+          16            6 
+
+$Wolverhampton$total
+      Labour Conservative 
+          50           10 
+
+$Wolverhampton$change
+      Labour Conservative 
+          -1            1 
+
+
+$Worcester
+$Worcester$control
+[1] "CON LOSE TO NOC"
+
+$Worcester$elected
+Conservative       Labour        Green 
+           7            3            1 
+
+$Worcester$total
+Conservative       Labour        Green 
+          17           15            3 
+
+$Worcester$change
+Conservative       Labour        Green 
+          -1            0            1 
+
+
+$Worthing
+$Worthing$control
+[1] "CON HOLD"
+
+$Worthing$elected
+         Conservative                Labour      Liberal Democrat           Independent UK Independence Party 
+                    5                     5                     1                     0                     0 
+
+$Worthing$total
+         Conservative                Labour      Liberal Democrat           Independent UK Independence Party 
+                   21                    10                     3                     2                     1 
+
+$Worthing$change
+         Conservative                Labour      Liberal Democrat           Independent UK Independence Party 
+                   -6                     5                     1                     0                     0 
+
+
+$Wychavon
+$Wychavon$control
+[1] "CON HOLD"
+
+$Wychavon$elected
+         Conservative      Liberal Democrat                 Green           Independent UK Independence Party 
+                   36                     6                     2                     1                     0 
+
+$Wychavon$total
+         Conservative      Liberal Democrat                 Green           Independent UK Independence Party 
+                   36                     6                     2                     1                     0 
+
+$Wychavon$change
+         Conservative      Liberal Democrat                 Green           Independent UK Independence Party 
+                   -3                     1                     2                     1                    -1 
+
+
+$Wyre
+$Wyre$control
+[1] "CON HOLD"
+
+$Wyre$elected
+         Conservative                Labour UK Independence Party 
+                   37                     9                     4 
+
+$Wyre$total
+         Conservative                Labour UK Independence Party 
+                   37                     9                     4 
+
+$Wyre$change
+         Conservative                Labour UK Independence Party 
+                    1                    -5                     4 
+
+
+$`Wyre Forest`
+$`Wyre Forest`$control
+[1] "CON LOSE TO NOC"
+
+$`Wyre Forest`$elected
+                          Conservative Independent Community & Health Concern 
+                                    14                                      8 
+                           Independent                       Liberal Democrat 
+                                     5                                      3 
+                                Labour                                  Green 
+                                     2                                      1 
+                         Liberal Party 
+                                     0 
+
+$`Wyre Forest`$total
+                          Conservative Independent Community & Health Concern 
+                                    14                                      8 
+                           Independent                       Liberal Democrat 
+                                     5                                      3 
+                                Labour                                  Green 
+                                     2                                      1 
+                         Liberal Party 
+                                     0 
+
+$`Wyre Forest`$change
+                          Conservative Independent Community & Health Concern 
+                                    -6                                      6 
+                           Independent                       Liberal Democrat 
+                                     2                                      1 
+                                Labour                                  Green 
+                                    -3                                      1 
+                         Liberal Party 
+                                    -1 
+
+
+$York
+$York$control
+[1] "NOC NO CHANGE"
+
+$York$elected
+Liberal Democrat           Labour            Green      Independent     Conservative 
+              21               17                4                3                2 
+
+$York$total
+Liberal Democrat           Labour            Green      Independent     Conservative 
+              21               17                4                3                2 
+
+$York$change
+Liberal Democrat           Labour            Green      Independent     Conservative 
+               9                2                0                1              -12 
+
+

@@ -1,0 +1,249 @@
+                                  Length Class  Mode
+Allerdale                         4      -none- list
+Amber Valley                      4      -none- list
+Arun                              4      -none- list
+Ashfield                          4      -none- list
+Ashford                           4      -none- list
+Babergh                           4      -none- list
+Barnsley                          4      -none- list
+Barrow-in-Furness                 4      -none- list
+Basildon                          4      -none- list
+Basingstoke & Deane               4      -none- list
+Bassetlaw                         4      -none- list
+Bath & North East Somerset        4      -none- list
+Bedford                           4      -none- list
+Blaby                             4      -none- list
+Blackburn with Darwen             4      -none- list
+Blackpool                         4      -none- list
+Bolsover                          4      -none- list
+Bolton                            4      -none- list
+Boston                            4      -none- list
+Bournemouth, Christchurch & Poole 4      -none- list
+Bracknell Forest                  4      -none- list
+Bradford                          4      -none- list
+Braintree                         4      -none- list
+Breckland                         4      -none- list
+Brentwood                         4      -none- list
+Brighton & Hove                   4      -none- list
+Broadland                         4      -none- list
+Bromsgrove                        4      -none- list
+Broxbourne                        4      -none- list
+Broxtowe                          4      -none- list
+Burnley                           4      -none- list
+Bury                              4      -none- list
+Calderdale                        4      -none- list
+Cambridge                         4      -none- list
+Cannock Chase                     4      -none- list
+Canterbury                        4      -none- list
+Carlisle                          4      -none- list
+Castle Point                      4      -none- list
+Central Bedfordshire              4      -none- list
+Charnwood                         4      -none- list
+Chelmsford                        4      -none- list
+Cherwell                          4      -none- list
+Cheshire East                     4      -none- list
+Cheshire West & Chester           4      -none- list
+Chesterfield                      4      -none- list
+Chichester                        4      -none- list
+Chorley                           4      -none- list
+Colchester                        4      -none- list
+Copeland                          4      -none- list
+Cotswold                          4      -none- list
+Coventry                          4      -none- list
+Craven                            4      -none- list
+Crawley                           4      -none- list
+Dacorum                           4      -none- list
+Darlington                        4      -none- list
+Dartford                          4      -none- list
+Derby                             4      -none- list
+Derbyshire Dales                  4      -none- list
+Dorset                            4      -none- list
+Dover                             4      -none- list
+Dudley                            4      -none- list
+East Cambridgeshire               4      -none- list
+East Devon                        4      -none- list
+East Hampshire                    4      -none- list
+East Hertfordshire                4      -none- list
+East Lindsey                      4      -none- list
+East Riding of Yorkshire          4      -none- list
+East Staffordshire                4      -none- list
+East Suffolk                      4      -none- list
+Eastbourne                        4      -none- list
+Eastleigh                         4      -none- list
+Eden                              4      -none- list
+Elmbridge                         4      -none- list
+Epping Forest                     4      -none- list
+Epsom & Ewell                     4      -none- list
+Erewash                           4      -none- list
+Exeter                            4      -none- list
+Fenland                           4      -none- list
+Folkestone & Hythe                4      -none- list
+Forest of Dean                    4      -none- list
+Fylde                             4      -none- list
+Gateshead                         4      -none- list
+Gedling                           4      -none- list
+Gravesham                         4      -none- list
+Great Yarmouth                    4      -none- list
+Guildford                         4      -none- list
+Halton                            4      -none- list
+Hambleton                         4      -none- list
+Harborough                        4      -none- list
+Harlow                            4      -none- list
+Hart                              4      -none- list
+Hartlepool                        4      -none- list
+Havant                            4      -none- list
+Herefordshire                     4      -none- list
+Hertsmere                         4      -none- list
+High Peak                         4      -none- list
+Hinckley & Bosworth               4      -none- list
+Horsham                           4      -none- list
+Hyndburn                          4      -none- list
+Ipswich                           4      -none- list
+King's Lynn & West Norfolk        4      -none- list
+Kingston-upon-Hull                4      -none- list
+Kirklees                          4      -none- list
+Knowsley                          4      -none- list
+Lancaster                         4      -none- list
+Leeds                             4      -none- list
+Leicester                         4      -none- list
+Lewes                             4      -none- list
+Lichfield                         4      -none- list
+Lincoln                           4      -none- list
+Liverpool                         4      -none- list
+Luton                             4      -none- list
+Maidstone                         4      -none- list
+Maldon                            4      -none- list
+Malvern Hills                     4      -none- list
+Manchester                        4      -none- list
+Mansfield                         4      -none- list
+Medway                            4      -none- list
+Melton                            4      -none- list
+Mendip                            4      -none- list
+Mid Devon                         4      -none- list
+Mid Suffolk                       4      -none- list
+Mid Sussex                        4      -none- list
+Middlesbrough                     4      -none- list
+Milton Keynes                     4      -none- list
+Mole Valley                       4      -none- list
+New Forest                        4      -none- list
+Newark & Sherwood                 4      -none- list
+Newcastle-upon-Tyne               4      -none- list
+North Devon                       4      -none- list
+North East Derbyshire             4      -none- list
+North East Lincolnshire           4      -none- list
+North Hertfordshire               4      -none- list
+North Kesteven                    4      -none- list
+North Lincolnshire                4      -none- list
+North Norfolk                     4      -none- list
+North Somerset                    4      -none- list
+North Tyneside                    4      -none- list
+North Warwickshire                4      -none- list
+North West Leicestershire         4      -none- list
+Norwich                           4      -none- list
+Nottingham                        4      -none- list
+Oadby & Wigston                   4      -none- list
+Oldham                            4      -none- list
+Pendle                            4      -none- list
+Peterborough                      4      -none- list
+Plymouth                          4      -none- list
+Portsmouth                        4      -none- list
+Preston                           4      -none- list
+Reading                           4      -none- list
+Redcar & Cleveland                4      -none- list
+Redditch                          4      -none- list
+Reigate & Banstead                4      -none- list
+Ribble Valley                     4      -none- list
+Richmondshire                     4      -none- list
+Rochdale                          4      -none- list
+Rochford                          4      -none- list
+Rossendale                        4      -none- list
+Rother                            4      -none- list
+Rugby                             4      -none- list
+Runnymede                         4      -none- list
+Rushcliffe                        4      -none- list
+Rushmoor                          4      -none- list
+Rutland                           4      -none- list
+Ryedale                           4      -none- list
+Salford                           4      -none- list
+Sandwell                          4      -none- list
+Scarborough                       4      -none- list
+Sedgemoor                         4      -none- list
+Sefton                            4      -none- list
+Selby                             4      -none- list
+Sevenoaks                         4      -none- list
+Sheffield                         4      -none- list
+Slough                            4      -none- list
+Solihull                          4      -none- list
+Somerset West & Taunton           4      -none- list
+South Derbyshire                  4      -none- list
+South Gloucestershire             4      -none- list
+South Hams                        4      -none- list
+South Holland                     4      -none- list
+South Kesteven                    4      -none- list
+South Lakeland                    4      -none- list
+South Norfolk                     4      -none- list
+South Oxfordshire                 4      -none- list
+South Ribble                      4      -none- list
+South Somerset                    4      -none- list
+South Staffordshire               4      -none- list
+South Tyneside                    4      -none- list
+Southampton                       4      -none- list
+Southend-on-Sea                   4      -none- list
+Spelthorne                        4      -none- list
+St Albans                         4      -none- list
+St Helens                         4      -none- list
+Stafford                          4      -none- list
+Staffordshire Moorlands           4      -none- list
+Stevenage                         4      -none- list
+Stockport                         4      -none- list
+Stockton-on-Tees                  4      -none- list
+Stoke-on-Trent                    4      -none- list
+Stratford-on-Avon                 4      -none- list
+Sunderland                        4      -none- list
+Surrey Heath                      4      -none- list
+Swale                             4      -none- list
+Swindon                           4      -none- list
+Tameside                          4      -none- list
+Tamworth                          4      -none- list
+Tandridge                         4      -none- list
+Teignbridge                       4      -none- list
+Telford & Wrekin                  4      -none- list
+Tendring                          4      -none- list
+Test Valley                       4      -none- list
+Tewkesbury                        4      -none- list
+Thanet                            4      -none- list
+Three Rivers                      4      -none- list
+Thurrock                          4      -none- list
+Tonbridge & Malling               4      -none- list
+Torbay                            4      -none- list
+Torridge                          4      -none- list
+Trafford                          4      -none- list
+Tunbridge Wells                   4      -none- list
+Uttlesford                        4      -none- list
+Vale of White Horse               4      -none- list
+Wakefield                         4      -none- list
+Walsall                           4      -none- list
+Warwick                           4      -none- list
+Watford                           4      -none- list
+Waverley                          4      -none- list
+Wealden                           4      -none- list
+Welwyn Hatfield                   4      -none- list
+West Berkshire                    4      -none- list
+West Devon                        4      -none- list
+West Lancashire                   4      -none- list
+West Lindsey                      4      -none- list
+West Oxfordshire                  4      -none- list
+West Suffolk                      4      -none- list
+Wigan                             4      -none- list
+Winchester                        4      -none- list
+Windsor & Maidenhead              4      -none- list
+Wirral                            4      -none- list
+Woking                            4      -none- list
+Wokingham                         4      -none- list
+Wolverhampton                     4      -none- list
+Worcester                         4      -none- list
+Worthing                          4      -none- list
+Wychavon                          4      -none- list
+Wyre                              4      -none- list
+Wyre Forest                       4      -none- list
+York                              4      -none- list
