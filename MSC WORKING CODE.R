@@ -22,3 +22,6 @@ head(names(results))
 sum(newdt$LAName==names(results))
 newdt$LAName==names(results)
 summary(results.df$elected)
+
+colnames(new)[18] <- 'Control2019'
+sum(results$Allerdale$elected)
