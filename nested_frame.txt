@@ -1,0 +1,2 @@
+"control"|"elected"|"total"|"change"
+"Allerdale"|
