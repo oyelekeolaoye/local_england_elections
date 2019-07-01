@@ -13,8 +13,7 @@ library(magrittr)
 library(plyr)
 library(sf)
 
-map <- st_read("Local_Authority_Districts_December_2017_Full_Extent_Boundaries_in_United_Kingdom_WGS84.shp")
-str(map)
+
 
 load("brexit.rdata")
 
@@ -51,77 +50,80 @@ merged_dataset[, numeric_columns] <- lapply(numeric_columns, function(col) {
   as.numeric(merged_dataset[[col]])
 })
 
-write.csv(merged_dataset, "leke.csv")
-
-
-#putting columns together
-head(merged_dataset)
-current_df <- merged_dataset
-current_df$seats_available <- current_df$elected.Conservative + current_df$elected.Green + current_df$elected.Independent + current_df$`elected.Independent Community & Health Concern`
-                              + current_df$elected.Labour + current_df$`elected.Liberal Democrat`+ current_df$`elected.Liberal Party`+ current_df$`elected.Residents' Association`
-                              + current_df$`elected.UK Independence Party`
-names(current_df) <- str_replace(names(current_df), " ", '_')
-
-
 ##inspecting NA values in brexit data frame
 summary(brexit) ##all na's are zero values for no recorded votes for parties associated in the area
 ##replacing NAs by zeros
-current_df[is.na(current_df)] <- 0
+merged_dataset[is.na(merged_dataset)] <- 0
 
-#creating a total seats column
-current_df$total_seats <- 0
+#SAVING MERGED DATASET AS CSV FILE
+write.csv(merged_dataset, "merged.csv")
 
-#filling values for seats_available in 2019 prior to election
-current_df$seats_available <- current_df$elected.Conservative+current_df$elected.Green+current_df$elected.Independent+current_df$`elected.Independent Community & Health Concern`+current_df$elected.Labour+current_df$`elected.Liberal Democrat`+current_df$`elected.Liberal Party`+current_df$`elected.Residents' Association`+current_df$`elected.UK Independence Party`
-   
-#filling values for total_seats in each area
-current_df$total_seats <- current_df$total.Conservative+current_df$total.Green+current_df$total.Independent+current_df$`total.Independent Community & Health Concern`+current_df$total.Labour+current_df$`total.Liberal Democrat`+current_df$`total.Liberal Party`+current_df$`total.Residents' Association`+current_df$`total.UK Independence Party`
+#duplicating merged dataset
+current_df <- merged_dataset
 
-#removing all elected and total columns for parties
-current_df$elected.Conservative <- NULL
-current_df$elected.Green <- NULL
-current_df$elected.Independent <- NULL
-current_df$elected.Labour <- NULL
-current_df$`elected.Independent Community & Health Concern` <- NULL
-current_df$`elected.Liberal Democrat`<- NULL
-current_df$`elected.Liberal Party` <- NULL
-current_df$`elected.Residents' Association` <- NULL
-current_df$`elected.UK Independence Party` <- NULL
 
-current_df$total.Conservative <- NULL
-current_df$total.Green <- NULL
-current_df$total.Independent <- NULL
-current_df$`total.Independent Community & Health Concern` <- NULL
-current_df$total.Labour <- NULL
-current_df$`total.Liberal Democrat` <- NULL
-current_df$`total.Liberal Party` <- NULL
-current_df$`total.Residents' Association` <- NULL
-current_df$`total.UK Independence Party` <- NULL
+#column names of merged dataset contain special characters and spaces in multiple patterns
+#renaming columns
+var_names <- c("la_name", "region", "ab", "c1", "c2", "de", "con_vote", "lab_vote", "ld_vote", "ukip_vote", 
+               "green_vote", "leave", "control", "elected_ind", "elected_con", "elected_lab", "elected_ukip", 
+               "total_ind", "total_con", "total_lab", "total_ukip", "change_ind", "change_con", "change_lab", 
+               "change_ukip", "elected_green", "total_green", "change_green", "elected_ld", "total_ld", 
+               "change_ld", "elected_ra", "total_ra", "change_ra", "elected_lp", "total_lp", "change_lp", 
+               "elected_ichc", "total_ichc", "change_ichc")
 
-#merging change for non-major parties into "change.others" column
-current_df$change.others <- current_df$`change.Independent Community & Health Concern`+current_df$`change.Liberal Party`+current_df$`change.Residents' Association` 
-current_df$`change.Independent Community & Health Concern`<- NULL
-current_df$`change.Liberal Party` <- NULL
-current_df$`change.Residents' Association`<- NULL
+colnames(current_df) <- var_names
+
+
+#putting columns together
+#we will merge variables for minor parties to the independent column
+
+#FOR ELECTED VARIABLE
+current_df$elected_ind <- current_df$elected_ind + current_df$elected_ichc + current_df$elected_lp + current_df$elected_ra
+#removing the merged columns
+current_df <- current_df %>% select(-elected_ichc, -elected_lp, -elected_ra)
+
+#FOR CHANGE VARIABLE
+current_df$change_ind <- current_df$change_ind + current_df$change_ichc + current_df$change_lp + current_df$change_ra
+#removing the merged columns
+current_df <- current_df %>% select(-change_ichc, -change_lp, -change_ra)
+
+#FOR TOTAL VARIABLE
+current_df$total_ind <- current_df$total_ind + current_df$total_ichc + current_df$total_lp + current_df$total_ra
+current_df <- current_df %>% select(-total_ichc, -total_lp, -total_ra)
+
+
+#COLLAPSING ELECTED AND TOTAL VARIABLE TO AVAILABLE SEATS AND TOTAL SEATS
+current_df$seats_available <- current_df$elected_con + current_df$elected_green + current_df$elected_ind + current_df$elected_lab +
+                              current_df$elected_ld + current_df$elected_ukip
+current_df$total_seats <- current_df$total_con + current_df$total_green + current_df$total_ind + current_df$total_lab + 
+                          current_df$total_ld + current_df$total_ukip
+
+#SEPARATING ELECTED AND TOTAL VARIABLES FOR POSSIBLE LATER USE
+partial_df <- current_df %>% select(la_name, elected_con, elected_green, elected_ind, elected_lab, elected_ld, elected_ukip
+                                    , total_con, total_green, total_ind, total_lab, total_ld, total_ukip)
+current_df <- current_df %>% select(-elected_con, -elected_green, -elected_ind, -elected_lab, -elected_ld, -elected_ukip
+                                    , -total_con, -total_green, -total_ind, -total_lab, -total_ld, -total_ukip)
+
+
 
 #converting control and region to factor
 current_df$control <- as.factor(current_df$control)
-current_df$Region <- as.factor(current_df$Region)
-str(current_df)
+current_df$region <- as.factor(current_df$region)
 
-colnames(current_df) <- str_replace(colnames(current_df), " ", "_")
+
+
 
 #combining region classes to N,E,S,W and Yorkshire and the Humber (reduces levels from 8 to 5)
-current_df$Region <- str_replace(current_df$Region, "East Midlands", "East")
-current_df$Region <- str_replace(current_df$Region, "North East", "North")
-current_df$Region <- str_replace(current_df$Region, "North West", "North")
-current_df$Region <- str_replace(current_df$Region, "South East", "South")
-current_df$Region <- str_replace(current_df$Region, "South West", "South")
-current_df$Region <- str_replace(current_df$Region, "West Midlands", "West")
+current_df$region <- str_replace(current_df$region, "East Midlands", "East")
+current_df$region <- str_replace(current_df$region, "North East", "North")
+current_df$region <- str_replace(current_df$region, "North West", "North")
+current_df$region <- str_replace(current_df$region, "South East", "South")
+current_df$region <- str_replace(current_df$region, "South West", "South")
+current_df$region <- str_replace(current_df$region, "West Midlands", "West")
 
-current_df$Region <- as.factor(current_df$Region)
+current_df$region <- as.factor(current_df$region)
 
-merged_dataset[is.na(merged_dataset)] <- 0
+
 
 ##NOTES
 ##259 councils were scheduled for election this year according to BBC
@@ -560,3 +562,10 @@ ggpairs(cormat)
 cormat2 <- current_df %>% select(-AB, -C1, -C2, -DE, -Leave, -LAName, -Region, -control, -seats_available, -total_seats)
 ggpairs(cormat2)
 
+
+
+#******************************************************************************************************
+#---IMPORTING SHAPE FILE AND DRAWING MAPS
+#******************************************************************************************************
+map <- st_read("Local_Authority_Districts_December_2017_Full_Extent_Boundaries_in_United_Kingdom_WGS84.shp")
+str(map)
