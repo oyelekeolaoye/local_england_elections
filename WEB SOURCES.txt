@@ -19,3 +19,6 @@ https://www.youtube.com/watch?v=dcwuBo4PvE0
 MODELLING RESOURCES
 https://en.wikipedia.org/wiki/Multinomial_logistic_regression
 https://stats.idre.ucla.edu/r/dae/multinomial-logistic-regression/
+
+SHAPE FILES 
+https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2017-full-extent-boundaries-in-united-kingdom-wgs84/data?page=13

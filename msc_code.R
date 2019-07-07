@@ -1,19 +1,32 @@
 #libraries
 require(data.table)
-require(rgdal)
 library(ggplot2)
 library(dplyr)
 library(GGally)
 library(tidyr)
 library(tidyverse)
+install.packages("devtools")
+devtools::install_github("ropenscilabs/roomba")
 library(purrr)
 library(data.table)
 library(roomba)
 library(magrittr)
 library(plyr)
 library(sf)
+library(tmap)
+library(tmaptools)
+library(leaflet)
+library(skimr)
+library(moderndive)
+library(snakecase)
+library(olsrr)
 
 
+
+
+
+#displaying numbers and avoiding scientific notation
+options(scipen = 999)
 
 load("brexit.rdata")
 
@@ -62,7 +75,7 @@ write.csv(merged_dataset, "merged.csv")
 current_df <- merged_dataset
 
 
-#column names of merged dataset contain special characters and spaces in multiple patterns
+#column names of merged dataset contain special characters and white spaces in multiple patterns
 #renaming columns
 var_names <- c("la_name", "region", "ab", "c1", "c2", "de", "con_vote", "lab_vote", "ld_vote", "ukip_vote", 
                "green_vote", "leave", "control", "elected_ind", "elected_con", "elected_lab", "elected_ukip", 
@@ -77,28 +90,28 @@ colnames(current_df) <- var_names
 #putting columns together
 #we will merge variables for minor parties to the independent column
 
-#FOR ELECTED VARIABLE
+#FOR ELECTED VARIabLE
 current_df$elected_ind <- current_df$elected_ind + current_df$elected_ichc + current_df$elected_lp + current_df$elected_ra
 #removing the merged columns
 current_df <- current_df %>% select(-elected_ichc, -elected_lp, -elected_ra)
 
-#FOR CHANGE VARIABLE
+#FOR CHANGE VARIabLE
 current_df$change_ind <- current_df$change_ind + current_df$change_ichc + current_df$change_lp + current_df$change_ra
 #removing the merged columns
 current_df <- current_df %>% select(-change_ichc, -change_lp, -change_ra)
 
-#FOR TOTAL VARIABLE
+#FOR TOTAL VARIabLE
 current_df$total_ind <- current_df$total_ind + current_df$total_ichc + current_df$total_lp + current_df$total_ra
 current_df <- current_df %>% select(-total_ichc, -total_lp, -total_ra)
 
 
-#COLLAPSING ELECTED AND TOTAL VARIABLE TO AVAILABLE SEATS AND TOTAL SEATS
+#COLLAPSING ELECTED AND TOTAL VARIabLE TO AVAILabLE SEATS AND TOTAL SEATS
 current_df$seats_available <- current_df$elected_con + current_df$elected_green + current_df$elected_ind + current_df$elected_lab +
                               current_df$elected_ld + current_df$elected_ukip
 current_df$total_seats <- current_df$total_con + current_df$total_green + current_df$total_ind + current_df$total_lab + 
                           current_df$total_ld + current_df$total_ukip
 
-#SEPARATING ELECTED AND TOTAL VARIABLES FOR POSSIBLE LATER USE
+#SEPARATING ELECTED AND TOTAL VARIabLES FOR POSSIBLE LATER USE
 partial_df <- current_df %>% select(la_name, elected_con, elected_green, elected_ind, elected_lab, elected_ld, elected_ukip
                                     , total_con, total_green, total_ind, total_lab, total_ld, total_ukip)
 current_df <- current_df %>% select(-elected_con, -elected_green, -elected_ind, -elected_lab, -elected_ld, -elected_ukip
@@ -109,8 +122,6 @@ current_df <- current_df %>% select(-elected_con, -elected_green, -elected_ind, 
 #converting control and region to factor
 current_df$control <- as.factor(current_df$control)
 current_df$region <- as.factor(current_df$region)
-
-
 
 
 #combining region classes to N,E,S,W and Yorkshire and the Humber (reduces levels from 8 to 5)
@@ -126,8 +137,8 @@ current_df$region <- as.factor(current_df$region)
 
 
 ##NOTES
-##259 councils were scheduled for election this year according to BBC
-#The brexit data frame consist of 342 local areas, since only 248 local areas held elections in May 2, 2019 
+##248 councils were scheduled for election this year according to BBC
+#The brexit data frame consist of 342 local authorities(including some local authorities in Wales), since only 248 local areas held elections in May 2, 2019 
 #we are considering these 248 in the analysis, of these 248 local areas for which election results are available for,
 #there are no brexit information for (10) of these areas, which implies that we have complete information on
 #238 local areas.
@@ -139,16 +150,16 @@ sum(current_df$seats_available)/sum(current_df$total_seats)
 
 
 #***************************************************
-#PROPORTION OF SEATS WON BY EACH PARTY OF AVAILABLE
+#PROPORTION OF SEATS WON BY EACH PARTY OF AVAILabLE
 #***************************************************
 sum(merged_dataset$elected.Conservative)/sum(current_df$seats_available)
 #CONSERVATIVES took 41.9% of the seats available
 
 sum(merged_dataset$elected.Labour)/sum(current_df$seats_available)
-#LABOUR took 24.5% of the seats available
+#LabOUR took 24.5% of the seats available
 
-sum(merged_dataset$`elected.Liberal Democrat`)/sum(current_df$seats_available)
-#LIBDEM took 15.7% of the seats available
+sum(merged_dataset$`elected.Liberal democrat`)/sum(current_df$seats_available)
+#LIBdeM took 15.7% of the seats available
 
 sum(merged_dataset$elected.Green)/sum(current_df$seats_available)
 #Greens took 3% of the seats available
@@ -176,19 +187,11 @@ sum(current_df$seats_available == current_df$total_seats)
 #************************************************
 #INSIGHTS FROM THE DATA
 #************************************************
-# The conservatives lost the most seats in "Bournemouth, Christchurch & Poole council in the South Region"
-# Most of the people in this council belong to the C1 social grade. In contrast, the CONSERVATIVES obtained 48.7%
+# The conservatives lost the most seats in "Bournemouth, Christchurch & Poole council in the South region"
+# Most of the people in this council belong to the c1 social grade. In contrast, the CONSERVATIVES obtained 48.7%
 # votes in this council in the 2017 general election. No party currently has an overall control in this council but Independent candidates made
 #the most gains.
-
-
-
-
-
-
-
-
-
+current_df[which.min(current_df$change_con),]
 
 
 #************************************************
@@ -198,10 +201,10 @@ sum(merged_dataset$total.Conservative)/sum(current_df$total_seats)
 #CONSERVATIVES have 38.6% of the total seats in the 238 councils
 
 sum(merged_dataset$total.Labour)/sum(current_df$total_seats)
-#LABOUR have 31.8% of the total seats in the 238 councils
+#LabOUR have 31.8% of the total seats in the 238 councils
 
-sum(merged_dataset$`total.Liberal Democrat`)/sum(current_df$total_seats)
-#LIBDEM have 14.7% of the total seats in the 238 councils
+sum(merged_dataset$`total.Liberal democrat`)/sum(current_df$total_seats)
+#LIBdeM have 14.7% of the total seats in the 238 councils
 
 sum(merged_dataset$total.Green)/sum(current_df$total_seats)
 #GREENS have 2.5% of the total seats in the 238 councils
@@ -210,7 +213,7 @@ sum(merged_dataset$`total.UK Independence Party`)/sum(current_df$total_seats)
 #UKIP have 0.37% of the total seats in the 238 councils
 
 sum(merged_dataset$total.Independent)/sum(current_df$total_seats)
-#INDEPENDENT candidates have 10.2% of the total seats in the 238 councils
+#INdePENdeNT candidates have 10.2% of the total seats in the 238 councils
 
 #Other minor parties combined own 1.83% of the total seats in the 238 councils
 
@@ -225,44 +228,48 @@ sum(merged_dataset$total.Independent)/sum(current_df$total_seats)
 #---SUMMARY STATISTICS
 #******************************************************************************************************
 summary(current_df)
-#from the summary stats, CONSERVATIVES held control in 83 councils, LABOUR held control in 53 councils
-#CONSERVATIVES lost to No Overall Control in 33 Councils, LABOUR lost to No Overall Control in 10 councils
-#LIBDEM gained from CONSERVATIVES in 7 councils
+skim(current_df)
+#from the summary stats, CONSERVATIVES held control in 86 councils, LabOUR held control in 53 councils
+#CONSERVATIVES lost to No Overall Control in 33 Councils, LabOUR lost to No Overall Control in 10 councils
+#LIBdeM gained from CONSERVATIVES in 7 councils
 
-table(current_df$control)
-
-mean(current_df$change.Conservative)
-var(current_df$change.Conservative)
 
 
 
 #******************************************************************************************************
 #---BOXPLOTS FOR change variable FOR EACH PARTY
 #******************************************************************************************************
-ggplot(data = current_df, mapping = aes(y=current_df$change.Conservative)) +
-  geom_boxplot()
+ggplot(data = current_df, mapping = aes(y=current_df$change_con)) +
+  geom_boxplot() +
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR CONSERVATIVES")
 #boxplot indicates 8 outliers/normal distribution
 
-ggplot(data = current_df, mapping = aes(y=current_df$change.Green)) +
-  geom_boxplot()
-#boxplot indicates 6 outliers/heavy right skewness
+ggplot(data = current_df, mapping = aes(y=current_df$change_green)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR GREENS")
+#boxplot indicates 6 outliers/right skewness
 
-ggplot(data = current_df, mapping = aes(y=current_df$change.Independent)) +
-  geom_boxplot()
-#boxplot indicates 10 outlying values/right skewness
+ggplot(data = current_df, mapping = aes(y=current_df$change_ind)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR INdePENdeNTS")
+  #boxplot indicates 7 outlying values/right skewness
 
-ggplot(data = current_df, mapping = aes(y=current_df$change.Labour)) +
-  geom_boxplot()
+ggplot(data = current_df, mapping = aes(y=current_df$change_lab)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR LabOUR")
 #boxplot indicates normal distribution/many outlying values
 
-ggplot(data = current_df, mapping = aes(y=current_df$change.Liberal_Democrat)) +
-  geom_boxplot()
+ggplot(data = current_df, mapping = aes(y=current_df$change_ld)) +
+  geom_boxplot() +
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR LIBERAL deMOCRATS")
 #right skewness/couple of outlying values
 
-ggplot(data = current_df, mapping = aes(y=current_df$`change.UK_Independence Party`)) +
-  geom_boxplot()
-ggplot(data = current_df, mapping = aes(x=Region, y=current_df$`change.UK_Independence Party`)) +
-  geom_boxplot()
+ggplot(data = current_df, mapping = aes(y=current_df$change_ukip)) +
+  geom_boxplot()+ 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR UKIP")
+ggplot(data = current_df, mapping = aes(x=region, y=current_df$change_ukip)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR UKIP BY REGION")
 #most of the points for UKIP are zeros(185 total zeros of 238 observations)
 #boxplot not very informative but most of the positives came from Yorkshire and the Humber after splitting plots by region
 
@@ -270,181 +277,201 @@ ggplot(data = current_df, mapping = aes(x=Region, y=current_df$`change.UK_Indepe
 
 
 #******************************************************************************************************
-#---scatterplots for examining relationship between social class AB & loss/gain
+#---scatterplots for examining relationship between social grade ab & loss/gain
 #*****************************************************************************************************
-ggplot(current_df, aes(change.Conservative, AB)) +
-  geom_point()
-##conservatives seem to record less losses in areas with low proportion of social grade AB
-##there seems to be a mild inverse relationship between social grade AB and loss for convervatives
+ggplot(current_df, aes(change_con, ab)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##conservatives seem to record less losses in areas with low proportion of social grade ab
+##there seems to be a mild inverse relationship between social grade ab and loss for convervatives
 
-ggplot(current_df, aes(change.Labour, AB)) +
-  geom_point()
-##most of the losses recorded by labour seem to be in areas with low proportion of social grade AB
-##majority of the data points indicate a no change for labour and gains where recorded in areas with high proportion of social grade AB
+ggplot(current_df, aes(change_lab, ab)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##most of the losses recorded by labour seem to be in areas with low proportion of social grade ab
+##majority of the data points indicate a no change for labour and gains where recorded in areas with high proportion of social grade ab
 
-ggplot(current_df, aes(change.Green, AB)) +
-  geom_point()
-##there is no clear pattern of a relationship between social grade AB and change for Green
-##high gains for green seem to be from areas with median proportion (0.2-0.3) of social grade AB
+ggplot(current_df, aes(change_green, ab)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##there is no clear pattern of a relationship between social grade ab and change for Green
+##high gains for green seem to be from areas with median proportion (0.2-0.3) of social grade ab
 
-ggplot(current_df, aes(current_df$`change.UK_Independence Party`, AB)) +
-  geom_point()
-##there doesn't seem to be a clear relationship between change for UKIP and social grade AB
+ggplot(current_df, aes(current_df$change_ukip, ab)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##there doesn't seem to be a clear relationship between change for UKIP and social grade ab
 
-ggplot(current_df, aes(current_df$change.Liberal_Democrat, AB)) +
-  geom_point()
-##there seems to be a positive relationship between proportion of social grade AB and gains for LD
-##more gains where recorded in areas with more than 20% of people in social grade AB
+ggplot(current_df, aes(current_df$change_ld, ab)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##there seems to be a positive relationship between proportion of social grade ab and gains for LD
+##more gains where recorded in areas with more than 20% of people in social grade ab
 
 
-ggplot(current_df, aes(current_df$change.Independent, AB)) +
-  geom_point()
-##there seems to be a negative relationship between AB and change for Independents
-##more gains where recorded in areas with less than 30% of people in social grade AB
-
-ggplot(current_df, aes(current_df$change.others, AB)) +
-  geom_point()
-##the pattern of relationship is not clear for other minor parties combined into "others" for social grade AB
-
+ggplot(current_df, aes(current_df$change_ind, ab)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##there seems to be a negative linear relationship between ab and change for Independents
+##more gains where recorded in areas with less than 30% of people in social grade ab
 
 
 #******************************************************************************************************
-#---scatterplots for examining relationship between social class C1 & loss/gain
+#---scatterplots for examining relationship between social grade c1 & loss/gain
 #*****************************************************************************************************
-ggplot(current_df, aes(change.Conservative, C1)) +
-  geom_point()
-##the higher the losses came from areas with high proportion of C1 social grade for the Tories
-ggplot(current_df, aes(current_df$change.Green, C1)) +
-  geom_point()
-##the pattern is not clear for C1 and change for Greens
+ggplot(current_df, aes(change_con, c1)) +
+  geom_point() + 
+  ggtitle("SCATTERPLOT OF SOCIAL GRAde c1 VS CHANGE FOR CONS") +
+  geom_smooth(method = "lm", se = FALSE)
+##the higher the losses came from areas with high proportion of c1 social grade for the Tories
+##roughly linear and negative relationship
 
-ggplot(current_df, aes(current_df$change.Independent, C1)) +
-  geom_point() 
-##there seems to be a mild inverse relationship between C1 and gains for Independents
-##more gains came from areas with less than 30% of people in social grade C1
+ggplot(current_df, aes(current_df$change_green, c1)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##the pattern is not clear for c1 and change for Greens
 
-ggplot(current_df, aes(current_df$change.Labour, C1)) +
-  geom_point()
-##labour seem to do well in areas with more people in social grade C1
+ggplot(current_df, aes(current_df$change_ind, c1)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##there seems to be a mild inverse relationship between c1 and gains for Independents
+##more gains came from areas with less than 30% of people in social grade c1
 
-ggplot(current_df, aes(current_df$change.Liberal_Democrat, C1)) +
-  geom_point() 
-#liberal democrats seem to be gain more in areas with more people in social grade C1
-#although the pattern is not clear, there seems to be a slightly positive relationship
-#between proportion of C1 grade and gains for LibDem
-ggplot(current_df, aes(current_df$`change.UK_Independence Party`, C1)) +
-  geom_point() 
-#the pattern is not clear for UKIP and C1
+ggplot(current_df, aes(current_df$change_lab, c1)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+##labour seem to do well in areas with more people in social grade c1
+##scatterplot indicates positive linear relationship
 
-ggplot(current_df, aes(current_df$change.others, C1)) +
-  geom_point() 
-#the pattern is not clear for other minor parties 
+ggplot(current_df, aes(current_df$change_ld, c1)) +
+  geom_point()  +
+  geom_smooth(method = "lm", se = FALSE)
+#liberal democrats seem to be gain more in areas with more people in social grade c1
+#although the pattern is not clear, there seems to be a slightly positive linear relationship
+#between proportion of c1 grade and gains for Libdem
+
+ggplot(current_df, aes(current_df$change_ukip, c1)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the pattern is not clear for UKIP and c1
+
 
 #******************************************************************************
-#---scatterplots for examining relationship between social class C2 & loss/gain
+#---scatterplots for examining relationship between social grade c2 & loss/gain
 #*******************************************************************************
 
-ggplot(current_df, aes(current_df$change.Conservative, C2)) +
-  geom_point() 
-#there doesn't seem to be a linear relationship between proportion of C2 and change for conservatives
+ggplot(current_df, aes(current_df$change_con, c2)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#there doesn't seem to be a linear relationship between proportion of c2 and change for conservatives
+#pattern seems random
 
-ggplot(current_df, aes(current_df$change.Green, C2)) +
-  geom_point() 
-#the pattern is not clear for C2 and greens
+ggplot(current_df, aes(current_df$change_green, c2)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the pattern is not clear for c2 and greens (no linear relationship)
 
-ggplot(current_df, aes(current_df$change.Independent, C2)) +
-  geom_point() 
-#there seems to be a slightly positive relationship between C2 and change for Independent candidates
+ggplot(current_df, aes(current_df$change_ind, c2)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#there seems to be a slightly positive relationship between c2 and change for Independents
 #this relationship seems to be weak
 
-ggplot(current_df, aes(current_df$change.Labour, C2)) +
-  geom_point() 
-#the pattern is not clear for C2 and change for labour
+ggplot(current_df, aes(current_df$change_lab, c2)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the pattern is not clear for c2 and change for labour
 
-ggplot(current_df, aes(current_df$change.Liberal_Democrat, C2)) +
-  geom_point() 
-#the pattern is not clear for C2 and change for LibDem
+ggplot(current_df, aes(current_df$change_ld, c2)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the pattern is not clear for c2 and change for Libdem
 
-ggplot(current_df, aes(current_df$change.others, C2)) +
-  geom_point() 
-#the pattern is not clear for C2 and change for other minor parties
 
-ggplot(current_df, aes(current_df$`change.UK_Independence Party`, C2)) +
-  geom_point() 
-#the pattern is not clear for C2 and change for UKIP
-
-#******************************************************************************
-#---scatterplots for examining relationship between social class DE & loss/gain
-#*******************************************************************************
-
-ggplot(current_df, aes(current_df$change.Conservative, DE)) +
-  geom_point() 
-#there seem to be a positive relationship between proportion for DE and gain for Cons 
-#they gained most in areas with more than 20% to 40% of people in social class DE
-
-ggplot(current_df, aes(current_df$change.Independent, DE)) +
-  geom_point() 
-#the pattern is not clear for DE and change for Independent candidates
-
-ggplot(current_df, aes(current_df$change.Green, DE)) +
-  geom_point() 
-#the pattern is not clear for DE and change for Greens
-
-ggplot(current_df, aes(current_df$change.Labour, DE)) +
-  geom_point() 
-#there seems to be an inverse relationship for DE and change for labour 
-#they gained more in areas with less than 30% people in social class DE
-#*and lost most in areas with 30% to 40% of people in social class DE
-
-ggplot(current_df, aes(current_df$change.Liberal_Democrat, DE)) +
-  geom_point()
-#the relationship between DE and change for LibDem seems to be inverse
-#*they gained most in areas with less than 30% of people in grade DE
-
-ggplot(current_df, aes(current_df$change.others, DE)) +
-  geom_point()
-#there is no clear pattern for other minor parties
-
-ggplot(current_df, aes(current_df$`change.UK_Independence Party`, DE)) +
-  geom_point()
-#there is no clear pattern for DE and change for UKIP
+ggplot(current_df, aes(current_df$change_ukip, c2)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the pattern is not clear for c2 and change for UKIP
 
 #******************************************************************************
-#---scatterplots for examining relationship between LEAVE votes & loss/gain
+#---scatterplots for examining relationship between social grade de & loss/gain
 #*******************************************************************************
 
-ggplot(current_df, aes(current_df$change.Conservative, Leave)) +
-  geom_point()
+ggplot(current_df, aes(current_df$change_con, de)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#there seem to be a positive linear relationship between proportion for de and gain for Cons 
+#they gained most in areas with more than 20% of people in social grade de
+
+ggplot(current_df, aes(current_df$change_ind, de)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the pattern is not clear for de and change for Independent candidates
+
+ggplot(current_df, aes(current_df$change_green, de)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the pattern is not clear for de and change for Greens
+
+ggplot(current_df, aes(current_df$change_lab, de)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#there seems to be an inverse relationship for de and change for labour 
+#they gained more in areas with less than 30% people in social grade de
+#*and lost most in areas with 30% to 40% of people in social grade de
+
+ggplot(current_df, aes(current_df$change_ld, de)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#the relationship between de and change for Libdem seems to be inverse
+#*they gained most in areas with less than 30% of people in grade de
+
+ggplot(current_df, aes(current_df$change_ukip, de)) +
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+#there is no clear pattern for de and change for UKIP
+
+#******************************************************************************
+#---scatterplots for examining relationship between leave votes & loss/gain
+#*******************************************************************************
+
+ggplot(current_df, aes(current_df$change_con, leave)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
 ##there seems to be a moderate positve relationship between leave votes and change for Cons
 #Cons suffered less loss in areas with high proportion of leave votes
-#their gains came from areas with more than 50% leave voters 
+#their gains came from areas with more than 50% leave voters, although not much
 
-ggplot(current_df, aes(current_df$change.Green, Leave)) +
-  geom_point()
+
+
+ggplot(current_df, aes(current_df$change_green, leave)) +
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
 #the pattern doesn't seem to be clear for leave and change for Greens
 #there is a slight indication of an inverse relationship
 #more of the gains came from areas with low proportion of leave votes 
 
-ggplot(current_df, aes(current_df$change.Independent, Leave)) +
-  geom_point()
+ggplot(current_df, aes(current_df$change_ind, leave)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
 #there is a slight indication of a positive relationship for Greens and leave votes
 #more gains came from areas with high proportion of leave voters
 
-ggplot(current_df, aes(current_df$change.Labour, Leave)) +
-  geom_point()
+ggplot(current_df, aes(current_df$change_lab, leave)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
 #the pattern seems random for leave votes and change for labour
+#indication of a negative relationship perharps
 
-ggplot(current_df, aes(current_df$change.Liberal_Democrat, Leave)) +
+ggplot(current_df, aes(current_df$change_ld, leave)) +
   geom_point()
-#there is a slight indication of an inverse relationship for leave votes and change for LibDem
+#there is a slight indication of an inverse relationship for leave votes and change for Libdem
 #more gains came from areas with less than 60% of leave voters
 
-ggplot(current_df, aes(current_df$change.others, Leave)) +
-  geom_point()
-#the pattern between leave votes and change for other minor parties is not clear
 
-ggplot(current_df, aes(current_df$`change.UK_Independence Party`, Leave)) +
-  geom_point()
+ggplot(current_df, aes(current_df$change_ukip, leave)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
 #the pattern between leave votes and change for UKIP is not clear
 
 
@@ -452,101 +479,178 @@ ggplot(current_df, aes(current_df$`change.UK_Independence Party`, Leave)) +
 #---scatterplots for examining popularity in 2017 general election vs loss/gain in 2019 for each party
 #******************************************************************************************************
 
-ggplot(current_df, aes(current_df$change.Conservative, ConVote)) +
-  geom_point()
-#conservatives seem to lose most in areas which they were popular in 2017
+ggplot(current_df, aes(current_df$change_con, con_vote)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+#conservatives seem to lose most in areas which they had high popularity in 2017
 
-ggplot(current_df, aes(current_df$change.Green, GreenVote)) +
-  geom_point()
+ggplot(current_df, aes(current_df$change_green, green_vote)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
 #the pattern is not clear for greens
 
-ggplot(current_df, aes(current_df$change.Liberal_Democrat, LDVote)) +
-  geom_point()
+ggplot(current_df, aes(current_df$change_ld, ld_vote)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
 #the pattern is not clear for liberal democrats
 
-ggplot(current_df, aes(current_df$change.Labour, LabVote)) +
-  geom_point()
+ggplot(current_df, aes(current_df$change_lab, lab_vote)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
 #labour seem to lose most in areas where they were popular in 2017
-#similar pattern observed for Conservatives
+#similar pattern observed for Conservatives, inverse linear relationship
 
 
-ggplot(current_df, aes(current_df$`change.UK_Independence Party`, UKIPVote)) +
-  geom_jitter()
+ggplot(current_df, aes(current_df$change_ukip, ukip_vote)) +
+  geom_jitter()+
+  geom_smooth(method = "lm", se = FALSE)
 #the pattern is not clear for UKIP, one outlier observed as they lost most in an area where they had the most popularity in 2017
 
 
 #******************************************************************************************************
-#---HISTOGRAMS FOR CHANGE VARIABLE TO CHECK FOR NORMALITY
+#---HISTOGRAMS FOR CHANGE VARIabLE TO CHECK FOR NORMALITY
 #******************************************************************************************************
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Conservative)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_con)) +
   geom_histogram(color = "white", fill = "steelblue") 
 #histogram is roughly symmetric
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Green)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_green)) +
   geom_histogram(color = "white", fill = "steelblue")
 #histogram is skewed to the right
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Independent)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_ind)) +
   geom_histogram(color = "white", fill = "steelblue")
 #histogram is skewed to the right
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Labour)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_lab)) +
   geom_histogram(color = "white", fill = "steelblue")
 #histogram is roughly symmetric
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Liberal_Democrat)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_ld)) +
   geom_histogram(color = "white", fill = "steelblue")
 #histogram is skewed to the right
 
-ggplot(data = current_df, mapping = aes(x = current_df$`change.UK_Independence Party`)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_ukip)) +
   geom_histogram(color = "white", fill = "steelblue", binwidth = 10)
 #histogram is skewed to the left
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.others)) +
-  geom_histogram(color = "white", fill = "steelblue", binwidth = 10)
-#histogram is skewed to the right
 
 #******************************************************************************************************
-#---HISTOGRAMS FOR CHANGE VARIABLE BY REGION
+#---HISTOGRAMS FOR CHANGE VARIabLE BY region
 #******************************************************************************************************
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Conservative)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_con)) +
   geom_histogram(color = "white", fill = "steelblue") +
-  facet_wrap(~ Region)
+  facet_wrap(~ region)
 #roughly normal distribution for CONS in each region, west and yorkshire are of relatively smaller sizes compared to others, so no surprises
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Green)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_green)) +
   geom_histogram(color = "white", fill = "steelblue") +
-  facet_wrap(~ Region)
+  facet_wrap(~ region)
 #same right skewness observed for each region for the GREENS
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Independent)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_ind)) +
   geom_histogram(color = "white", fill = "steelblue") +
-  facet_wrap(~ Region)
+  facet_wrap(~ region)
 #same right skewness observed for each region, roughly normal in Yorkshire and the Humber for Independents
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Labour)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_lab)) +
   geom_histogram(color = "white", fill = "steelblue") +
-  facet_wrap(~ Region)
-#roughly normal distribution observed in each region for LABOURS
+  facet_wrap(~ region)
+#roughly normal distribution observed in each region for LabOURS
 
-ggplot(data = current_df, mapping = aes(x = current_df$change.Liberal_Democrat)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_ld)) +
   geom_histogram(color = "white", fill = "steelblue") +
-  facet_wrap(~ Region)
-#right skewness observed for each region for LIBDEM
+  facet_wrap(~ region)
+#right skewness observed for each region for LIBdeM
 
-ggplot(data = current_df, mapping = aes(x = current_df$`change.UK_Independence Party`)) +
+ggplot(data = current_df, mapping = aes(x = current_df$change_ukip)) +
   geom_histogram(color = "white", fill = "steelblue") +
-  facet_wrap(~ Region)
+  facet_wrap(~ region)
 #left skewness observed for UKIP
 
 
 #******************************************************************************************************
-#---FITTING NORMAL LINEAR MODELS FOR EACH PARTY
+#---CORRELATION MATRIX FOR LEAVE AND CHANGE FOR ALL PARTIES
 #******************************************************************************************************
-model1 <- lm(current_df$change.Conservative ~ ConVote + Leave, data = current_df)
+
+current_df %>%
+  select(leave, change_ind, change_con, change_lab, change_ukip, change_ld, change_green) %>% 
+  cor()
+#the 2016 EU leave vote is positively correlated with change for Indp. and Conservative, although this is weak
+#Negatively correlated with change for Labour, UKIP, LibDEM and Green
+
+
+#******************************************************************************************************
+#---CORRELATION MATRIX FOR SOCIAL GRADE AND CHANGE FOR ALL PARTIES
+#******************************************************************************************************
+current_df %>%
+  select(change_ind, ab, c1, c2, de) %>% 
+  cor()
+#weak correlation observed for social grades and change for independents
+
+current_df %>%
+  select(change_con, ab, c1, c2, de) %>% 
+  cor()
+#ab has a moderate negative correlation with change for TORIES while de has a moderate positive correlation 
+
+current_df %>%
+  select(change_lab, ab, c1, c2, de) %>% 
+  cor()
+#weak correlation observed for social grades and change for lab
+#only ab and c1 has positive correlations
+
+current_df %>%
+  select(change_ld, ab, c1, c2, de) %>% 
+  cor()
+#ab is positively correlated with change for LIBDEM while de has a negative correlation of rhe same magnitude
+
+current_df %>%
+  select(change_ukip, ab, c1, c2, de) %>% 
+  cor()
+#weak correlations observed for social grades and change for UKIP
+
+current_df %>%
+  select(change_green, ab, c1, c2, de) %>% 
+  cor()
+#weak correlations observed for social grades and change for GREENS
+
+
+#******************************************************************************************************
+#---FITTING NORMAL LINEAR MOdeLS FOR EACH PARTY
+#******************************************************************************************************
+#MOdeL FITTING FOR CONSERVATIVE CHANGE
+
+model1 <- lm(change_con ~ leave + ab + c2 + de + con_vote + lab_vote + ld_vote + ukip_vote , data = current_df)
 summary(model1)
+plot(model1)
+stepwise
+get_regression_table(model1)
+
+
+frame_for_step <- current_df %>% select(-control, -la_name, -region)
+frame_for_con <- frame_for_step %>% select(-change_green, -change_ind, -change_lab, -change_ld, -change_ukip)
+
+
+
+
+model2 <- glm(formula = change_con ~ leave + con_vote, family = gaussian(link = "identity"), data = current_df)
+summary(model2)
+plot(model2)
+
+mean(current_df$change_con)
+var(current_df$change_con)
+
+regression_points <- get_regression_points(model1)
+regression_points
+
+model3 <- lm(change_con ~ con_vote + lab_vote + green_vote + ld_vote + ukip_vote + leave + ab + c1 + c2 + de -1, data = current_df)
+summary(model3)
+plot(model3)
+
+
+
 
 
 
@@ -554,18 +658,99 @@ summary(model1)
 #******************************************************************************************************
 #---PAIRS PLOT
 #******************************************************************************************************
-#pairs plot for social grade and change variable
-cormat <- current_df %>% select(-ConVote, -LabVote, -GreenVote, -UKIPVote, -LDVote, -LAName, -Region, -control, -seats_available, -total_seats)
-ggpairs(cormat)
+#pairs plot of the explanatory variables
+cormat1 <- current_df %>% select(ab, c1, c2, de, con_vote, lab_vote, green_vote, ukip_vote, ld_vote, leave)
+ggpairs(cormat1)
+#there is high correlation between some of the explanatory variables
 
-##pairs plot for proportion of 2017 elections and change variable
-cormat2 <- current_df %>% select(-AB, -C1, -C2, -DE, -Leave, -LAName, -Region, -control, -seats_available, -total_seats)
+#pairs plot for social grade and change variable
+cormat2 <- current_df %>% select(-con_vote, -lab_vote, -green_vote, -ukip_vote, -ld_vote, -la_name, -region, -control, -seats_available, -total_seats)
 ggpairs(cormat2)
 
+##pairs plot for proportion of 2017 elections and change variable
+cormat3 <- current_df %>% select(-ab, -c1, -c2, -de, -leave, -la_name, -region, -control, -seats_available, -total_seats)
+ggpairs(cormat3)
+
 
 
 #******************************************************************************************************
-#---IMPORTING SHAPE FILE AND DRAWING MAPS
+#---IMPORTING SHAPE FILE AND DRAWING MAPS FOR EXPLORATORY
 #******************************************************************************************************
-map <- st_read("Local_Authority_Districts_December_2017_Full_Extent_Boundaries_in_United_Kingdom_WGS84.shp")
-str(map)
+map <- st_read("Local_Authority_Districts_december_2017_Full_Extent_Boundaries_in_United_Kingdom_WGS84.shp")
+map$lad17nm <- as.character(map$lad17nm)
+colnames(map)[colnames(map)=="lad17nm"] <- "la_name"
+map_and_data <- inner_join(map, current_df)
+head(map_and_data)
+##due to boundary changes, we have complete map information for 219 councils 
+
+##PLOTTING MAPS WITH GGPLOT
+
+theme_update(plot.title = element_text(hjust = 0.5)) #setting default alignment to center
+
+ggplot(map_and_data) +
+  geom_sf(aes(fill=seats_available)) +
+  scale_fill_gradient(low="#56B1F7", high="#132B43")  +
+  ggtitle("SEATS UP FOR ELECTION")               ###seats available
+
+ggplot(map_and_data) +
+  geom_sf(aes(fill=change_con)) +
+  scale_fill_gradient()  +
+  ggtitle("LOSS/GAIN FOR CONSERVATIVES")      ###change for conservatives
+
+ggplot(map_and_data) +
+  geom_sf(aes(fill=change_lab)) +
+  scale_fill_gradient()  +
+  ggtitle("LOSS/GAIN FOR LabOUR")      ###change for labour
+
+
+
+##PLOTTING MAPS WITH T.MAP 
+
+#viewing with tmap interactive function
+tmap_mode("view")
+
+tm_shape(map_and_data) +
+  tm_polygons("seats_available", id = "la_name", pallete="Green")
+
+tm_shape(map_and_data) +
+  tm_polygons("change_con", id = "la_name", pallete="Green") ##interactive plot for conservative change
+##plot indicates that the biggest losses came from the south
+
+tm_shape(map_and_data) +
+  tm_polygons("change_lab", id = "la_name", pallete="Green")
+##plot indicates that labour biggest losses came from midlands and north
+
+tm_shape(map_and_data) +
+  tm_polygons("leave", id = "la_name", pallete="Green")
+#one can see which areas voted most to leave the EU
+
+tm_shape(map_and_data) +
+  tm_polygons("control", id = "la_name", pallete="Green")
+#conservatives lost mostly to no overall control
+#despite losses, conservatives held control in numerous councils
+
+tm_shape(map_and_data) +
+  tm_polygons("con_vote", id = "la_name", pallete="Green")
+
+
+tmap_last()
+
+#saving interactive map as html with tmap save
+test_map <- tmap_last()
+tmap_save(test_map, "test_map.html")
+
+
+
+
+
+##zeros are now meaning two things (either no loss/gain or no result available for party in that area)
+
+##LIMITATIONS OF THE STUDY
+#Boundary changes in England makes interpretability and reliability of results a problem
+#For example, the council where Conservatives lost the most is "Bournemout, Christchurch and Poole"
+#according to the BBC, this local authority is new and is a merger of 3 councils. 
+#BBC also stated that the council has never elected councillors before and the change figures was calculated based
+#on predictions on what the results would have been if the council was in existence as at the time of the previous election.
+
+#The loss/gain figures represented by the "change" variable could be an overestimation of loss/gain and an innacurate description of electorates change of support for parties
+#as it was obtained by comparing 2019 elections to 2015, where some councils hold elections every year and the changes in those relations was not accounted for in this change variable
