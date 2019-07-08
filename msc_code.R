@@ -65,6 +65,7 @@ merged_dataset[, numeric_columns] <- lapply(numeric_columns, function(col) {
 ##inspecting NA values in brexit data frame
 summary(brexit) ##all na's are zero values for no recorded votes for parties associated in the area
 ##replacing NAs by zeros
+merged_with_nas <- merged_dataset
 merged_dataset[is.na(merged_dataset)] <- 0
 
 #SAVING MERGED DATASET AS CSV FILE
@@ -734,7 +735,7 @@ tmap_save(test_map, "test_map.html")
 
 
 
-
+##PROBLEM!!!
 ##zeros are now meaning two things (either no loss/gain or no result available for party in that area)
 
 ##LIMITATIONS OF THE STUDY
