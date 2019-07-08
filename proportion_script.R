@@ -38,7 +38,7 @@ ggcoef(model_con,vline_color = "red",
 
 ggpairs(conservative_frame,lower = list(continuous = wrap(ggally_points, size = .3)))
 
-
+outlierTest(lm(change_con ~ lab_vote + leave, data = conservative_frame)) #outlier test
 
 #stepwise LABOUR
 model_lab <- lm(change_lab ~ ., data = labour_frame)
@@ -100,3 +100,15 @@ test_ukip <- lm(change_ukip ~ c2 + ukip_vote + leave, data = ukip_frame)
 summary(test_ukip)
 
 step(model_ukip) #stepwise selection
+
+
+
+
+# GENERALIZED LINEAR MODELLING --------------------------------------------
+
+ggplot(data = ld_frame, mapping = aes(x = log(change_ld))) +
+        geom_histogram(color = "white", fill = "steelblue")
+
+#log transformation not possible due to negative values in data
+#if I add the highest negative value to the data, will that not affect the interpretability?
+

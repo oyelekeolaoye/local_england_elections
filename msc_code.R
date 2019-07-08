@@ -5,8 +5,6 @@ library(dplyr)
 library(GGally)
 library(tidyr)
 library(tidyverse)
-install.packages("devtools")
-devtools::install_github("ropenscilabs/roomba")
 library(purrr)
 library(data.table)
 library(roomba)
@@ -20,6 +18,7 @@ library(skimr)
 library(moderndive)
 library(snakecase)
 library(olsrr)
+library(car)
 
 
 
@@ -627,13 +626,6 @@ summary(model1)
 plot(model1)
 stepwise
 get_regression_table(model1)
-
-
-frame_for_step <- current_df %>% select(-control, -la_name, -region)
-frame_for_con <- frame_for_step %>% select(-change_green, -change_ind, -change_lab, -change_ld, -change_ukip)
-
-
-
 
 model2 <- glm(formula = change_con ~ leave + con_vote, family = gaussian(link = "identity"), data = current_df)
 summary(model2)
