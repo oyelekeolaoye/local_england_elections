@@ -209,7 +209,7 @@ sum(merged_dataset$total.Independent)/sum(current_df$total_seats)
 #Other minor parties combined own 1.82% of the total seats in the 238 councils
 
 
-##CONVERTING CHANGE VARIABLE TO PROPORTION
+##CONVERTING CHANGE VARIABLE TO PROPORTION CHANGE
 current_df$change_con <- current_df$change_con/current_df$seats_available
 current_df$change_ind <- current_df$change_ind/current_df$seats_available
 current_df$change_lab <- current_df$change_lab/current_df$seats_available
@@ -218,5 +218,78 @@ current_df$change_ukip <- current_df$change_ukip/current_df$seats_available
 current_df$change_green <- current_df$change_green/current_df$seats_available
 
 #EXPLORATORY DATA ANALYSIS
-summary(current_df)
 skim(current_df)
+summary(current_df)
+#on the average, 22.6% are in the AB social grade, 30.4% are in the C1, 22.3% in C2, 24.5% in DE
+#Social Grades across areas shows symmetric distribution as median almost equals mean for each grade classification
+#Statistics reveal that Conservatives had a maximum loss of 72.2% and a maximum gain of 31.2% of the seats that were up for election
+#Labour had a maximum loss of 46.1% and a maximum gain of 45.4%
+#The independents(including other minor parties) had a maximum loss of 7% and a maximum gain of 46.1%
+#UKIP had a maximum loss of 58.9% and a maximum gain of 11.7%
+#Green Party had a maximum loss of 6% and a maximum gain of 20%
+#Liberal Democrat had a maximum loss of 9% and a maximum gain of 64.2%
+#Average statistics reveal that Conservatives, Labour, and UKIP are the parties that suffered losses, the rest parties on an average made a gain.
+
+
+
+
+#******************************************************************************************************
+#---BOXPLOTS FOR change variable FOR EACH PARTY
+#******************************************************************************************************
+ggplot(data = current_df, mapping = aes(y=current_df$change_con)) +
+  geom_boxplot() +
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR CONSERVATIVES")
+#boxplot indicates some outliers/normal distribution
+
+ggplot(data = current_df, mapping = aes(y=current_df$change_green)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR GREENS")
+#boxplot indicates outliers/right skewness
+
+ggplot(data = current_df, mapping = aes(y=current_df$change_ind)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR INdePENdeNTS")
+#boxplot indicates outlying values/right skewness
+
+ggplot(data = current_df, mapping = aes(y=current_df$change_lab)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR LabOUR")
+#boxplot indicates normal distribution/many outlying values
+
+ggplot(data = current_df, mapping = aes(y=current_df$change_ld)) +
+  geom_boxplot() +
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR LIBERAL deMOCRATS")
+#right skewness/couple of outlying values
+
+ggplot(data = current_df, mapping = aes(y=current_df$change_ukip)) +
+  geom_boxplot()+ 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR UKIP")
+ggplot(data = current_df, mapping = aes(x=region, y=current_df$change_ukip)) +
+  geom_boxplot() + 
+  ggtitle("BOXPLOT OF LOSS/GAIN FOR UKIP BY REGION")
+#most of the points for UKIP are zeros(185 total zeros of 238 observations)
+#boxplot not very informative but most of the positives came from Yorkshire and the Humber after splitting plots by region
+
+
+
+
+#CREATING SEPARATE DATA FRAMES FOR EACH PARTY TO BEGIN MODELLING
+conservative_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_seats, -change_green, -change_ind, -change_lab, -change_ld, -change_ukip)
+labour_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_seats, -change_green, -change_ind, -change_con, -change_ld, -change_ukip)
+green_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_seats, -change_con, -change_ind, -change_lab, -change_ld, -change_ukip)
+ld_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_seats, -change_green, -change_ind, -change_lab, -change_con, -change_ukip)
+ind_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_seats, -change_green, -change_con, -change_lab, -change_ld, -change_ukip)
+ukip_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_seats, -change_green, -change_ind, -change_lab, -change_ld, -change_con)
+
+
+#LINEAR REGRESSION FOR CONSERVATIVE
+model_con <- lm(change_con ~ ., data = conservative_frame)
+model.selection <- ols_step_best_subset(model_con)
+model.selection   
+plot(model.selection)
+test_con <- lm(change_con ~ con_vote + lab_vote + leave, data = conservative_frame)
+summary(test_con)
+
+step(model_con) #stepwise selection
+
+
