@@ -56,7 +56,7 @@ ggcoef(model_con,vline_color = "red",
        errorbar_color = "blue",
        errorbar_height = .25,exclude_intercept = TRUE)
 
-ggpairs(conservative_frame,lower = list(continuous = wrap(ggally_points, size = .3)))
+ggpairs(conservative_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
 
 print(summary(lakes.step),concise=TRUE)
 

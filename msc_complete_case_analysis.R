@@ -282,6 +282,33 @@ ind_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_
 ukip_frame <- current_df %>% select(-la_name, -control, -seats_available, -total_seats, -change_green, -change_ind, -change_lab, -change_ld, -change_con)
 
 
+
+# -------------------------------------------------------------------------
+#CHECKING FOR COLLINEARITY WITH PAIRS PLOT
+
+#*CONSERVATIVES
+ggpairs(conservative_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
+#multicollinearity observed, response has a non-linear relationships with some covariates
+
+#*LABOUR
+ggpairs(labour_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
+#multicollinearity observed, response has a non-linear relationships with some covariates
+
+#*LIBDEM
+ggpairs(ld_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
+#multicollinearity observed, response has a non-linear relationships with some covariates
+
+#*INDEPENDENTS
+ggpairs(ind_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
+#multicollinearity observed, response has a non-linear relationships with some covariates
+
+#*GREENS
+ggpairs(green_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
+#multicollinearity observed, response has a non-linear relationships with some covariates
+
+
+
+# -------------------------------------------------------------------------
 #LINEAR REGRESSION FOR CONSERVATIVE
 model_con <- lm(change_con ~ ., data = conservative_frame)
 model.selection <- ols_step_best_subset(model_con)
@@ -358,3 +385,18 @@ step_ukip <- lm(formula = change_ukip ~ ab + c1 + con_vote + ukip_vote + leave,
                 data = ukip_frame)
 summary(step_ukip)
 plot(step_ukip)
+
+
+##FITTING A LOGISTIC REGRESSION TO THE DATA
+#We set an arbitrary large loss to 15% for conservatives
+conservative_logit <- conservative_frame
+conservative_logit$change_con <- ifelse(conservative_logit$change_con<(-0.15), 1, 0)
+
+#logistic regression on conservative
+glm_con <- glm(formula = change_con ~ ., family = binomial(link = "logit"), 
+            data = conservative_logit)
+step(glm_con)
+
+glm_step_con <- glm(formula = change_con ~ ab + c2 + lab_vote + ld_vote + ukip_vote + 
+                      green_vote + leave, family = binomial(link = "logit"), data = conservative_logit)
+plot(glm_step_con)
