@@ -289,7 +289,72 @@ model.selection
 plot(model.selection)
 test_con <- lm(change_con ~ con_vote + lab_vote + leave, data = conservative_frame)
 summary(test_con)
-
+plot(test_con) #checking residual plots
+#fit is not too bad
 step(model_con) #stepwise selection
+##stepwise selection matches 
+
+#LINEAR REGRESSION FOR LABOUR
+model_lab <- lm(change_lab ~ ., data = labour_frame)
+model.selection_lab <- ols_step_best_subset(model_lab)
+model.selection_lab  
+plot(model.selection_lab) #model 7 is preferred
+test_lab <- lm(change_lab ~ region + ab + de + con_vote + ukip_vote + green_vote + leave, data = labour_frame)
+summary(test_lab)
+plot(test_lab) #residual plot indicates lack of fit
+step(model_lab) #stepwise selection does not match
+lab_stepwise <- lm(formula = change_lab ~ region + ab + c1 + con_vote + ukip_vote + 
+                     green_vote + leave, data = labour_frame)
+summary(lab_stepwise)
+plot(lab_stepwise)
 
 
+#LINEAR REGRESSION FOR INDEPENDENT
+model_ind <- lm(change_ind ~ ., data = ind_frame)
+model.selection_ind <- ols_step_best_subset(model_ind)
+model.selection_ind  
+plot(model.selection_ind) #model 6 is preferred
+test_ind <- lm(change_ind ~ region + ab + c1 + con_vote + lab_vote + ld_vote, data = ind_frame)
+summary(test_ind)
+plot(test_ind) #residual plot indicates lack of fit
+step(model_ind) #stepwise selection agrees
+
+#LINEAR REGRESSION FOR LIBDEM
+model_ld <- lm(change_ld ~ ., data = ld_frame)
+model.selection_ld <- ols_step_best_subset(model_ld)
+model.selection_ld
+plot(model.selection_ld) #model 2 is preferred
+test_ld <- lm(change_ld ~  ab + ld_vote, data = ld_frame)
+summary(test_ld)
+plot(test_ld) #residual plot indicates lack of fit
+
+step(model_ld)  #stepwise selection agrees
+
+#stepwise GREEN
+model_green <- lm(change_green ~ ., data = green_frame)
+model.selection_green <- ols_step_best_subset(model_green)
+model.selection_green
+plot(model.selection_green) #model 4 is preferred
+test_green <- lm(change_green ~ region + c2 + green_vote + leave, data = green_frame)
+summary(test_green)
+plot(test_ld) #residual plot indicates lack of fit
+
+step(model_green) #stepwise selection does not agree
+step_green <- lm(formula = change_green ~ region + ab + c2 + green_vote, data = green_frame)
+summary(step_green)
+plot(step_green)
+
+#stepwise UKIP
+model_ukip <- lm(change_ukip ~ ., data = ukip_frame)
+model.selection_ukip <- ols_step_best_subset(model_ukip)
+model.selection_ukip
+plot(model.selection) #model 3 is preferred
+test_ukip <- lm(change_ukip ~ region + ukip_vote + leave, data = ukip_frame)
+summary(test_ukip)
+plot(test_ukip) #residual plot indicates lack of fit
+
+step(model_ukip) #stepwise selection does not agree
+step_ukip <- lm(formula = change_ukip ~ ab + c1 + con_vote + ukip_vote + leave, 
+                data = ukip_frame)
+summary(step_ukip)
+plot(step_ukip)

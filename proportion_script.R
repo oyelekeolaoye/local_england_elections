@@ -24,6 +24,7 @@ model.selection
 plot(model.selection)
 test_con <- lm(change_con ~ de + lab_vote + leave, data = conservative_frame)
 summary(test_con)
+plot(test_con)
 
 step(model_con) #stepwise selection
 
@@ -47,7 +48,7 @@ model.selection_lab
 plot(model.selection_lab)
 test_lab <- lm(change_lab ~ ab + c1 + con_vote + lab_vote + ld_vote + ukip_vote + leave, data = labour_frame)
 summary(test_lab)
-
+plot(test_lab)
 step(model_lab) #stepwise selection
 
 ggcoef(model_con,vline_color = "red",
@@ -66,7 +67,7 @@ model.selection_ind
 plot(model.selection_ind)
 test_ind <- lm(change_ind ~ c1 + de + con_vote + lab_vote + ld_vote + green_vote, data = ind_frame)
 summary(test_ind)
-
+plot(test_ind)
 step(model_ind) #stepwise selection
 
 #stepwise LIBDEM
