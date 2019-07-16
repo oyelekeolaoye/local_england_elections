@@ -25,3 +25,9 @@ https://stats.idre.ucla.edu/r/dae/multinomial-logistic-regression/
 
 SHAPE FILES 
 https://geoportal.statistics.gov.uk/datasets/local-authority-districts-december-2017-full-extent-boundaries-in-united-kingdom-wgs84/data?page=13
+
+LIMITATIONS OF STEPWISE SELECTION
+https://towardsdatascience.com/stopping-stepwise-why-stepwise-selection-is-bad-and-what-you-should-use-instead-90818b3f52df
+
+BOUNDARY REVIEW
+http://www.lgbce.org.uk/how-reviews-work

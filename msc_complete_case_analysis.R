@@ -170,6 +170,11 @@ sum(merged_dataset$`elected.UK Independence Party`)/sum(current_df$seats_availab
 
 #other minor parties combined took 2.1% of the seats available
 
+proportion_won <- data.frame(party=c("Conservative", "Labour", "LibDem", "Green", "UKIP", "Independents"),
+                             value=c(42.4, 23.4, 16.5, 3.3, 0.4, 14))
+ggplot(data=proportion_won, aes(x=value, fill=party)) +
+  geom_histogram()
+
 ##CREATING A PIE CHART FOR PROPORTION WON
 slices <- c(42.4, 23.4, 16.5, 3.3, 0.4, 11.9, 2.1) 
 lbls <- c("Conservative-42.4%", "Labour-23.4%", "LibDem-16.5%", "Green-3.3%", "UKIP-0.4%", "Independents-11.9%", "Other-2.1%")
@@ -231,7 +236,7 @@ summary(current_df)
 #Average statistics reveal that Conservatives, Labour, and UKIP are the parties that suffered losses, the rest parties on an average made a gain.
 
 
-
+table(current_df$control)
 
 #******************************************************************************************************
 #---BOXPLOTS FOR change variable FOR EACH PARTY
@@ -271,6 +276,22 @@ ggplot(data = current_df, mapping = aes(x=region, y=current_df$change_ukip)) +
 #boxplot not very informative but most of the positives came from Yorkshire and the Humber after splitting plots by region
 
 
+#******************************************************************************************************
+#---HISTOGRAMS FOR NUMERIC COVARIATES
+#******************************************************************************************************
+
+covariate_frame <- current_df %>% select(ab, c1, c2, de, con_vote, lab_vote, green_vote, ukip_vote,
+                                         ld_vote, leave)
+
+ggplot(gather(covariate_frame), aes(value)) + 
+  geom_histogram(bins = 10) + 
+  facet_wrap(~key, scales = 'free_x')
+
+
+#******************************************************************************************************
+#---BOXPLOT OF CONSERVARIVE CHANGE WITH COVARIATES
+#******************************************************************************************************
+par(mfrow = c(5,2))
 
 
 #CREATING SEPARATE DATA FRAMES FOR EACH PARTY TO BEGIN MODELLING
@@ -288,6 +309,7 @@ ukip_frame <- current_df %>% select(-la_name, -control, -seats_available, -total
 
 #*CONSERVATIVES
 ggpairs(conservative_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
+cor(conservative_frame[,-1])
 #multicollinearity observed, response has a non-linear relationships with some covariates
 
 #*LABOUR
@@ -390,7 +412,7 @@ plot(step_ukip)
 ##FITTING A LOGISTIC REGRESSION TO THE DATA
 #We set an arbitrary large loss to 15% for conservatives
 conservative_logit <- conservative_frame
-conservative_logit$change_con <- ifelse(conservative_logit$change_con<(-0.15), 1, 0)
+conservative_logit$change_con <- ifelse(conservative_logit$change_con<(-0.20), 1, 0)
 
 #logistic regression on conservative
 glm_con <- glm(formula = change_con ~ ., family = binomial(link = "logit"), 
@@ -398,5 +420,14 @@ glm_con <- glm(formula = change_con ~ ., family = binomial(link = "logit"),
 step(glm_con)
 
 glm_step_con <- glm(formula = change_con ~ ab + c2 + lab_vote + ld_vote + ukip_vote + 
-                      green_vote + leave, family = binomial(link = "logit"), data = conservative_logit)
+                      green_vote + leave, family = binomial(link = "logit"), data = conservative_logit) #model for 15%
+
+glm_step_con <- glm(formula = change_con ~ c1 + c2 + con_vote + leave, family = binomial(link = "logit"), 
+                    data = conservative_logit) #model for 5%
+
+glm_step_con <- glm(formula = change_con ~ ab + con_vote + lab_vote + leave, family = binomial(link = "logit"), 
+                    data = conservative_logit) #model for 20%
+
 plot(glm_step_con)
+summary(glm_step_con$fitted.values)
+hist(glm_step_con$fitted.values)

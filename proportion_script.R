@@ -105,11 +105,51 @@ step(model_ukip) #stepwise selection
 
 
 
-# GENERALIZED LINEAR MODELLING --------------------------------------------
+#******************************************************************************
+#---scatterplots for examining relationship between leave votes & loss/gain
+#*******************************************************************************
 
-ggplot(data = ld_frame, mapping = aes(x = log(change_ld))) +
-        geom_histogram(color = "white", fill = "steelblue")
+ggplot(current_df, aes(conservative_frame$change_con, leave)) +
+        geom_point() +
+        geom_smooth(method = "lm", se = FALSE)
+##there seems to be a moderate positve relationship between leave votes and change for Cons
+#Cons suffered less loss in areas with high proportion of leave votes
+#their gains came from areas with more than 50% leave voters, although not much
 
-#log transformation not possible due to negative values in data
-#if I add the highest negative value to the data, will that not affect the interpretability?
 
+
+ggplot(current_df, aes(current_df$change_green, leave)) +
+        geom_point()+
+        geom_smooth(method = "lm", se = FALSE)
+#the pattern doesn't seem to be clear for leave and change for Greens
+#there is a slight indication of an inverse relationship
+#more of the gains came from areas with low proportion of leave votes 
+
+ggplot(current_df, aes(current_df$change_ind, leave)) +
+        geom_point() +
+        geom_smooth(method = "lm", se = FALSE)
+#there is a slight indication of a positive relationship for Greens and leave votes
+#more gains came from areas with high proportion of leave voters
+
+ggplot(current_df, aes(current_df$change_lab, leave)) +
+        geom_point() +
+        geom_smooth(method = "lm", se = FALSE)
+#the pattern seems random for leave votes and change for labour
+#indication of a negative relationship perharps
+
+ggplot(ld_frame, aes(ld_frame$change_ld, leave)) +
+        geom_point() 
+#there is a slight indication of an inverse relationship for leave votes and change for Libdem
+#more gains came from areas with less than 60% of leave voters
+
+
+ggplot(current_df, aes(current_df$change_ukip, leave)) +
+        geom_point() +
+        geom_smooth(method = "lm", se = FALSE)
+#the pattern between leave votes and change for UKIP is not clear
+
+
+ ld_frame$remain <- 1-ld_frame$leave
+ggplot(ld_frame, aes(ld_frame$change_ld, remain)) +
+        geom_point() + 
+        geom_smooth(method = "lm", se = FALSE)

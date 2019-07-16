@@ -618,54 +618,6 @@ current_df %>%
 #weak correlations observed for social grades and change for GREENS
 
 
-#******************************************************************************************************
-#---FITTING NORMAL LINEAR MOdeLS FOR EACH PARTY
-#******************************************************************************************************
-#MOdeL FITTING FOR CONSERVATIVE CHANGE
-
-model1 <- lm(change_con ~ leave + ab + c2 + de + con_vote + lab_vote + ld_vote + ukip_vote , data = current_df)
-summary(model1)
-plot(model1)
-stepwise
-get_regression_table(model1)
-
-model2 <- glm(formula = change_con ~ leave + con_vote, family = gaussian(link = "identity"), data = current_df)
-summary(model2)
-plot(model2)
-
-mean(current_df$change_con)
-var(current_df$change_con)
-
-regression_points <- get_regression_points(model1)
-regression_points
-
-model3 <- lm(change_con ~ con_vote + lab_vote + green_vote + ld_vote + ukip_vote + leave + ab + c1 + c2 + de -1, data = current_df)
-summary(model3)
-plot(model3)
-
-
-
-
-
-
-
-#******************************************************************************************************
-#---PAIRS PLOT
-#******************************************************************************************************
-#pairs plot of the explanatory variables
-cormat1 <- current_df %>% select(ab, c1, c2, de, con_vote, lab_vote, green_vote, ukip_vote, ld_vote, leave)
-ggpairs(cormat1)
-#there is high correlation between some of the explanatory variables
-
-#pairs plot for social grade and change variable
-cormat2 <- current_df %>% select(-con_vote, -lab_vote, -green_vote, -ukip_vote, -ld_vote, -la_name, -region, -control, -seats_available, -total_seats)
-ggpairs(cormat2)
-
-##pairs plot for proportion of 2017 elections and change variable
-cormat3 <- current_df %>% select(-ab, -c1, -c2, -de, -leave, -la_name, -region, -control, -seats_available, -total_seats)
-ggpairs(cormat3)
-
-
 
 #******************************************************************************************************
 #---IMPORTING SHAPE FILE AND DRAWING MAPS FOR EXPLORATORY
@@ -739,7 +691,7 @@ tmap_save(test_map, "test_map.html")
 ##PROBLEM!!!
 ##zeros are now meaning two things (either no loss/gain or no result available for party in that area)
 
-##LIMITATIONS OF THE STUDY
+##LIMITATIONS OF THE STUDY 
 #Boundary changes in England makes interpretability and reliability of results a problem
 #For example, the council where Conservatives lost the most is "Bournemout, Christchurch and Poole"
 #according to the BBC, this local authority is new and is a merger of 3 councils. 
