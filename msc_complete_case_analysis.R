@@ -20,6 +20,8 @@ library(snakecase)
 library(olsrr)
 library(car)
 library(plotrix)
+library(ResourceSelection)
+library(spdep)
 
 
 #displaying numbers and avoiding scientific notation
@@ -289,9 +291,10 @@ ggplot(gather(covariate_frame), aes(value)) +
 
 
 #******************************************************************************************************
-#---BOXPLOT OF CONSERVARIVE CHANGE WITH COVARIATES
+#---BOXPLOT OF RESPONSE VARIABLES
 #******************************************************************************************************
-par(mfrow = c(5,2))
+response_frame <- current_df %>% select(change_con, change_green, change_ind, change_lab, change_ld)
+ggplot(melt(response_frame), aes(x = variable, y = value)) + geom_boxplot() 
 
 
 #CREATING SEPARATE DATA FRAMES FOR EACH PARTY TO BEGIN MODELLING
@@ -306,6 +309,11 @@ ukip_frame <- current_df %>% select(-la_name, -control, -seats_available, -total
 
 # -------------------------------------------------------------------------
 #CHECKING FOR COLLINEARITY WITH PAIRS PLOT
+
+pairs(covariate_frame)
+#checking for multicollinearity among numeric covariates
+ggpairs(covariate_frame,lower = list(continuous = wrap(ggally_points, size = .3)))
+cor(covariate_frame)
 
 #*CONSERVATIVES
 ggpairs(conservative_frame[,-1],lower = list(continuous = wrap(ggally_points, size = .3)))
@@ -410,7 +418,7 @@ plot(step_ukip)
 
 
 ##FITTING A LOGISTIC REGRESSION TO THE DATA
-#We set an arbitrary large loss to 15% for conservatives
+#We set an arbitrary large loss to 20% for conservatives
 conservative_logit <- conservative_frame
 conservative_logit$change_con <- ifelse(conservative_logit$change_con<(-0.20), 1, 0)
 
@@ -418,16 +426,72 @@ conservative_logit$change_con <- ifelse(conservative_logit$change_con<(-0.20), 1
 glm_con <- glm(formula = change_con ~ ., family = binomial(link = "logit"), 
             data = conservative_logit)
 step(glm_con)
-
-glm_step_con <- glm(formula = change_con ~ ab + c2 + lab_vote + ld_vote + ukip_vote + 
-                      green_vote + leave, family = binomial(link = "logit"), data = conservative_logit) #model for 15%
-
-glm_step_con <- glm(formula = change_con ~ c1 + c2 + con_vote + leave, family = binomial(link = "logit"), 
-                    data = conservative_logit) #model for 5%
-
 glm_step_con <- glm(formula = change_con ~ ab + con_vote + lab_vote + leave, family = binomial(link = "logit"), 
                     data = conservative_logit) #model for 20%
+summary(glm_step_con)
 
-plot(glm_step_con)
-summary(glm_step_con$fitted.values)
-hist(glm_step_con$fitted.values)
+#PERFORMING HOSMER-LEMESHOW GOODNESS OF FIT TEST FOR LOGISTIC MODELS
+hl <- hoslem.test(glm_step_con$y, fitted(glm_step_con), g=10)
+hl #there is no evidence of lack of fit
+cbind(hl$expected, hl$observed)
+
+
+#LABOUR - we set an arbitrary large loss to 5% for labour
+labour_logit <- labour_frame
+labour_logit$change_lab <- ifelse(labour_logit$change_lab<(-0.05), 1, 0)
+glm_lab <- glm(formula = change_lab ~ ., family = binomial(link = "logit"),
+                    data = labour_logit)
+step(glm_step_lab)
+glm_step_lab <- glm(formula = change_lab ~ c1 + con_vote + ld_vote + ukip_vote + 
+                      green_vote + leave, family = binomial(link = "logit"), data = labour_logit)
+summary(glm_step_lab)
+hl_lab <- hoslem.test(glm_step_lab$y, fitted(glm_step_lab), g=10)
+hl_lab
+
+#INDEPENDENTS - we set an arbitrary large proportion of gain to 10% for independents
+ind_logit <- ind_frame
+ind_logit$change_ind <- ifelse(ind_logit$change_ind>0.07, 1, 0)
+glm_ind <- glm(formula = change_ind ~ ., family = binomial(link = "logit"),
+               data = ind_logit)
+step(glm_ind)
+glm_step_ind <- glm(formula = change_ind ~ region + c1 + con_vote + lab_vote + 
+                      ld_vote, family = binomial(link = "logit"), data = ind_logit)
+summary(glm_step_ind)
+hl_ind <- hoslem.test(glm_step_ind$y, fitted(glm_step_ind), g=10)
+hl_ind
+
+#LIBERAL DEMOCRATS - we set an arbitrary large proportion of gain to 10% for liberal democrats
+ld_logit <- ld_frame
+ld_logit$change_ld <- ifelse(ld_logit$change_ld>0.1, 1, 0)
+glm_ld <- glm(formula = change_ind ~ ., family = binomial(link = "logit"),
+               data = ind_logit)
+step(glm_ind)
+glm_step_ld <- glm(formula = change_ind ~ region + c1 + con_vote + lab_vote + 
+                     ld_vote, family = binomial(link = "logit"), data = ind_logit)
+summary(glm_step_ld)
+hl_ld <- hoslem.test(glm_step_ld$y, fitted(glm_step_ld), g=10)
+hl_ld
+
+#GREEN - we set an arbitrary large proportion of gain to 5% for greens
+green_logit <- green_frame
+green_logit$change_green <- ifelse(green_logit$change_green>0.05, 1, 0)
+glm_green <- glm(formula = change_green ~ ., family = binomial(link = "logit"),
+              data = green_logit)
+step(glm_green)
+glm_step_green <- glm(formula = change_green ~ ab + c2 + con_vote + lab_vote + 
+                        ld_vote + ukip_vote + green_vote, family = binomial(link = "logit"), 
+                      data = green_logit)
+summary(glm_step_green)
+hl_ind <- hoslem.test(glm_step_ind$y, fitted(glm_step_ind), g=10)
+hl_ind
+
+
+
+par(mfrow=c(1,1))
+boxplot(leave ~ change_con, data = conservative_logit)
+boxplot(leave ~ change_ind, data = ind_logit)
+boxplot(leave ~ change_ld, data = ld_logit)
+boxplot(leave ~ change_lab, data = labour_logit)
+boxplot(leave ~ change_green, data = green_logit)
+
+plot(change_con~leave, data = conservative_logit)
