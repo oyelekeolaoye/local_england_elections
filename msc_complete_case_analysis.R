@@ -307,6 +307,7 @@ ukip_frame <- current_df %>% select(-la_name, -control, -seats_available, -total
 
 
 
+
 # -------------------------------------------------------------------------
 #CHECKING FOR COLLINEARITY WITH PAIRS PLOT
 
@@ -495,3 +496,8 @@ boxplot(leave ~ change_lab, data = labour_logit)
 boxplot(leave ~ change_green, data = green_logit)
 
 plot(change_con~leave, data = conservative_logit)
+
+
+ggplot(current_df, aes(x=change_con, y=leave)) + 
+  geom_point() +
+  facet_grid(. ~ region)
