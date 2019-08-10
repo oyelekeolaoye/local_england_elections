@@ -263,11 +263,13 @@ summary(glm(formula = change_con ~ green_vote , family = binomial(link = "logit"
             data = conservative_logit))
 summary(glm(formula = change_con ~ ukip_vote , family = binomial(link = "logit"), 
             data = conservative_logit))
+summary(glm(formula = change_con ~ leave , family = binomial(link = "logit"), 
+            data = conservative_logit))
 #c2 should be dropped
 
 
 #logistic regression on conservative
-glm_con <- glm(formula = change_con ~. -c2 -ukip_vote , family = binomial(link = "logit"), 
+glm_con <- glm(formula = change_con ~ . -c2 -ukip_vote , family = binomial(link = "logit"), 
                data = conservative_logit)
 summary(glm_con)
 step(glm_con, direction = "backward")
@@ -340,7 +342,9 @@ summary(glm(formula = change_lab ~ ld_vote , family = binomial(link = "logit"),
 summary(glm(formula = change_lab ~ green_vote , family = binomial(link = "logit"), 
             data = labour_logit)) #not important
 summary(glm(formula = change_lab ~ ukip_vote , family = binomial(link = "logit"), 
-            data = labour_logit)) #not important
+            data = labour_logit))
+summary(glm(formula = change_lab ~ leave , family = binomial(link = "logit"), 
+            data = labour_logit))
 
 #c2, ukip_vote, green_vote should be dropped
 
@@ -350,7 +354,248 @@ glm_lab <- glm(formula = change_lab ~. -c2 -ukip_vote -green_vote  , family = bi
                data = labour_logit)
 summary(glm_lab)
 step(glm_lab, direction = "backward")
-model_lab <- glm(formula = change_con ~ ab + con_vote + ld_vote + leave, 
-              family = binomial(link = "logit"), data = conservative_logit2) #final model for conservative
-summary(model1)
+model_lab <- glm(formula = change_lab ~ region + lab_vote, family = binomial(link = "logit"), 
+                 data = labour_logit) #final model for labour
+summary(model_lab)
+
+
+
+#*******************************************************
+#-LOGISTIC REGRESSION FOR LIBERAL DEMOCRATS
+#*******************************************************
+
+ld_plot1 <- ggplot(ld_logit, aes(change_ld,fill = change_ld))+
+  geom_bar( position = position_dodge())
+
+ld_plot2 <- ggplot(ld_logit, aes(region,fill = change_ld))+
+  geom_bar( position = position_dodge())
+
+ld_plot3 <- ggplot(ld_logit, aes(ab,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot4 <- ggplot(ld_logit, aes(c1,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot5 <- ggplot(ld_logit, aes(c2,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot6 <- ggplot(ld_logit, aes(de,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot7 <- ggplot(ld_logit, aes(con_vote,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot8 <- ggplot(ld_logit, aes(lab_vote,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot9 <- ggplot(ld_logit, aes(ld_vote,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot10 <- ggplot(ld_logit, aes(ukip_vote,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot11 <- ggplot(ld_logit, aes(green_vote,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ld_plot12 <- ggplot(ld_logit, aes(leave,fill = change_ld))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+grid.arrange(ld_plot1,ld_plot2,ld_plot3,ld_plot4,ld_plot5,ld_plot6,ld_plot7,ld_plot8,ld_plot9,ld_plot10,ld_plot11,ld_plot12, ncol=3, nrow=4)
+
+#density plot suggests all covariates are of clinical importance except c2
+
+#univariate logistic regression to select variables
+summary(glm(formula = change_ld ~ ab , family = binomial(link = "logit"), 
+            data = ld_logit))
+summary(glm(formula = change_ld ~ c1 , family = binomial(link = "logit"), 
+            data = ld_logit))
+summary(glm(formula = change_ld ~ c2 , family = binomial(link = "logit"), 
+            data = ld_logit)) 
+summary(glm(formula = change_ld ~ de , family = binomial(link = "logit"), 
+            data = ld_logit))
+summary(glm(formula = change_ld ~ con_vote , family = binomial(link = "logit"), 
+            data = ld_logit))
+summary(glm(formula = change_ld ~ lab_vote , family = binomial(link = "logit"), 
+            data = ld_logit))
+summary(glm(formula = change_ld ~ ld_vote , family = binomial(link = "logit"), 
+            data = ld_logit))
+summary(glm(formula = change_ld ~ green_vote , family = binomial(link = "logit"), 
+            data = ld_logit)) 
+summary(glm(formula = change_ld ~ ukip_vote , family = binomial(link = "logit"), 
+            data = ld_logit)) 
+summary(glm(formula = change_ld ~ leave , family = binomial(link = "logit"), 
+            data = ld_logit)) 
+
+#univariate analysis suggest all variables are of clinical importance for LibDem
+
+
+#logistic regression on libdem
+glm_ld <- glm(formula = change_ld ~. , family = binomial(link = "logit"), 
+               data = ld_logit)
+summary(glm_ld)
+step(glm_ld, direction = "backward")
+model_ld <- glm(formula = change_ld ~ con_vote + ld_vote + leave, family = binomial(link = "logit"), 
+                data = ld_logit) #final model for liberal democrats
+summary(model_ld)
+
+
+#*******************************************************
+#-LOGISTIC REGRESSION FOR INDEPENDENTS
+#*******************************************************
+
+ind_plot1 <- ggplot(ind_logit, aes(change_ind,fill = change_ind))+
+  geom_bar( position = position_dodge())
+
+ind_plot2 <- ggplot(ind_logit, aes(region,fill = change_ind))+
+  geom_bar( position = position_dodge())
+
+ind_plot3 <- ggplot(ind_logit, aes(ab,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot4 <- ggplot(ind_logit, aes(c1,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot5 <- ggplot(ind_logit, aes(c2,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot6 <- ggplot(ind_logit, aes(de,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot7 <- ggplot(ind_logit, aes(con_vote,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot8 <- ggplot(ind_logit, aes(lab_vote,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot9 <- ggplot(ind_logit, aes(ld_vote,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot10 <- ggplot(ind_logit, aes(ukip_vote,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot11 <- ggplot(ind_logit, aes(green_vote,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+ind_plot12 <- ggplot(ind_logit, aes(leave,fill = change_ind))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+grid.arrange(ind_plot1,ind_plot2,ind_plot3,ind_plot4,ind_plot5,ind_plot6,ind_plot7,ind_plot8,ind_plot9,ind_plot10,ind_plot11,ind_plot12, ncol=3, nrow=4)
+
+#density plot suggests that there is no clear pattern of large wins in the regions for the independents
+#plot suggest we screen out DE and green_vote
+
+#univariate logistic regression to select variables
+summary(glm(formula = change_ind ~ ab , family = binomial(link = "logit"), 
+            data = ind_logit))#not important
+summary(glm(formula = change_ind ~ c1 , family = binomial(link = "logit"), 
+            data = ind_logit))#not important
+summary(glm(formula = change_ind ~ c2 , family = binomial(link = "logit"), 
+            data = ind_logit)) 
+summary(glm(formula = change_ind ~ de , family = binomial(link = "logit"), 
+            data = ind_logit)) #not important
+summary(glm(formula = change_ind ~ con_vote , family = binomial(link = "logit"), 
+            data = ind_logit))
+summary(glm(formula = change_ind ~ lab_vote , family = binomial(link = "logit"), 
+            data = ind_logit))
+summary(glm(formula = change_ind ~ ld_vote , family = binomial(link = "logit"), 
+            data = ind_logit)) #not_important
+summary(glm(formula = change_ind ~ green_vote , family = binomial(link = "logit"), 
+            data = ind_logit)) #not important
+summary(glm(formula = change_ind ~ ukip_vote , family = binomial(link = "logit"), 
+            data = ind_logit)) 
+summary(glm(formula = change_ind ~ leave , family = binomial(link = "logit"), 
+            data = ind_logit)) 
+
+#univariate analysis suggest ab,c1,de,ld_vote,green_vote are not of clinical importance
+
+
+#logistic regression on independents
+glm_ind <- glm(formula = change_ind ~.-ab-c1-de-ld_vote-green_vote , family = binomial(link = "logit"), 
+              data = ind_logit)
+summary(glm_ind)
+step(glm_ind, direction = "backward")
+model_ind <- glm(formula = change_ind ~ region + lab_vote + ukip_vote, family = binomial(link = "logit"), 
+                  data = ind_logit) #final model for independents
+summary(model_ind)
+
+
+
+
+#*******************************************************
+#-LOGISTIC REGRESSION FOR GREENS
+#*******************************************************
+
+green_plot1 <- ggplot(green_logit, aes(change_green,fill = change_green))+
+  geom_bar( position = position_dodge())
+
+green_plot2 <- ggplot(green_logit, aes(region,fill = change_green))+
+  geom_bar( position = position_dodge())
+
+green_plot3 <- ggplot(green_logit, aes(ab,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot4 <- ggplot(green_logit, aes(c1,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot5 <- ggplot(green_logit, aes(c2,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot6 <- ggplot(green_logit, aes(de,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot7 <- ggplot(green_logit, aes(con_vote,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot8 <- ggplot(green_logit, aes(lab_vote,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot9 <- ggplot(green_logit, aes(ld_vote,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot10 <- ggplot(green_logit, aes(ukip_vote,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot11 <- ggplot(green_logit, aes(green_vote,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+green_plot12 <- ggplot(green_logit, aes(leave,fill = change_green))+
+  geom_density( position = position_dodge(), alpha=0.5)
+
+grid.arrange(green_plot1,green_plot2,green_plot3,green_plot4,green_plot5,green_plot6,green_plot7,green_plot8,green_plot9,green_plot10,green_plot11,green_plot12, ncol=3, nrow=4)
+
+#plot suggest we screen out C2 and UKIP_vote, LD_VOTE
+
+#univariate logistic regression to select variables
+summary(glm(formula = change_green ~ ab , family = binomial(link = "logit"), 
+            data = green_logit))
+summary(glm(formula = change_green ~ c1 , family = binomial(link = "logit"), 
+            data = green_logit)) #not important
+summary(glm(formula = change_green ~ c2 , family = binomial(link = "logit"), 
+            data = green_logit)) #not important
+summary(glm(formula = change_green ~ de , family = binomial(link = "logit"), 
+            data = green_logit)) 
+summary(glm(formula = change_green ~ con_vote , family = binomial(link = "logit"), 
+            data = green_logit))
+summary(glm(formula = change_green ~ lab_vote , family = binomial(link = "logit"), 
+            data = green_logit))
+summary(glm(formula = change_green ~ ld_vote , family = binomial(link = "logit"), 
+            data = green_logit)) 
+summary(glm(formula = change_green ~ green_vote , family = binomial(link = "logit"), 
+            data = green_logit)) 
+summary(glm(formula = change_green ~ ukip_vote , family = binomial(link = "logit"), 
+            data = green_logit)) 
+summary(glm(formula = change_green ~ leave , family = binomial(link = "logit"), 
+            data = green_logit)) 
+
+#univariate analysis suggest we should drop C1 & C2
+
+
+#logistic regression on greens
+glm_green <- glm(formula = change_green ~.-c1 -c2 , family = binomial(link = "logit"), 
+               data = green_logit)
+summary(glm_green)
+step(glm_green, direction = "backward")
+model_green <-  glm(formula = change_green ~ con_vote + green_vote, family = binomial(link = "logit"), 
+                    data = green_logit) #final model for greens
+summary(model_green)
 
