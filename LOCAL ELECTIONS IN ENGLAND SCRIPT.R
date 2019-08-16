@@ -342,7 +342,7 @@ summary(glm(formula = change_lab ~ ld_vote , family = binomial(link = "logit"),
 summary(glm(formula = change_lab ~ green_vote , family = binomial(link = "logit"), 
             data = labour_logit)) #not important
 summary(glm(formula = change_lab ~ ukip_vote , family = binomial(link = "logit"), 
-            data = labour_logit))
+            data = labour_logit)) #not important
 summary(glm(formula = change_lab ~ leave , family = binomial(link = "logit"), 
             data = labour_logit))
 
@@ -357,7 +357,7 @@ step(glm_lab, direction = "backward")
 model_lab <- glm(formula = change_lab ~ region + lab_vote, family = binomial(link = "logit"), 
                  data = labour_logit) #final model for labour
 summary(model_lab)
-
+exp(cbind(coef(model_lab), confint(model_lab))) 
 
 
 #*******************************************************
@@ -437,7 +437,7 @@ step(glm_ld, direction = "backward")
 model_ld <- glm(formula = change_ld ~ con_vote + ld_vote + leave, family = binomial(link = "logit"), 
                 data = ld_logit) #final model for liberal democrats
 summary(model_ld)
-
+exp(cbind(coef(model_ld), confint(model_ld))) 
 
 #*******************************************************
 #-LOGISTIC REGRESSION FOR INDEPENDENTS
@@ -517,8 +517,7 @@ step(glm_ind, direction = "backward")
 model_ind <- glm(formula = change_ind ~ region + lab_vote + ukip_vote, family = binomial(link = "logit"), 
                   data = ind_logit) #final model for independents
 summary(model_ind)
-
-
+exp(cbind(coef(model_ind), confint(model_ind))) 
 
 
 #*******************************************************
@@ -598,4 +597,4 @@ step(glm_green, direction = "backward")
 model_green <-  glm(formula = change_green ~ con_vote + green_vote, family = binomial(link = "logit"), 
                     data = green_logit) #final model for greens
 summary(model_green)
-
+exp(cbind(coef(model_green), confint(model_green))) 

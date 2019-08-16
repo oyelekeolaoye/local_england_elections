@@ -221,7 +221,7 @@ grid.arrange(sc1, sc3, sc2, sc4, ncol=2, nrow=2)
 
 
 #SOCIAL GRADE INFLUENCE ON LABOUR
-ggplot(current_df, aes(x=change_lab, y=ab)) +
+lb1 <- ggplot(current_df, aes(x=change_lab, y=ab)) +
   geom_point() +
   geom_smooth(method = "lm") + 
   labs(x="Proportion Change for Labour", y="Social Grade AB") +
@@ -230,7 +230,7 @@ ggplot(current_df, aes(x=change_lab, y=ab)) +
     axis.title.y = element_text(color = "red", size = 14, face = "bold")
   )
 
-ggplot(current_df, aes(x=change_lab, y=c1)) +
+lb2 <- ggplot(current_df, aes(x=change_lab, y=c1)) +
   geom_point() +
   geom_smooth(method = "lm") + 
   labs(x="Proportion Change for Labour", y="Social Grade C1") +
@@ -239,7 +239,7 @@ ggplot(current_df, aes(x=change_lab, y=c1)) +
     axis.title.y = element_text(color = "red", size = 14, face = "bold")
   )
 
-ggplot(current_df, aes(x=change_lab, y=c2)) +
+lb3 <- ggplot(current_df, aes(x=change_lab, y=c2)) +
   geom_point() +
   geom_smooth(method = "lm") + 
   labs(x="Proportion Change for Labour", y="Social Grade C2") +
@@ -248,7 +248,7 @@ ggplot(current_df, aes(x=change_lab, y=c2)) +
     axis.title.y = element_text(color = "red", size = 14, face = "bold")
   )
 
-ggplot(current_df, aes(x=change_lab, y=de)) +
+lb4 <- ggplot(current_df, aes(x=change_lab, y=de)) +
   geom_point() +
   geom_smooth(method = "lm") + 
   labs(x="Proportion Change for Labour", y="Social Grade DE") +
@@ -257,6 +257,7 @@ ggplot(current_df, aes(x=change_lab, y=de)) +
     axis.title.y = element_text(color = "red", size = 14, face = "bold")
   )
 
+grid.arrange(lb1, lb3, lb2, lb4, ncol=2, nrow=2)
 
 ##FITTING A LOGISTIC REGRESSION TO THE DATA
 #We set an arbitrary large loss to 20% for conservatives
