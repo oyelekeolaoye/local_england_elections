@@ -19,8 +19,8 @@ library(moderndive)
 library(snakecase)
 library(olsrr)
 library(car)
-
-
+install.packages("spdep")
+library(spdep)
 
 
 
@@ -659,9 +659,17 @@ ggplot(map_and_data) +
   ggtitle("SEATS UP FOR ELECTION")               ###seats available
 
 ggplot(map_and_data) +
-  geom_sf(aes(fill=change_con)) +
+  geom_sf(aes(fill=change_ld)) +
   scale_fill_gradient(low="#56B1F7", high="#132B43")  +
   ggtitle("LOSS/GAIN FOR CONSERVATIVES")      ###change for conservatives
+
+
+##TEST
+library(RColorBrewer)
+ggplot(map_and_data) +
+  geom_sf(aes(fill=change_con)) + 
+  scale_fill_gradientn(colors = brewer.pal(n=9, name = "Blues"))
+
 
 ggplot(map_and_data) +
   geom_sf(aes(fill=change_lab)) +
@@ -679,7 +687,7 @@ tm_shape(map_and_data) +
   tm_polygons("seats_available", id = "la_name", pallete="Green")
 
 con_map <- tm_shape(map_and_data) +
-            tm_polygons("change_con", id = "la_name", pallete="Green") ##interactive plot for conservative change
+            tm_polygons("change_ld", id = "la_name", pallete="Green") ##interactive plot for conservative change
 ##plot indicates that the biggest losses came from the south
 
 lab_map <- tm_shape(map_and_data) +
