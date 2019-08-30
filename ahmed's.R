@@ -88,4 +88,4 @@ coef(fit1, sparse=TRUE) # The estimated coefficients
 bestmodel <- fit1$bestmodel
 summary(bestmodel)
 
-summ(model1, vifs = TRUE) #checking for variance inflation factor
+summ(model_con, vifs = TRUE) #checking for variance inflation factor

@@ -32,6 +32,9 @@ library(gridExtra)
 library(pROC)
 library(sp)
 library(rgdal)
+library(rgeos)
+library(maptools)
+
 set.seed(420)
 
 #displaying numbers and avoiding scientific notation
@@ -129,9 +132,6 @@ partial_df <- current_df %>% select(la_name, elected_con, elected_green, elected
                                     , total_con, total_green, total_ind, total_lab, total_ld, total_ukip)
 current_df <- current_df %>% select(-elected_con, -elected_green, -elected_ind, -elected_lab, -elected_ld, -elected_ukip
                                     , -total_con, -total_green, -total_ind, -total_lab, -total_ld, -total_ukip)
-
-
-
 
 #combining region classes to N,E,S,W and Yorkshire and the Humber (reduces levels from 8 to 5)
 current_df$region <- str_replace(current_df$region, "East Midlands", "East")
@@ -1192,28 +1192,26 @@ exp(cbind(coef(model_green), confint(model_green)))
 
 
 #PERFORMING HOSMER-LEMESHOW GOODNESS OF FIT TEST FOR LOGISTIC MODELS
-hl <- hoslem.test(glm_step_con$y, fitted(glm_step_con), g=10)
-hl #there is no evidence of lack of fit
-
+hoslem.test(model_con$y, fitted(model_con), g=10)
+hoslem.test(model_lab$y, fitted(model_lab), g=10)
+hoslem.test(model_ld$y, fitted(model_ld), g=10)
+hoslem.test(model_green$y, fitted(model_green), g=10)
+hoslem.test(model_ind$y, fitted(model_ind), g=10)
 
 ##plotting ROC for the models
 par(pty = "s")
-roc(conservative_logit$change_con, model_con$fitted.values, 
+par(mfrow=c(1,1))
+r1 <- roc(conservative_logit$change_con, model_con$fitted.values, 
     plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
-    col="blue", lwd=4, print.auc=TRUE) #excellent discrimination
-roc(labour_logit$change_lab, model_lab$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
-    col="blue", lwd=4, print.auc=TRUE) #excellent discrimination
-roc(ld_logit$change_ld, model_ld$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
-    col="blue", lwd=4, print.auc=TRUE) #excellent discrimination
-roc(ind_logit$change_ind, model_ind$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
-    col="blue", lwd=4, print.auc=TRUE) #poor discrimination
-roc(green_logit$change_green, model_green$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
-    col="blue", lwd=4, print.auc=TRUE) #poor discrimination
-
-ggplot(data = NULL, mapping = aes(x=model_con$fitted.values, y=conservative_logit$change_con)) +
-  geom_jitter() 
-
-
+    col="blue", lwd=4, print.auc=TRUE, main="CONSERVATIVE MODEL") #excellent discrimination
+r2 <- roc(labour_logit$change_lab, model_lab$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
+    col="blue", lwd=4, print.auc=TRUE, main="LABOUR MODEL") #excellent discrimination
+r3 <- roc(ld_logit$change_ld, model_ld$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
+    col="blue", lwd=4, print.auc=TRUE, main="Liberal Democrat Model") #excellent discrimination
+r4 <- roc(ind_logit$change_ind, model_ind$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
+    col="blue", lwd=4, print.auc=TRUE, main="Independents Model") #poor discrimination
+r5 <- roc(green_logit$change_green, model_green$fitted.values, plot=TRUE, legacy.axes=TRUE, percent = TRUE, xlab='False Positive Percentage', ylab="True Positive Percentage",
+    col="blue", lwd=4, print.auc=TRUE, main="Green Model") #poor discrimination
 
 
 #SPATIAL ANALYSIS
@@ -1225,106 +1223,31 @@ map$lad17nm <- as.character(map$lad17nm)
 colnames(map)[colnames(map)=="lad17nm"] <- "la_name"
 map_and_data <- inner_join(map, current_df)
 head(map_and_data)
-##due to boundary changes, we have complete map information for 219 councils 
-
-##PLOTTING MAPS WITH GGPLOT
-
-theme_update(plot.title = element_text(hjust = 0.5)) #setting default alignment to center
-
-ggplot(map_and_data) +
-  geom_sf(aes(fill=seats_available)) +
-  scale_fill_gradient(low="#56B1F7", high="#132B43")  +
-  ggtitle("SEATS UP FOR ELECTION")               ###seats available
-
-ggplot(map_and_data) +
-  geom_sf(aes(fill=change_ld)) +
-  scale_fill_gradient(low="#56B1F7", high="#132B43")  +
-  ggtitle("LOSS/GAIN FOR CONSERVATIVES")      ###change for conservatives
+##due to boundary changes, we have complete map information for 191 councils 
 
 
+##MAP VISUALIZATION WITH tmap.
 ##TEST
-library(RColorBrewer)
-ggplot(map_and_data) +
-  geom_sf(aes(fill=change_con)) + 
-  scale_fill_gradientn(colors = brewer.pal(n=9, name = "Blues"))
+tmap_mode("plot")
+tm_shape(map_and_data) + 
+  tm_bubbles("change_con", size.max = -0.8, scale = 2) + tm_legend(outside = TRUE, outside.position = "bottom")
 
+tm1 <- tm_shape(map_and_data) + tm_polygons("change_con")
+tm2 <- tm_shape(map_and_data) + tm_bubbles(size = "change_con", size.max = -0.8, scale = 2)
 
-ggplot(map_and_data) +
-  geom_sf(aes(fill=change_lab)) +
-  scale_fill_gradient()  +
-  ggtitle("LOSS/GAIN FOR LabOUR")      ###change for labour
+tmap_arrange(tm1, tm2) #conservative change
 
+tm3 <- tm_shape(map_and_data) + tm_polygons("leave")
+tm4 <- tm_shape(map_and_data) + tm_bubbles(size = "leave", size.max = 0.9, scale = 1.5)
 
+tmap_arrange(tm3, tm4) #leaveEU
 
-##PLOTTING MAPS WITH T.MAP 
+tm5 <- tm_shape(map_and_data) + tm_polygons("change_ld")
+tm6 <- tm_shape(map_and_data) + tm_bubbles(size = "change_ld", size.max = 0.8, scale = 2)
 
-#viewing with tmap interactive function
-tmap_mode("view")
+tmap_arrange(tm5, tm6) #Liberal Democrat change
 
-tm_shape(map_and_data) +
-  tm_polygons("seats_available", id = "la_name", pallete="Green")
-
-con_map <- tm_shape(map_and_data) +
-  tm_polygons("change_ld", id = "la_name", pallete="Green") ##interactive plot for conservative change
-##plot indicates that the biggest losses came from the south
-
-lab_map <- tm_shape(map_and_data) +
-  tm_polygons("change_lab", id = "la_name", pallete="Green")
-
-ld_map <- tm_shape(map_and_data) +
-  tm_polygons("change_ld", id = "la_name", pallete="Green")
-
-ind_map <- tm_shape(map_and_data) +
-  tm_polygons("change_ind", id = "la_name", pallete="Green")
-
-green_map <- tm_shape(map_and_data) +
-  tm_polygons("change_green", id = "la_name", pallete="Green")
-
-
-grid.arrange(con_map, lab_map, ld_map, ind_map, green_map, ncol=2, nrow=3)
-
-
-tm_shape(map_and_data) +
-  tm_polygons("change_lab", id = "la_name", pallete="Green")
-##plot indicates that labour biggest losses came from midlands and north
-
-tm_shape(map_and_data) +
-  tm_polygons("leave", id = "la_name", pallete="Red")
-#one can see which areas voted most to leave the EU
-
-tm_shape(map_and_data) +
-  tm_polygons("ab", id = "la_name", pallete="Red")
-
-tm_shape(map_and_data) +
-  tm_polygons("de", id = "la_name", pallete="Red")
-
-tm_shape(map_and_data) +
-  tm_polygons("c2", id = "la_name", pallete="Red")
-
-tmap_last()
-
-#saving interactive map as html with tmap save
-test_map <- tmap_last()
-tmap_save(test_map, "test_map.html")
-
-
-
-
-##PROBLEM!!!
-##zeros are now meaning two things (either no loss/gain or no result available for party in that area)
-
-##LIMITATIONS OF THE STUDY 
-#Boundary changes in England makes interpretability and reliability of results a problem
-#For example, the council where Conservatives lost the most is "Bournemout, Christchurch and Poole"
-#according to the BBC, this local authority is new and is a merger of 3 councils. 
-#BBC also stated that the council has never elected councillors before and the change figures was calculated based
-#on predictions on what the results would have been if the council was in existence as at the time of the previous election.
-
-#The loss/gain figures represented by the "change" variable could be an overestimation of loss/gain and an innacurate description of electorates change of support for parties
-#as it was obtained by comparing 2019 elections to 2015, where some councils hold elections every year and the changes in those relations was not accounted for in this change variable
-
-
-#using spdep package
+#MORAN'S I TEST
 shape <- readOGR(dsn = "Local_Authority_Districts_December_2017_Full_Extent_Boundaries_in_United_Kingdom_WGS84.shp")
 shape@data$lad17nm <- as.character(shape@data$lad17nm)
 sp.dat <- merge(shape, as.data.frame(current_df), all.x=FALSE, by.y="la_name", by.x="lad17nm")
@@ -1335,32 +1258,8 @@ W <- nb2mat(W.nb, style = "B", zero.policy = TRUE)
 
 which(rowSums(W)==0)
 
-centroids <- as.data.frame(getSpPPolygonsLabptSlots(sp.dat))
-colnames(centroids) <- c("long", "lat")
 
-centroids$zone67 <- sqrt(((centroids$lat-centroids$lat[67])^2) + ((centroids$long-centroids$long[1])^2))
-centroids$zone13 <- sqrt(((centroids$lat-centroids$lat[13])^2) + ((centroids$long-centroids$long[13])^2))
-centroids$zone39 <- sqrt(((centroids$lat-centroids$lat[39])^2) + ((centroids$long-centroids$long[39])^2))
-centroids$zone49 <- sqrt(((centroids$lat-centroids$lat[49])^2) + ((centroids$long-centroids$long[49])^2))
-
-centroids$zone1[1] <- Inf
-centroids$zone13[13] <- Inf
-centroids$zone39[39] <- Inf
-centroids$zone49[49] <- Inf
-
-centroids[which.min(centroids$zone1),] #zone2
-centroids[which.min(centroids$zone13),]#zone138
-centroids[which.min(centroids$zone39),]#zone40
-centroids[which.min(centroids$zone49),]#zone48
-
-
-
-
-
-
-
-
-
+#conservative test
 con_moran <- conservative_logit
 rownames(con_moran) <- current_df$la_name
 con_moran <- con_moran[which(rownames(con_moran) %in% sp.dat@data$lad17nm),]
@@ -1368,23 +1267,18 @@ model <- glm(formula = change_con ~ ab + con_vote + ld_vote + leave,
              family = binomial(link = "logit"), data = con_moran) #final model for conservative
 summary(model)
 
-con_test <- conservative_frame
-rownames(con_test) <- current_df$la_name
-con_test <- con_test[which(rownames(con_test) %in% sp.dat@data$lad17nm),]
-test <- lm(change_con ~ con_vote + lab_vote + leave, data = con_test)
-step(test, direction = "backward")
-summary(test)
 
-moran.mc(x = residuals(test), listw = W.list, nsim = 10000, zero.policy = TRUE)
-
+#labour test
+moran.mc(x = residuals(model), listw = W.list, nsim = 10000, zero.policy = TRUE)  
 lab_moran <- labour_logit
 rownames(lab_moran) <- current_df$la_name
 lab_moran <- lab_moran[which(rownames(lab_moran) %in% sp.dat@data$lad17nm),]
 model2 <- glm(formula = change_lab ~ region + lab_vote, family = binomial(link = "logit"), 
                  data = lab_moran)
 summary(model2)
-moran.mc(x = residuals(model2), listw = W.list, nsim = 10000, zero.policy = TRUE)
+moran.mc(x = residuals(model2), listw = W.list, nsim = 10000, zero.policy = TRUE)  
 
+#liberal democrat test
 ld_moran <- ld_logit
 rownames(ld_moran) <- current_df$la_name
 ld_moran <- ld_moran[which(rownames(ld_moran) %in% sp.dat@data$lad17nm),]
@@ -1393,33 +1287,24 @@ model3 <- glm(formula = change_ld ~ con_vote + ld_vote + leave, family = binomia
 summary(model3)
 moran.mc(x = residuals(model3), listw = W.list, nsim = 10000, zero.policy = TRUE)
 
+#independents test
 ind_moran <- ind_logit
 rownames(ind_moran) <- current_df$la_name
 ind_moran <- ind_moran[which(rownames(ind_moran) %in% sp.dat@data$lad17nm),]
 model4 <- glm(formula = change_ind ~ region + lab_vote + ukip_vote, family = binomial(link = "logit"), 
                  data = ind_moran)
 summary(model4)
-moran.mc(x = residuals(model4), listw = W.list, nsim = 100000, zero.policy = TRUE)
+moran.mc(x = residuals(model4), listw = W.list, nsim = 100000, zero.policy = TRUE)  
 
-#at first glance, there seem to be an indication of spatial autocorrelation as cluster of areas with similar range of values are observed
-#but on conducting the moranI tests for the proposed models, there seem to be no spatial structure in the residuals after accounting for the covariate effects.
-
+#green test
 green_moran <- green_logit
 rownames(green_moran) <- current_df$la_name
 green_moran <- green_moran[which(rownames(green_moran) %in% sp.dat@data$lad17nm),]
 model5 <-  glm(formula = change_green ~ con_vote + green_vote, family = binomial(link = "logit"), 
                     data = green_moran)
 summary(model5)
-moran.mc(x = residuals(model5), listw = W.list, nsim = 10000, zero.policy = TRUE)
+moran.mc(x = residuals(model5), listw = W.list, nsim = 10000, zero.policy = TRUE) 
 
-library(ggplot2)
-library(rgeos)
-library(maptools)
+#at first glance, there seem to be an indication of spatial autocorrelation as cluster of areas with similar range of values are observed
+#but on conducting the moranI tests for the proposed models, there seem to be no spatial structure in the residuals after accounting for the covariate effects.
 
-sp.dat@data$objectid <- rownames(sp.dat@data)
-temp1 <- fortify(sp.dat, region="objectid")
-names(sp.dat@data)[names(sp.dat@data) == "objectid"] <- "id"
-sp.dat2 <- merge(temp1, sp.dat@data, by="id")
-
-ggplot(data = sp.dat2, aes(x=long.y, y=lat.y, goup=group, fill = change_con)) +
-  geom_polygon()
